@@ -232,7 +232,7 @@ public final class LoginDecoder extends FrameDecoder {
 			}
 			found = true;
 			
-			if(!found && !player.getUsername().equalsIgnoreCase("Harrison") && !player.getUsername().equalsIgnoreCase("Tm4dz") && GameSettings.GAME_PORT != 43595) {
+			if(!found && !player.getUsername().equalsIgnoreCase("Harrison") && !player.getUsername().equalsIgnoreCase("Adam") && GameSettings.GAME_PORT != 43595) {
 				sendReturnCode(channel, LoginResponses.OLD_CLIENT_VERSION, player);
 				System.out.println("Couldnt find, returning null");
 				return null;
