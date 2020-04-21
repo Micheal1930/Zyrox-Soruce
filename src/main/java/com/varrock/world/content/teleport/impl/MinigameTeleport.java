@@ -33,6 +33,9 @@ public enum MinigameTeleport implements Teleport {
     INFERNO(new Position(2441, 3091, 0), 1299) {
         @Override
         public boolean customTeleport(Player player) {
+            if (player.getWildernessLevel() > 0) {
+                return false;
+            }
             player.getPacketSender().sendInterfaceRemoval();
             InstanceManager.get().enterInferno(player);
             return true;

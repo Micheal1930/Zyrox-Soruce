@@ -38,7 +38,7 @@ public class GameSettings {
 	/**
 	 * True, when developing.
 	 */
-	public static boolean DEBUG_MODE = false;
+	public static boolean DEBUG_MODE = true;
 
 	/**
 	 * The special staff names.

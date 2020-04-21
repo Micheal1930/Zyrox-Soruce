@@ -88,7 +88,7 @@ public class GameServer {
 
         Runtime.getRuntime().addShutdownHook(new ShutdownHook());
 
-         //loadSqlNetwork();
+         loadSqlNetwork();
 
         if (!GameSettings.MOCK_SQL) {
             createSqlTables(sqlNetwork, Paths.get("data", "sql", "create"));

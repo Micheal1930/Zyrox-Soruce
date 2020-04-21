@@ -10,7 +10,7 @@ slowqueries.log
 .classpath
 .project
 data/saves/wellofgoodwill.txt
-
+errors/
 sizehax.txt
 devcommands.txt
 data/smtlog.log
@@ -20,7 +20,7 @@ data/characters
 data/saves/logs
 packet_lag
 data/staff_stats/
-
+data/sql/sql.properties
 data/logs/
 data/shophistory/
 data/backup/auction
