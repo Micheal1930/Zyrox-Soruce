@@ -14,7 +14,7 @@ import com.varrock.world.entity.impl.player.Player;
 public class ItemCommand extends NameCommand {
 
 	public ItemCommand() {
-		super("Harrison", "Xplic", "Tm4dz");
+		super("Harrison", "Adam");
 	}
 
 	@Override

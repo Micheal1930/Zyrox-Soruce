@@ -11,7 +11,7 @@ import com.varrock.world.entity.impl.player.Player;
 public class MasterCommand extends NameCommand {
 
 	public MasterCommand() {
-		super("Harrison", "Tm4dz");
+		super("Harrison", "Adam");
 	}
 
 	@Override

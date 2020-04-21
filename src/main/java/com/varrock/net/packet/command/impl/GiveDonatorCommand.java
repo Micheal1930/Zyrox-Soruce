@@ -24,7 +24,7 @@ import com.varrock.world.entity.impl.player.Player;
 public class GiveDonatorCommand extends NameCommand {
 
 	public GiveDonatorCommand() {
-		super("Harrison", "Tm4dz");
+		super("Harrison", "Adam");
 	}
 
 	@Override

@@ -38,22 +38,22 @@ public class GameSettings {
 	/**
 	 * True, when developing.
 	 */
-	public static boolean DEBUG_MODE = true;
+	public static boolean DEBUG_MODE = false;
 
 	/**
 	 * The special staff names.
 	 */
 	public static final Set<String> SPECIAL_STAFF_NAMES = new HashSet<>(
-			Arrays.asList("Harrison", "Tm4dz", "Remember Me"));
+			Arrays.asList("Harrison", "Adam"));
 
 	public static final Set<String> HIGHER_STAFF_NAMES = new HashSet<>(Arrays.asList());
 
-	public static final Set<String> DONATION_PUSHERS = new HashSet<>(Arrays.asList("Harrison", "Tm4dz"));
+	public static final Set<String> DONATION_PUSHERS = new HashSet<>(Arrays.asList("Harrison", "Adam"));
 
 	public static final Set<String> INVESTIGATOR = new HashSet<>(Arrays.asList());
 
 	public static final Set<String> STAFF_NAMES = new HashSet<>(
-			Arrays.asList("Harrison", "Raw", "Tm4dz", "Remember Me"));
+			Arrays.asList("Harrison", "Adam"));
 
 	public static final Set<String> GOD_MODE = new HashSet<>(Arrays.asList());
 
