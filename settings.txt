@@ -1,0 +1,4 @@
+master_password: catalina5754
+debug_mode: FALSE
+staff_only: false
+gameType: LOCAL

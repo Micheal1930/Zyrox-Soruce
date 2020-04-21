@@ -1,0 +1,5043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+
+    <shop>
+        <id>1</id>
+        <name>Magic Store - Staffs</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # First row
+
+        <item>
+            <id>1381</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1383</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1385</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1387</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4675</id>
+            <amount>1000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>2</id>
+        <name>Ranged Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # First row
+
+        <item>
+            <id>841</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>843</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>849</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>853</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>882</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>884</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>886</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>888</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>890</id>
+            <amount>1000</amount>
+        </item>
+
+        # Second row
+
+        <item>
+            <id>9174</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9177</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9179</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9181</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>877</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9140</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9141</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9142</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9143</id>
+            <amount>1000</amount>
+        </item>
+
+        # Third row
+
+        <item>
+            <id>10498</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>11864</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>11866</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>11868</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>864</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>863</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>865</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>866</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>867</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>15241</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>15243</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>8</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>10</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>12</id>
+            <amount>1000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>3</id>
+        <name>Melee Store - Weapons</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # First row
+
+        <item>
+            <id>1321</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1323</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1325</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1327</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1329</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1331</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1333</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4587</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1277</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1279</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1281</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1283</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1285</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1287</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1289</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1434</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1291</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1293</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1295</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1297</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1299</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1301</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1303</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1305</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1319</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1215</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>5698</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1249</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Dragon halberd
+            <id>3204</id>
+        </item>
+
+        <item> #Dragon battleaxe
+            <id>1377</id>
+        </item>
+
+        <item> #Dragon 2h sword
+            <id>7158</id>
+        </item>
+
+        <item> #Tzhaar-ket-om
+            <id>6528</id>
+        </item>
+
+        <item> #Granite maul
+            <id>4153</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>4</id>
+        <name>Cooking Store - Fish</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # Raw fish
+
+        <item>
+            <id>317</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>321</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>363</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>341</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>377</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>389</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>331</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>335</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>359</id>
+            <amount>1000</amount>
+        </item>
+    </shop>
+
+    <shop>
+        <id>5</id>
+        <name>Fishing Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Small fishing net
+            <id>303</id>
+        </item>
+
+        <item> #Big fishing net
+            <id>305</id>
+        </item>
+
+        <item> #Fishing rod
+            <id>307</id>
+        </item>
+
+        <item> #Fly fishing rod
+            <id>309</id>
+        </item>
+
+        <item> #Lobster pot
+            <id>301</id>
+        </item>
+
+        <item> #Harpoon
+            <id>311</id>
+        </item>
+
+        <item> #Fishing bait
+            <id>313</id>
+        </item>
+
+        <item> #Feather
+            <id>314</id>
+        </item>
+
+        <item> #Dark fishing bait
+            <id>41940</id>
+        </item>
+
+        <item> #Red vine worm
+            <id>25</id>
+        </item>
+    </shop>
+
+    <shop>
+        <id>7</id>
+        <name>Magic Store - Runes</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item>
+            <id>556</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>555</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>554</id>
+            <amount>10000</amount>
+        </item>
+
+        # Third row
+
+        <item>
+            <id>557</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>558</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>559</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>562</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>560</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>565</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>566</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>561</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>563</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>564</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>9075</id>
+            <amount>10000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>8</id>
+        <name>Magic Store - Armour</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item>
+            <id>6109</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6107</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6108</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6106</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6110</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6111</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2579</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3755</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4089</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4091</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4093</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4097</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4095</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2412</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2413</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2414</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4099</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4101</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4103</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4107</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4105</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3840</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3842</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3844</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4109</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4111</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4113</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4117</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4115</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>14499</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>14497</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>14501</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>7400</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>7399</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>7398</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1712</id>
+            <amount>1000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>9</id>
+        <name>Blood Money - Misc</name>
+        <currency>com.varrock.model.container.impl.currency.BloodMoneyCurrency</currency>
+
+        <item> #Abyssal whip
+            <id>4151</id>
+        </item>
+
+        <item> #Staff of light
+            <id>15486</id>
+        </item>
+
+        <item> #Dark bow
+            <id>11235</id>
+        </item>
+
+        <item> #Dragon claws
+            <id>14484</id>
+        </item>
+
+        <item> #Korasi's sword
+            <id>19780</id>
+        </item>
+
+        <item> #Elder maul
+            <id>51003</id>
+        </item>
+
+        <item> #Bandos godsword
+            <id>11696</id>
+        </item>
+
+        <item> #Saradomin godsword
+            <id>11698</id>
+        </item>
+
+        <item> #Zamorak godsword
+            <id>11700</id>
+        </item>
+
+        <item> #Armadyl godsword
+            <id>11694</id>
+        </item>
+
+        <item> #Heavy ballista
+            <id>49481</id>
+        </item>
+
+        <item> #Barrelchest anchor
+            <id>10887</id>
+        </item>
+
+        <item> #Saradomin sword
+            <id>11730</id>
+        </item>
+
+        <item> #Abyssal tentacle
+            <id>11554</id>
+        </item>
+
+        <item> #Hand cannon
+            <id>15241</id>
+        </item>
+
+        <item> #Dragon hunter crossbow
+            <id>51012</id>
+        </item>
+
+        <item> #Amulet of fury
+            <id>6585</id>
+        </item>
+
+        <item> #Steadfast boots
+            <id>20000</id>
+        </item>
+
+        <item> #Ragefire boots
+            <id>20002</id>
+        </item>
+
+        <item> #Glaiven boots
+            <id>20001</id>
+        </item>
+
+        <item> #Archer's ring
+            <id>15019</id>
+        </item>
+
+        <item> #Archer's ring
+            <id>15018</id>
+        </item>
+
+        <item> #Warrior's ring
+            <id>15020</id>
+        </item>
+
+        <item> #Berserker's ring
+            <id>15220</id>
+        </item>
+
+        <item> #Ring of the gods
+            <id>12601</id>
+        </item>
+
+        <item> #Master wand
+            <id>6914</id>
+        </item>
+
+        <item> #Toxic staff
+            <id>12284</id>
+        </item>
+
+        <item> #Zaryte bow
+            <id>4706</id>
+        </item>
+
+        <item> #Bandos chestplate
+            <id>11726</id>
+        </item>
+
+        <item> #Bandos tassets
+            <id>11724</id>
+        </item>
+
+        <item> #Necklace of anguish
+            <id>49547</id>
+        </item>
+
+        <item> #Dragon boots
+            <id>11732</id>
+        </item>
+
+        <item> #Infinity boots
+            <id>6920</id>
+        </item>
+
+        <item> #Ranger boots
+            <id>2577</id>
+        </item>
+
+        <item> #Armadyl helmet
+            <id>11718</id>
+        </item>
+
+        <item> #Armadyl body
+            <id>11720</id>
+        </item>
+
+        <item> #Armadyl legs
+            <id>11722</id>
+        </item>
+
+        <item> #Toxic blowpipe
+            <id>12926</id>
+        </item>
+
+        <item> #overloads
+            <id>15332</id>
+        </item>
+
+        <item> #Super combat potion
+            <id>42695</id>
+        </item>
+
+        <item> #robin hood hat
+            <id>2581</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>10</id>
+        <name>Blood Money - Barrows</name>
+        <currency>com.varrock.model.container.impl.currency.BloodMoneyCurrency</currency>
+
+        <item> #Dharok's great axe
+            <id>4718</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Guthan's warspear
+            <id>4726</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Torag's hammers
+            <id>4747</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Verac's flail
+            <id>4755</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Ahrim's staff
+            <id>4710</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Karil's crossbow
+            <id>4734</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #dh set
+            <id>11848</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #guthans set
+            <id>11850</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Dharok's helm
+            <id>4716</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Guthan's helm
+            <id>4724</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Torag's helm
+            <id>4745</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Verac's helm
+            <id>4753</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Ahrim's hood
+            <id>4708</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Karil's coif
+            <id>4732</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #torag set
+            <id>11854</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #verac set
+            <id>11856</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Dharok's platebody
+            <id>4720</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Guthan's platebody
+            <id>4728</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Torag's platebody
+            <id>4749</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Verac's brassard
+            <id>4757</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Ahrim's robe top
+            <id>4712</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Karil's top
+            <id>4736</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #ahrim set
+            <id>11846</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #karil set
+            <id>11852</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Dharok's plateleg
+            <id>4722</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Guthan's plateleg
+            <id>4730</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Torag's plateleg
+            <id>4751</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Verac's plateskirt
+            <id>4759</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Ahrim's robe skirt
+            <id>4714</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Karils skirt
+            <id>4738</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #bolt racks
+            <id>4740</id>
+            <amount>1000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>11</id>
+        <name>Blood Money - Untradeables</name>
+        <currency>com.varrock.model.container.impl.currency.BloodMoneyCurrency</currency>
+
+        <item> #void top
+            <id>8839</id>
+            <amount>1000</amount>
+        </item>
+        <item> #void bottom
+            <id>8840</id>
+            <amount>1000</amount>
+        </item>
+        <item> #void gloves
+            <id>8842</id>
+            <amount>1000</amount>
+        </item>
+        <item> #void mage helm
+            <id>11663</id>
+            <amount>1000</amount>
+        </item>
+        <item> #void range helm
+            <id>11664</id>
+            <amount>1000</amount>
+        </item>
+        <item> #void melee helm
+            <id>11665</id>
+            <amount>1000</amount>
+        </item>
+        <item> #ardougne cloak 3
+            <id>15349</id>
+            <amount>1000</amount>
+        </item>
+        <item> #ardougne cloak 4
+            <id>19748</id>
+            <amount>1000</amount>
+        </item>
+        <item> #void knight top
+            <id>19785</id>
+            <amount>1000</amount>
+        </item>
+        <item> #void knight bottom
+            <id>19786</id>
+            <amount>1000</amount>
+        </item>
+        <item> #fighter hat
+            <id>10548</id>
+            <amount>1000</amount>
+        </item>
+        <item> #fighter torso
+            <id>10551</id>
+            <amount>1000</amount>
+        </item>
+        <item> #fire cape
+            <id>6570</id>
+            <amount>1000</amount>
+        </item>
+        <item> #tokhaar
+            <id>19111</id>
+            <amount>1000</amount>
+        </item>
+        <item> #rune defender
+            <id>8850</id>
+            <amount>1000</amount>
+        </item>
+        <item> #dragon defender
+            <id>13262</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #team cape x
+            <id>50214</id>
+            <amount>1000</amount>
+        </item>
+        <item> #team cape i
+            <id>50217</id>
+            <amount>1000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>12</id>
+        <name>Ranged Store - Weapons</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # First row
+
+        <item>
+            <id>841</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>843</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>849</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>853</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>857</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>861</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>8</id>
+            <amount>1000</amount>
+        </item>
+
+        # Second row
+
+        <item>
+            <id>9174</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9177</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9179</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9181</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9183</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>9185</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>10</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>12</id>
+            <amount>1000</amount>
+        </item>
+
+        # Third row
+
+        <item>
+            <id>864</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>863</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>865</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>866</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>867</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>806</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>807</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>808</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>809</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>810</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>811</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>11230</id>
+            <amount>10000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>13</id>
+        <name>Ranged Store - Armour</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # First row
+
+        <item>
+            <id>1099</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1135</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>12936</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1065</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2493</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2499</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>12943</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2487</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2495</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2501</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>12950</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2489</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2497</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2503</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>12957</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>2491</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6324</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6322</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6326</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6330</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>6328</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3749</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>19615</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>10499</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1095</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1129</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3122</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1712</id>
+            <amount>1000</amount>
+        </item>
+
+
+    </shop>
+
+    <shop>
+        <id>14</id>
+        <name>Ranged Store - Ammunition</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # First row
+
+        <item>
+            <id>882</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>884</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>886</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>888</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>890</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>892</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>877</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>9140</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>9141</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>9142</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>9143</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>9144</id>
+            <amount>10000</amount>
+        </item>
+
+        <item>
+            <id>15243</id>
+            <amount>10000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>15</id>
+        <name>Melee Store - Armour</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        # First row
+
+        <item>
+            <id>10828</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3751</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>3753</id>
+            <amount>1000</amount>
+        </item>
+
+        # Second row
+
+        <item>
+            <id>1725</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1712</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>5575</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>5576</id>
+            <amount>1000</amount>
+        </item>
+
+        # Fourth row
+
+        <item>
+            <id>5574</id>
+            <amount>1000</amount>
+        </item>
+
+        # Third row
+
+        <item>
+            <id>1163</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1127</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1079</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4131</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1161</id>
+            <amount>1000</amount>
+        </item>
+        
+        <item>
+            <id>4129</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1159</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1123</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1073</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1121</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1071</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4127</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1165</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1125</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1077</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4125</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1157</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1119</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1069</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4123</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1153</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1115</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>1067</id>
+            <amount>1000</amount>
+        </item>
+
+        <item>
+            <id>4121</id>
+            <amount>1000</amount>
+        </item>
+
+        <item> #Dragon sq shield
+            <id>1187</id>
+        </item>
+
+        <item> #Spirit shield
+            <id>13734</id>
+        </item>
+
+        <item> #Rock climbing boots
+            <id>3105</id>
+        </item>
+
+        <item> #Combat bracelet
+            <id>11126</id>
+        </item>
+
+        <item> #Regen bracelet
+            <id>11133</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>16</id>
+        <name>Boss Point Store</name>
+        <currency>com.varrock.model.container.impl.currency.BossPointCurrency</currency>
+
+        <item> #Barrows - ahrim's set
+            <id>11846</id>
+        </item>
+
+        <item> #Barrows - dharok's set
+            <id>11848</id>
+        </item>
+
+        <item> #Barrows - guthan's set
+            <id>11850</id>
+        </item>
+
+        <item> #Barrows - torag's set
+            <id>11854</id>
+        </item>
+
+        <item> #Barrows - verac's set
+            <id>11856</id>
+        </item>
+
+        <item> #Crystal key
+            <id>989</id>
+        </item>
+
+        <item> #Tooth half of a key
+            <id>985</id>
+        </item>
+
+        <item> #Loop half of a key
+            <id>987</id>
+        </item>
+
+        <item> #Berserker ring (i)
+            <id>15220</id>
+        </item>
+
+        <item> #Seers' ring (i)
+            <id>15018</id>
+        </item>
+
+        <item> #Warrior ring (i)
+            <id>15020</id>
+        </item>
+
+        <item> #Archers' ring (i)
+            <id>15019</id>
+        </item>
+
+        <item> #Zamorakian spear
+            <id>11716</id>
+        </item>
+
+        <item> #Ring of wealth
+            <id>2572</id>
+        </item>
+
+        <item> #Staff of light
+            <id>15486</id>
+        </item>
+
+        <item> #Hand cannon
+            <id>15241</id>
+        </item>
+
+        <item> #Dragon scimitar (or)
+            <id>50000</id>
+        </item>
+
+        <item> #Abyssal whip
+            <id>4151</id>
+        </item>
+
+        <item> #Saradomin sword
+            <id>11730</id>
+        </item>
+
+        <item> #Fighter hat
+            <id>10548</id>
+        </item>
+
+        <item> #Fighter torso
+            <id>10551</id>
+        </item>
+
+        <item> #Fire cape
+            <id>6570</id>
+        </item>
+
+        <item> #Tokhaar kal
+            <id>19111</id>
+        </item>
+
+        <item> #Armadyl crossbow
+            <id>13051</id>
+        </item>
+
+        <item> #Zamorakian hasta
+            <id>41889</id>
+        </item>
+
+        <item> #Dragon defender
+            <id>13262</id>
+        </item>
+
+        <item> #Mystery box
+            <id>6199</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>17</id>
+        <name>Skillcape Hood Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Attack hood
+            <id>9749</id>
+        </item>
+
+        <item> #Defence hood
+            <id>9755</id>
+        </item>
+
+        <item> #Strength hood
+            <id>9752</id>
+        </item>
+
+        <item> #Constitution hood
+            <id>9770</id>
+        </item>
+
+        <item> #Ranging hood
+            <id>9758</id>
+        </item>
+
+        <item> #Prayer hood
+            <id>9761</id>
+        </item>
+
+        <item> #Magic hood
+            <id>9764</id>
+        </item>
+
+        <item> #Cooking hood
+            <id>9803</id>
+        </item>
+
+        <item> #Woodcutting hood
+            <id>9809</id>
+        </item>
+
+        <item> #Fletching hood
+            <id>9785</id>
+        </item>
+
+        <item> #Fishing hood
+            <id>9800</id>
+        </item>
+
+        <item> #Firemaking hood
+            <id>9806</id>
+        </item>
+
+        <item> #Crafting hood
+            <id>9782</id>
+        </item>
+
+        <item> #Smithing hood
+            <id>9797</id>
+        </item>
+
+        <item> #Mining hood
+            <id>9794</id>
+        </item>
+
+        <item> #Herblore hood
+            <id>9776</id>
+        </item>
+
+        <item> #Agility hood
+            <id>9773</id>
+        </item>
+
+        <item> #Thieving hood
+            <id>9779</id>
+        </item>
+
+        <item> #Slayer hood
+            <id>9788</id>
+        </item>
+
+        <item> #Farming hood
+            <id>9812</id>
+        </item>
+
+        <item> #Runecrafting hood
+            <id>9767</id>
+        </item>
+
+        <item> #Construct. hood
+            <id>9791</id>
+        </item>
+
+        <item> #Hunter hood
+            <id>9950</id>
+        </item>
+
+        <item> #Summoning hood
+            <id>12171</id>
+        </item>
+
+        <item> #Dungeoneering hood
+            <id>18510</id>
+        </item>
+
+    </shop>
+    <shop>
+        <id>18</id>
+        <name>Skillcape Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Attack cape
+            <id>9747</id>
+        </item>
+
+        <item> #Defence cape
+            <id>9753</id>
+        </item>
+
+        <item> #Strength cape
+            <id>9750</id>
+        </item>
+
+        <item> #Constitution cape
+            <id>9768</id>
+        </item>
+
+        <item> #Ranging cape
+            <id>9756</id>
+        </item>
+
+        <item> #Prayer cape
+            <id>9759</id>
+        </item>
+
+        <item> #Magic cape
+            <id>9762</id>
+        </item>
+
+        <item> #Cooking cape
+            <id>9801</id>
+        </item>
+
+        <item> #Woodcutting cape
+            <id>9807</id>
+        </item>
+
+        <item> #Fletching cape
+            <id>9783</id>
+        </item>
+
+        <item> #Fishing cape
+            <id>9798</id>
+        </item>
+
+        <item> #Firemaking cape
+            <id>9804</id>
+        </item>
+
+        <item> #Crafting cape
+            <id>9780</id>
+        </item>
+
+        <item> #Smithing cape
+            <id>9795</id>
+        </item>
+
+        <item> #Mining cape
+            <id>9792</id>
+        </item>
+
+        <item> #Herblore cape
+            <id>9774</id>
+        </item>
+
+        <item> #Agility cape
+            <id>9771</id>
+        </item>
+
+        <item> #Thieving cape
+            <id>9777</id>
+        </item>
+
+        <item> #Slayer cape
+            <id>9786</id>
+        </item>
+
+        <item> #Farming cape
+            <id>9810</id>
+        </item>
+
+        <item> #Runecraft cape
+            <id>9765</id>
+        </item>
+
+        <item> #Construct. cape
+            <id>9789</id>
+        </item>
+
+        <item> #Hunter cape
+            <id>9948</id>
+        </item>
+
+        <item> #Summoning cape
+            <id>12169</id>
+        </item>
+
+        <item> #Dungeoneering cape
+            <id>18508</id>
+        </item>
+
+    </shop>
+    <shop>
+        <id>19</id>
+        <name>Skillcape (t) Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Attack cape (t)
+            <id>9748</id>
+        </item>
+
+        <item> #Defence cape (t)
+            <id>9754</id>
+        </item>
+
+        <item> #Strength cape (t)
+            <id>9751</id>
+        </item>
+
+        <item> #Constitution cape (t)
+            <id>9769</id>
+        </item>
+
+        <item> #Ranging cape (t)
+            <id>9757</id>
+        </item>
+
+        <item> #Prayer cape (t)
+            <id>9760</id>
+        </item>
+
+        <item> #Magic cape (t)
+            <id>9763</id>
+        </item>
+
+        <item> #Cooking cape (t)
+            <id>9802</id>
+        </item>
+
+        <item> #Woodcut. cape (t)
+            <id>9808</id>
+        </item>
+
+        <item> #Fletching cape (t)
+            <id>9784</id>
+        </item>
+
+        <item> #Fishing cape (t)
+            <id>9799</id>
+        </item>
+
+        <item> #Firemaking cape (t)
+            <id>9805</id>
+        </item>
+
+        <item> #Crafting cape (t)
+            <id>9781</id>
+        </item>
+
+        <item> #Smithing cape (t)
+            <id>9796</id>
+        </item>
+
+        <item> #Mining cape (t)
+            <id>9793</id>
+        </item>
+
+        <item> #Herblore cape (t)
+            <id>9775</id>
+        </item>
+
+        <item> #Agility cape (t)
+            <id>9772</id>
+        </item>
+
+        <item> #Thieving cape (t)
+            <id>9778</id>
+        </item>
+
+        <item> #Slayer cape (t)
+            <id>9787</id>
+        </item>
+
+        <item> #Farming cape (t)
+            <id>9811</id>
+        </item>
+
+        <item> #Runecraft cape (t)
+            <id>9766</id>
+        </item>
+
+        <item> #Construct. cape (t)
+            <id>9790</id>
+        </item>
+
+        <item> #Hunter cape (t)
+            <id>9949</id>
+        </item>
+
+        <item> #Summoning cape (t)
+            <id>12170</id>
+        </item>
+
+        <item> #Dungeoneering cape (t)
+            <id>18509</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>20</id>
+        <name>Merchant's Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Banana
+            <id>18199</id>
+        </item>
+
+        <item> #Gold ring
+            <id>15009</id>
+        </item>
+
+        <item> #Damaged Hammer
+            <id>17401</id>
+        </item>
+
+        <item> #Staff
+            <id>1389</id>
+        </item>
+
+        <item> #Scimitar
+            <id>11998</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>21</id>
+        <name>General store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Tinderbox
+            <id>590</id>
+        </item>
+
+        <item> #Iron hatchet
+            <id>1349</id>
+        </item>
+
+        <item> #Anti-dragon shield
+            <id>1540</id>
+        </item>
+
+        <item> #Phoenix necklace
+            <id>11090</id>
+        </item>
+
+        <item> #Ring of recoil
+            <id>2550</id>
+        </item>
+
+        <item> #Ring of life
+            <id>2570</id>
+        </item>
+
+        <item> #Spade
+            <id>952</id>
+        </item>
+
+        <item> #Mith grapple
+            <id>9418</id>
+        </item>
+
+        <item> #Mith grapple
+            <id>4155</id>
+        </item>
+
+        <item> #Necklace mould
+            <id>1597</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>22</id>
+        <name>Mining Instructors Store - Tools</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Bronze pickaxe
+            <id>1265</id>
+        </item>
+
+        <item> #Iron pickaxe
+            <id>1267</id>
+        </item>
+
+        <item> #Steel pickaxe
+            <id>1269</id>
+        </item>
+
+        <item> #Mithril pickaxe
+            <id>1273</id>
+        </item>
+
+        <item> #Adamant pickaxe
+            <id>1271</id>
+        </item>
+
+        <item> #Rune pickaxe
+            <id>1275</id>
+        </item>
+
+        <item> #Hammer
+            <id>2347</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>23</id>
+        <name>Mining Instructors Store - Bars</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Bronze bar
+            <id>2349</id>
+        </item>
+
+        <item> #Iron bar
+            <id>2351</id>
+        </item>
+
+        <item> #Steel bar
+            <id>2353</id>
+        </item>
+
+        <item> #Gold bar
+            <id>2357</id>
+        </item>
+
+        <item> #Mithril bar
+            <id>2359</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>24</id>
+        <name>Stardust Shop</name>
+        <currency>com.varrock.model.container.impl.currency.StardustCurrency</currency>
+
+        <item> #3rd age pickaxe
+            <id>50014</id>
+        </item>
+
+        <item> #Dragon pickaxe
+            <id>15259</id>
+        </item>
+
+        <item> #Inferno adze
+            <id>13661</id>
+        </item>
+
+        <item> #Charm box
+            <id>10025</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>25</id>
+        <name>Culinomanchers Chest</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Culinaromancer's gloves 1
+            <id>7453</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 2
+            <id>7454</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 3
+            <id>7455</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 4
+            <id>7456</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 5
+            <id>7457</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 6
+            <id>7458</id>
+        </item>
+
+        <item> #Culinaromancer's Gloves 7
+            <id>7459</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 8
+            <id>7460</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 9
+            <id>7461</id>
+        </item>
+
+        <item> #Culinaromancer's gloves 10
+            <id>7462</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>26</id>
+        <name>Castle Wars Shop</name>
+        <currency>com.varrock.model.container.impl.currency.CastleWarsCurrency</currency>
+
+        <item> #Basic decorative helm
+            <id>4071</id>
+        </item>
+
+        <item> #Basic decorative platebody
+            <id>4069</id>
+        </item>
+
+        <item> #Basic decorative sword
+            <id>4068</id>
+        </item>
+
+        <item> #Basic decorative shield
+            <id>4072</id>
+        </item>
+
+        <item> #Basic decorative platelegs
+            <id>4070</id>
+        </item>
+
+        <item> #Detailed decorative helm
+            <id>4506</id>
+        </item>
+
+        <item> #Detailed decorative platebody
+            <id>4504</id>
+        </item>
+
+        <item> #Detailed decorative sword
+            <id>4503</id>
+        </item>
+
+        <item> #Detailed decorative shield
+            <id>4507</id>
+        </item>
+
+        <item> #Detailed decorative platelegs
+            <id>4505</id>
+        </item>
+
+        <item> #Intricate decorative helm
+            <id>4511</id>
+        </item>
+
+        <item> #Intricate decorative platebody
+            <id>4509</id>
+        </item>
+
+        <item> #Intricate decorative sword
+            <id>4508</id>
+        </item>
+
+        <item> #Intricate decorative shield
+            <id>4512</id>
+        </item>
+
+        <item> #Intricate decorative platelegs
+            <id>4510</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>27</id>
+        <name>Trivia Rewards Store</name>
+        <currency>com.varrock.model.container.impl.currency.TriviaPointCurrency</currency>
+
+        <item> #Casket
+            <id>7956</id>
+        </item>
+
+        <item> #Crystal key
+            <id>989</id>
+        </item>
+
+        <item> #Ring of wealth
+            <id>2572</id>
+        </item>
+
+        <item> #Overload (4)
+            <id>15332</id>
+        </item>
+
+        <item> #Rocktail
+            <id>15273</id>
+        </item>
+
+        <item> #Dragon bones
+            <id>537</id>
+        </item>
+
+        <item> #Charm Box
+            <id>10025</id>
+        </item>
+
+        <item> #Charming imp
+            <id>6500</id>
+        </item>
+
+        <item> #Gilded full helm
+            <id>3486</id>
+        </item>
+
+        <item> #Gilded platebody
+            <id>3481</id>
+        </item>
+
+        <item> #Gilded platelegs
+            <id>3483</id>
+        </item>
+
+        <item> #Gilded plateskirt
+            <id>3485</id>
+        </item>
+
+        <item> #Gilded kiteshield
+            <id>3488</id>
+        </item>
+
+        <item> #Gold-trimmed blue wizard set
+            <id>11906</id>
+        </item>
+
+        <item> #Black gold-trimmed armour set (sk)
+            <id>11884</id>
+        </item>
+
+        <item> #Zamorakian spear
+            <id>41889</id>
+        </item>
+
+        <item> #Armadyl full helm
+            <id>19422</id>
+        </item>
+
+        <item> #Armadyl platebody
+            <id>19413</id>
+        </item>
+
+        <item> #Armadyl platelegs
+            <id>19416</id>
+        </item>
+
+        <item> #Armadyl kiteshield
+            <id>19425</id>
+        </item>
+
+        <item> #Bandos full helm
+            <id>19437</id>
+        </item>
+
+        <item> #Bandos platebody
+            <id>19428</id>
+        </item>
+
+        <item> #Bandos platelegs
+            <id>19431</id>
+        </item>
+
+        <item> #Bandos kiteshield
+            <id>19440</id>
+        </item>
+
+        <item> #Red robin hood hat
+            <id>14000</id>
+        </item>
+
+        <item> #Yellow robin hood hat
+            <id>14001</id>
+        </item>
+
+        <item> #Blue robin hood hat
+            <id>14002</id>
+        </item>
+
+        <item> #White robin hood hat
+            <id>14003</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>28</id>
+        <name>Slayer Points Store</name>
+        <currency>com.varrock.model.container.impl.currency.SlayerPointCurrency</currency>
+
+        <item> #Slayer helmet
+            <id>13263</id>
+        </item>
+
+        <item> #Ring of slaying (8)
+            <id>13281</id>
+        </item>
+
+        <item> #Balmung
+            <id>15403</id>
+        </item>
+
+        <item> #Saradomin sword
+            <id>11730</id>
+        </item>
+
+        <item> #Barrelchest anchor
+            <id>10887</id>
+        </item>
+
+        <item> #Dark bow
+            <id>11235</id>
+        </item>
+
+        <item> #Abyssal whip
+            <id>4151</id>
+        </item>
+
+        <item> #Staff of light
+            <id>15486</id>
+        </item>
+
+        <item> #Hand cannon
+            <id>15241</id>
+        </item>
+
+        <item> #Hand cannon shot
+            <id>15243</id>
+        </item>
+
+        <item> #Fighter torso
+            <id>10551</id>
+        </item>
+
+        <item> #Ring of wealth
+            <id>2572</id>
+        </item>
+
+        <item> #Robin hood hat
+            <id>2581</id>
+        </item>
+
+        <item> #Ranger boots
+            <id>2577</id>
+        </item>
+
+        <item> #Amulet of fury
+            <id>6585</id>
+        </item>
+
+        <item> #Zamorakian spear
+            <id>11716</id>
+        </item>
+
+        <item> #Bonecrusher
+            <id>18337</id>
+        </item>
+
+        <item> #Dragon boots
+            <id>11732</id>
+        </item>
+
+        <item> #Berserker ring (i)
+            <id>15220</id>
+        </item>
+
+        <item> #Warrior ring (i)
+            <id>15020</id>
+        </item>
+
+        <item> #Archers' ring (i)
+            <id>15019</id>
+        </item>
+
+        <item> #Seers' ring (i)
+            <id>15018</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>29</id>
+        <name>Prestige Points Store</name>
+        <currency>com.varrock.model.container.impl.currency.PrestigePointCurrency</currency>
+
+    </shop>
+
+    <shop>
+        <id>30</id>
+        <name>Smuggler's Items</name>
+        <currency>com.varrock.model.container.impl.currency.DungeoneeringCoinCurrency</currency>
+
+        <item> #Bronze hatchet
+            <id>1351</id>
+        </item>
+
+        <item> #Logs
+            <id>1511</id>
+        </item>
+
+        <item> #Tinderbox
+            <id>590</id>
+        </item>
+
+        <item> #Raw heim crab
+            <id>17797</id>
+        </item>
+
+        <item> #Raw red-eye
+            <id>17799</id>
+        </item>
+
+        <item> #Raw dusk eel
+            <id>17801</id>
+        </item>
+
+        <item> #Raw giant flatfish
+            <id>17803</id>
+        </item>
+
+        <item> #Raw short-finned eel
+            <id>17805</id>
+        </item>
+
+        <item> #Raw web snipper
+            <id>17807</id>
+        </item>
+
+        <item> #Raw bouldabass
+            <id>17809</id>
+        </item>
+
+        <item> #Raw salve eel
+            <id>17811</id>
+        </item>
+
+        <item> #Raw blue crab
+            <id>17813</id>
+        </item>
+
+        <item> #Super strength (3)
+            <id>157</id>
+        </item>
+
+        <item> #Super attack (3)
+            <id>145</id>
+        </item>
+
+        <item> #Super defence (3)
+            <id>163</id>
+        </item>
+
+        <item> #Ranging potion (3)
+            <id>169</id>
+        </item>
+
+        <item> #Magic potion (3)
+            <id>3042</id>
+        </item>
+
+        <item> #Prayer potion (3)
+            <id>139</id>
+        </item>
+
+        <item> #Adamant scimitar
+            <id>1331</id>
+        </item>
+
+        <item> #Yew shortbow
+            <id>857</id>
+        </item>
+
+        <item> #Adamant arrow
+            <id>890</id>
+        </item>
+
+        <item> #Staff of water
+            <id>1383</id>
+        </item>
+
+        <item> #Air rune
+            <id>556</id>
+            <amount>10000</amount>
+        </item>
+
+        <item> #Mind rune
+            <id>558</id>
+            <amount>10000</amount>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>31</id>
+        <name>Dungeoneering Store</name>
+        <currency>com.varrock.model.container.impl.currency.DungeoneeringTokenCurrency</currency>
+
+        <item> #Chaotic longsword
+            <id>18351</id>
+        </item>
+
+        <item> #Chaotic rapier
+            <id>18349</id>
+        </item>
+
+        <item> #Chaotic maul
+            <id>18353</id>
+        </item>
+
+        <item> #Chaotic crossbow
+            <id>18357</id>
+        </item>
+
+        <item> #Chaotic staff
+            <id>18355</id>
+        </item>
+
+        <item> #Chaotic kiteshield
+            <id>18359</id>
+        </item>
+
+        <item> #Eagle-eye kiteshield
+            <id>18361</id>
+        </item>
+
+        <item> #Farseer kiteshield
+            <id>18363</id>
+        </item>
+
+        <item> #Arcane stream necklace
+            <id>18335</id>
+        </item>
+
+        <item> #Charming imp
+            <id>6500</id>
+        </item>
+
+        <item> #Tome of frost
+            <id>18346</id>
+        </item>
+
+        <item> #Bonecrusher
+            <id>18337</id>
+        </item>
+
+        <item> #Ring of vigour
+            <id>19669</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>32</id>
+        <name>Supply Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Lobster
+            <id>379</id>
+        </item>
+
+        <item> #Swordfish
+            <id>373</id>
+        </item>
+
+        <item> #Monkfish
+            <id>7946</id>
+        </item>
+
+        <item> #Shark
+            <id>385</id>
+        </item>
+
+        <item> #Manta ray
+            <id>391</id>
+        </item>
+
+        <item> #Super defence (4)
+            <id>2442</id>
+        </item>
+
+        <item> #Super attack (4)
+            <id>2436</id>
+        </item>
+
+        <item> #Super strength (4)
+            <id>2440</id>
+        </item>
+
+        <item> #Ranging potion (4)
+            <id>2444</id>
+        </item>
+
+        <item> #Magic potion (4)
+            <id>3040</id>
+        </item>
+
+        <item> #Saradomin brew (4)
+            <id>6685</id>
+        </item>
+
+        <item> #Antifire (4)
+            <id>2452</id>
+        </item>
+
+        <item> #Super restore (4)
+            <id>3024</id>
+        </item>
+
+        <item> #Prayer potion (4)
+            <id>2434</id>
+        </item>
+
+        <item> #Antipoison (4)
+            <id>2446</id>
+        </item>
+
+        <item> #Lobster
+            <id>380</id>
+        </item>
+
+        <item> #Swordfish
+            <id>374</id>
+        </item>
+
+        <item> #Monkfish
+            <id>7947</id>
+        </item>
+
+        <item> #Shark
+            <id>386</id>
+        </item>
+
+        <item> #Manta ray
+            <id>392</id>
+        </item>
+
+        <item> #Super defence (4)
+            <id>2443</id>
+        </item>
+
+        <item> #Super attack (4)
+            <id>2437</id>
+        </item>
+
+        <item> #Super strength (4)
+            <id>2441</id>
+        </item>
+
+        <item> #Ranging potion (4)
+            <id>2445</id>
+        </item>
+
+        <item> #Magic potion (4)
+            <id>3041</id>
+        </item>
+
+        <item> #Saradomin brew (4)
+            <id>6686</id>
+        </item>
+
+        <item> #Antifire (4)
+            <id>2453</id>
+        </item>
+
+        <item> #Super restore (4)
+            <id>3025</id>
+        </item>
+
+        <item> #Prayer potion (4)
+            <id>2435</id>
+        </item>
+
+        <item> #Antipoison (4)
+            <id>2447</id>
+        </item>
+
+        <item> #Cooked karambwan
+            <id>3144</id>
+        </item>
+
+        <item> #Cooked karambwan
+            <id>3145</id>
+        </item>
+
+        <item> #Varrock teleport
+            <id>8007</id>
+        </item>
+
+        <item> #Lumbridge teleport
+            <id>8008</id>
+        </item>
+
+        <item> #Falador teleport
+            <id>8009</id>
+        </item>
+
+        <item> #Camelot teleport
+            <id>8010</id>
+        </item>
+
+        <item> #Ardougne teleport
+            <id>8011</id>
+        </item>
+
+        <item> #Watchtower t'port
+            <id>8012</id>
+        </item>
+
+        <item> #Dwarven rock cake
+            <id>7509</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>33</id>
+        <name>Fancy Clothing Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Chef's hat
+            <id>1949</id>
+        </item>
+
+        <item> #Blue hat
+            <id>660</id>
+        </item>
+
+        <item> #Turquoise hat
+            <id>664</id>
+        </item>
+
+        <item> #Cream hat
+            <id>662</id>
+        </item>
+
+        <item> #Green hat
+            <id>658</id>
+        </item>
+
+        <item> #Pink hat
+            <id>656</id>
+        </item>
+
+        <item> #Blue robe top
+            <id>640</id>
+        </item>
+
+        <item> #Turquoise robe top
+            <id>644</id>
+        </item>
+
+        <item> #Cream robe top
+            <id>642</id>
+        </item>
+
+        <item> #Green robe top
+            <id>638</id>
+        </item>
+
+        <item> #Pink robe top
+            <id>636</id>
+        </item>
+
+        <item> #Camo helmet
+            <id>6656</id>
+        </item>
+
+        <item> #Camo top
+            <id>6654</id>
+        </item>
+
+        <item> #Camo bottoms
+            <id>6655</id>
+        </item>
+
+        <item> #Leather gloves
+            <id>1059</id>
+        </item>
+
+        <item> #Leather boots
+            <id>1061</id>
+        </item>
+
+        <item> #Blue robe bottoms
+            <id>650</id>
+        </item>
+
+        <item> #Turquoise robe bottoms
+            <id>654</id>
+        </item>
+
+        <item> #Cream robe bottoms
+            <id>652</id>
+        </item>
+
+        <item> #Green robe bottoms
+            <id>648</id>
+        </item>
+
+        <item> #Pink robe bottoms
+            <id>646</id>
+        </item>
+
+        <item> #Cape
+            <id>1007</id>
+        </item>
+
+        <item> #Cape
+            <id>1027</id>
+        </item>
+
+        <item> #Cape
+            <id>1021</id>
+        </item>
+
+        <item> #Cape
+            <id>1029</id>
+        </item>
+
+        <item> #Cape
+            <id>1023</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>34</id>
+        <name>Wilfred's Items - Tools</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Bronze hatchet
+            <id>1351</id>
+        </item>
+
+        <item> #Iron hatchet
+            <id>1349</id>
+        </item>
+
+        <item> #Steel hatchet
+            <id>1353</id>
+        </item>
+
+        <item> #Mithril hatchet
+            <id>1355</id>
+        </item>
+
+        <item> #Adamant hatchet
+            <id>1357</id>
+        </item>
+
+        <item> #Rune hatchet
+            <id>1359</id>
+        </item>
+
+        <item> #Knife
+            <id>946</id>
+        </item>
+
+        <item> #Tinderbox
+            <id>590</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>35</id>
+        <name>Wilfred's Items - Logs</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Logs
+            <id>1511</id>
+        </item>
+
+        <item> #Oak logs
+            <id>1521</id>
+        </item>
+
+        <item> #Willow logs
+            <id>1519</id>
+        </item>
+
+        <item> #Maple logs
+            <id>1517</id>
+        </item>
+
+        <item> #Yew logs
+            <id>1515</id>
+        </item>
+
+        <item> #Magic logs
+            <id>1513</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>36</id>
+        <name>Ignatius Vulcan's Items</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Tinderbox
+            <id>590</id>
+        </item>
+
+        <item> #Logs
+            <id>1511</id>
+        </item>
+
+        <item> #Oak logs
+            <id>1521</id>
+        </item>
+
+        <item> #Willow logs
+            <id>1519</id>
+        </item>
+
+        <item> #Maple logs
+            <id>1517</id>
+        </item>
+
+        <item> #Yew logs
+            <id>1515</id>
+        </item>
+
+        <item> #Magic logs
+            <id>1513</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>37</id>
+        <name>Master Fisher's Items</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Small fishing net
+            <id>303</id>
+        </item>
+
+        <item> #Big fishing net
+            <id>305</id>
+        </item>
+
+        <item> #Fishing rod
+            <id>307</id>
+        </item>
+
+        <item> #Fly fishing rod
+            <id>309</id>
+        </item>
+
+        <item> #Lobster pot
+            <id>301</id>
+        </item>
+
+        <item> #Harpoon
+            <id>311</id>
+        </item>
+
+        <item> #Fishing bait
+            <id>313</id>
+        </item>
+
+        <item> #Feather
+            <id>314</id>
+        </item>
+
+        <item> #Dark fishing bait
+            <id>41940</id>
+        </item>
+
+        <item> #Red vine worm
+            <id>25</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>38</id>
+        <name>Master Farmer's Items</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Rake
+            <id>5341</id>
+        </item>
+
+        <item> #Seed dibber
+            <id>5343</id>
+        </item>
+
+        <item> #Secateurs
+            <id>5329</id>
+        </item>
+
+        <item> #Watering can (8)
+            <id>5340</id>
+        </item>
+
+        <item> #Plant cure
+            <id>6036</id>
+        </item>
+
+        <item> #Compost
+            <id>6032</id>
+        </item>
+
+        <item> #Guam seed
+            <id>5291</id>
+        </item>
+
+        <item> #Marrentill seed
+            <id>5292</id>
+        </item>
+
+        <item> #Tarromin seed
+            <id>5293</id>
+        </item>
+
+        <item> #Harralander seed
+            <id>5294</id>
+        </item>
+
+        <item> #Ranarr seed
+            <id>5295</id>
+        </item>
+
+        <item> #Toadflax seed
+            <id>5296</id>
+        </item>
+
+        <item> #Irit seed
+            <id>5297</id>
+        </item>
+
+        <item> #Avantoe seed
+            <id>5298</id>
+        </item>
+
+        <item> #Kwuarm seed
+            <id>5299</id>
+        </item>
+
+        <item> #Snapdragon seed
+            <id>5300</id>
+        </item>
+
+        <item> #Cadantine seed
+            <id>5301</id>
+        </item>
+
+        <item> #Lantadyme seed
+            <id>5302</id>
+        </item>
+
+        <item> #Dwarf weed seed
+            <id>5303</id>
+        </item>
+
+        <item> #Torstol seed
+            <id>5304</id>
+        </item>
+
+        <item> #Potato seed
+            <id>5318</id>
+        </item>
+
+        <item> #Marigold seed
+            <id>5096</id>
+        </item>
+
+        <item> #Onion seed
+            <id>5319</id>
+        </item>
+
+        <item> #Cabbage seed
+            <id>5324</id>
+        </item>
+
+        <item> #Tomato seed
+            <id>5322</id>
+        </item>
+
+        <item> #Sweetcorn seed
+            <id>5320</id>
+        </item>
+
+        <item> #Strawberry seed
+            <id>5323</id>
+        </item>
+
+        <item> #Rosemary seed
+            <id>5097</id>
+        </item>
+
+        <item> #Nasturtium seed
+            <id>5098</id>
+        </item>
+
+        <item> #Woad seed
+            <id>5099</id>
+        </item>
+
+        <item> #Limpwurt seed
+            <id>5100</id>
+        </item>
+
+        <item> #White lily seed
+            <id>14589</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>39</id>
+        <name>Pikkupstix's Materials I</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Pouch
+            <id>12155</id>
+        </item>
+
+        <item> #Spirit shards
+            <id>18016</id>
+        </item>
+
+        <item> #Spirit shard pack
+            <id>15262</id>
+        </item>
+
+        <item> #Wolf bones
+            <id>2859</id>
+        </item>
+
+        <item> #Spider carcass
+            <id>6291</id>
+        </item>
+
+        <item> #Thin snail
+            <id>3363</id>
+        </item>
+
+        <item> #Proboscis
+            <id>6319</id>
+        </item>
+
+        <item> #Bucket of sand
+            <id>1783</id>
+        </item>
+
+        <item> #Bronze claws
+            <id>3095</id>
+        </item>
+
+        <item> #Obsidian charm
+            <id>12168</id>
+        </item>
+
+        <item> #Raw rat meat
+            <id>2134</id>
+        </item>
+
+        <item> #Potato cactus
+            <id>3138</id>
+        </item>
+
+        <item> #Compost
+            <id>6032</id>
+        </item>
+
+        <item> #Chinchompa
+            <id>9976</id>
+        </item>
+
+        <item> #Vampire dust
+            <id>3325</id>
+        </item>
+
+        <item> #Honeycomb
+            <id>12156</id>
+        </item>
+
+        <item> #Ravager charm
+            <id>12164</id>
+        </item>
+
+        <item> #Spinner charm
+            <id>12166</id>
+        </item>
+
+        <item> #Torcher charm
+            <id>12167</id>
+        </item>
+
+        <item> #Shifter charm
+            <id>12165</id>
+        </item>
+
+        <item> #Marigolds
+            <id>6010</id>
+        </item>
+
+        <item> #Carved evil turnip
+            <id>12153</id>
+        </item>
+
+        <item> #Bagged plant 1
+            <id>8431</id>
+        </item>
+
+        <item> #Swamp toad
+            <id>2150</id>
+        </item>
+
+        <item> #Tortoise shell
+            <id>7939</id>
+        </item>
+
+    </shop>
+    <shop>
+        <id>40</id>
+        <name>Pikkupstix's Materials II</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Banana
+            <id>1963</id>
+        </item>
+
+        <item> #Pot of flour
+            <id>1933</id>
+        </item>
+
+        <item> #Polar kebbit fur
+            <id>10117</id>
+        </item>
+
+        <item> #Phoenix quill
+            <id>14616</id>
+        </item>
+
+        <item> #Granite (500g)
+            <id>6979</id>
+        </item>
+
+        <item> #Flowers
+            <id>2460</id>
+        </item>
+
+        <item> #Ruby harvest
+            <id>10020</id>
+        </item>
+
+        <item> #Talon beast charm
+            <id>12162</id>
+        </item>
+
+        <item> #Willow branch
+            <id>5933</id>
+        </item>
+
+        <item> #Fire talisman
+            <id>1442</id>
+        </item>
+
+        <item> #Earth talisman
+            <id>1440</id>
+        </item>
+
+        <item> #Air talisman
+            <id>1438</id>
+        </item>
+
+        <item> #Water talisman
+            <id>1444</id>
+        </item>
+
+        <item> #Water orb
+            <id>571</id>
+        </item>
+
+        <item> #Dagannoth hide
+            <id>6155</id>
+        </item>
+
+        <item> #Swamp lizard
+            <id>10149</id>
+        </item>
+
+        <item> #Unicorn horn
+            <id>237</id>
+        </item>
+
+        <item> #Raw rabbit
+            <id>3226</id>
+        </item>
+
+        <item> #Iron platebody
+            <id>1115</id>
+        </item>
+
+        <item> #Steel platebody
+            <id>1119</id>
+        </item>
+
+        <item> #Yak-hide
+            <id>10818</id>
+        </item>
+
+        <item> #Guthatrice egg
+            <id>12111</id>
+        </item>
+
+        <item> #Saratrice egg
+            <id>12113</id>
+        </item>
+
+        <item> #Zamatrice egg
+            <id>12115</id>
+        </item>
+
+        <item> #Pengatrice egg
+            <id>12117</id>
+        </item>
+
+        <item> #Coraxatrice egg
+            <id>12119</id>
+        </item>
+
+        <item> #Vulatrice egg
+            <id>12121</id>
+        </item>
+
+        <item> #Tinderbox
+            <id>590</id>
+        </item>
+
+        <item> #Gold ring
+            <id>1635</id>
+        </item>
+
+        <item> #Raw beef
+            <id>2132</id>
+        </item>
+
+        <item> #Raw bird meat
+            <id>9978</id>
+        </item>
+
+        <item> #Jug of water
+            <id>1937</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>41</id>
+        <name>Herblore Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Ingridient's book
+            <id>292</id>
+        </item>
+
+        <item> #Grimy guam
+            <id>199</id>
+        </item>
+
+        <item> #Vial of water
+            <id>228</id>
+        </item>
+
+        <item> #Eye of newt
+            <id>221</id>
+        </item>
+
+        <item> #Bear fur
+            <id>948</id>
+        </item>
+
+        <item> #Unicorn horn dust
+            <id>235</id>
+        </item>
+
+        <item> #Chocolate dust
+            <id>1975</id>
+        </item>
+
+        <item> #Toad's legs
+            <id>2152</id>
+        </item>
+
+        <item> #Goat horn dust
+            <id>9736</id>
+        </item>
+
+        <item> #Snape grass
+            <id>231</id>
+        </item>
+
+        <item> #Cockatrice egg
+            <id>12109</id>
+        </item>
+
+        <item> #Frog spawn
+            <id>5004</id>
+        </item>
+
+        <item> #Kebbit teeth dust
+            <id>10111</id>
+        </item>
+
+        <item> #Wimpy feather
+            <id>11525</id>
+        </item>
+
+        <item> #Dragon scale dust
+            <id>241</id>
+        </item>
+
+        <item> #White berries
+            <id>239</id>
+        </item>
+
+        <item> #Yew roots
+            <id>6049</id>
+        </item>
+
+        <item> #Wine of zamorak
+            <id>245</id>
+        </item>
+
+        <item> #Potato cactus
+            <id>3138</id>
+        </item>
+
+        <item> #Jangerberries
+            <id>247</id>
+        </item>
+
+        <item> #Crushed nest
+            <id>6693</id>
+        </item>
+
+        <item> #Papaya fruit
+            <id>5972</id>
+        </item>
+
+        <item> #Phoenix feather
+            <id>4621</id>
+        </item>
+
+        <item> #Ground mud runes
+            <id>9594</id>
+        </item>
+
+        <item> #Grenwall spikes
+            <id>12539</id>
+        </item>
+
+        <item> #Limpwurt root
+            <id>225</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>42</id>
+        <name>Runecrafting Items</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Air talisman
+            <id>1438</id>
+        </item>
+
+        <item> #Mind talisman
+            <id>1448</id>
+        </item>
+
+        <item> #Water talisman
+            <id>1444</id>
+        </item>
+
+        <item> #Earth talisman
+            <id>1440</id>
+        </item>
+
+        <item> #Fire talisman
+            <id>1442</id>
+        </item>
+
+        <item> #Body talisman
+            <id>1446</id>
+        </item>
+
+        <item> #Cosmic talisman
+            <id>1454</id>
+        </item>
+
+        <item> #Chaos talisman
+            <id>1452</id>
+        </item>
+
+        <item> #Law talisman
+            <id>1458</id>
+        </item>
+
+        <item> #Death talisman
+            <id>1456</id>
+        </item>
+
+        <item> #Blood talisman
+            <id>1450</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>43</id>
+        <name>Energy Fragment's Store</name>
+        <currency>com.varrock.model.container.impl.currency.EnergyFragmentCurrency</currency>
+
+        <item> #Small pouch
+            <id>5509</id>
+        </item>
+
+        <item> #Medium pouch
+            <id>5510</id>
+        </item>
+
+        <item> #Large pouch
+            <id>5512</id>
+        </item>
+
+        <item> #Runecrafter hat
+            <id>13626</id>
+        </item>
+
+        <item> #Runecrafter robe
+            <id>13624</id>
+        </item>
+
+        <item> #Runecrafter skirt
+            <id>13627</id>
+        </item>
+
+        <item> #Runecrafter gloves
+            <id>13628</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>44</id>
+        <name>Crafting Items</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Flax
+            <id>1779</id>
+        </item>
+
+        <item> #Chisel
+            <id>1755</id>
+        </item>
+
+        <item> #Uncut opal
+            <id>1625</id>
+        </item>
+
+        <item> #Uncut jade
+            <id>1627</id>
+        </item>
+
+        <item> #Uncut red topaz
+            <id>1629</id>
+        </item>
+
+        <item> #Uncut sapphire
+            <id>1623</id>
+        </item>
+
+        <item> #Uncut emerald
+            <id>1621</id>
+        </item>
+
+        <item> #Uncut ruby
+            <id>1619</id>
+        </item>
+
+        <item> #Uncut diamond
+            <id>1617</id>
+        </item>
+
+        <item> #Uncut dragonstone
+            <id>1631</id>
+        </item>
+
+        <item> #Needle
+            <id>1733</id>
+        </item>
+
+        <item> #Thread
+            <id>1734</id>
+        </item>
+
+        <item> #Cowhide
+            <id>1739</id>
+        </item>
+
+        <item> #Bow string
+            <id>1777</id>
+        </item>
+
+        <item> #Mould
+            <id>1592</id>
+        </item>
+
+        <item> #Mould
+            <id>1597</id>
+        </item>
+
+        <item> #Mould
+            <id>11065</id>
+        </item>
+
+        <item> #Mould
+            <id>1595</id>
+        </item>
+
+        <item> #wool
+            <id>1759</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>45</id>
+        <name>Nomad's Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Blue cape
+            <id>14642</id>
+        </item>
+
+        <item> #Red cape
+            <id>14641</id>
+        </item>
+
+        <item> #Brackish blade
+            <id>14017</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>46</id>
+        <name>Hunting Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Butterfly net
+            <id>10010</id>
+        </item>
+
+        <item> #Impling jar
+            <id>11260</id>
+        </item>
+
+        <item> #Box trap
+            <id>10008</id>
+        </item>
+
+        <item> #Bird snare
+            <id>10006</id>
+        </item>
+
+        <item> #Larupia hat
+            <id>10045</id>
+        </item>
+
+        <item> #Larupia top
+            <id>10043</id>
+        </item>
+
+        <item> #Larupia legs
+            <id>10041</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>47</id>
+        <name>Agility Ticket Exchange</name>
+        <currency>com.varrock.model.container.impl.currency.AgilityTicketCurrency</currency>
+
+        <item> #Agile top
+            <id>14936</id>
+        </item>
+
+        <item> #Agile legs
+            <id>14938</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>48</id>
+        <name>Gambler's Items</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Mithril seeds
+            <id>299</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>50</id>
+        <name>Tzhaar Hur Lek's Store</name>
+        <currency>com.varrock.model.container.impl.currency.TokkulCurrency</currency>
+
+        <item> #Pet TzTok-Jad
+            <id>11978</id>
+        </item>
+
+        <item> #Tin ore
+            <id>438</id>
+        </item>
+
+        <item> #Copper ore
+            <id>436</id>
+        </item>
+
+        <item> #Iron ore
+            <id>440</id>
+        </item>
+
+        <item> #Coal
+            <id>453</id>
+        </item>
+
+        <item> #Silver ore
+            <id>442</id>
+        </item>
+
+        <item> #Gold ore
+            <id>444</id>
+        </item>
+
+        <item> #Mithril ore
+            <id>447</id>
+        </item>
+
+        <item> #Adamantite ore
+            <id>449</id>
+        </item>
+
+        <item> #Runite ore
+            <id>451</id>
+        </item>
+
+        <item> #Uncut sapphire
+            <id>1623</id>
+        </item>
+
+        <item> #Uncut emerald
+            <id>1621</id>
+        </item>
+
+        <item> #Uncut ruby
+            <id>1619</id>
+        </item>
+
+        <item> #Uncut diamond
+            <id>1617</id>
+        </item>
+
+        <item> #Uncut dragonstone
+            <id>1631</id>
+        </item>
+
+        <item> #Uncut onyx
+            <id>6571</id>
+        </item>
+
+        <item> #Berserker necklace
+            <id>11128</id>
+        </item>
+
+        <item> #Toktz-ket-xil
+            <id>6524</id>
+        </item>
+
+        <item> #Toktz-xil-ak
+            <id>6523</id>
+        </item>
+
+        <item> #Toktz-mej-tal
+            <id>6526</id>
+        </item>
+
+        <item> #Toktz-xil-ul
+            <id>6522</id>
+        </item>
+
+        <item> #Tzhaar-ket-om
+            <id>6528</id>
+        </item>
+
+        <item> #Obsidian cape
+            <id>6568</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>51</id>
+        <name>Ironman Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item>
+            <id>1540</id>
+        </item>
+
+        <item> #Small fishing net
+            <id>303</id>
+        </item>
+
+        <item> #Big fishing net
+            <id>305</id>
+        </item>
+
+        <item> #Fishing rod
+            <id>307</id>
+        </item>
+
+        <item> #Fly fishing rod
+            <id>309</id>
+        </item>
+
+        <item> #Lobster pot
+            <id>301</id>
+        </item>
+
+        <item> #Harpoon
+            <id>311</id>
+        </item>
+
+        <item> #Fishing bait
+            <id>313</id>
+        </item>
+
+        <item> #Dark fishing bait
+            <id>41940</id>
+        </item>
+
+        <item> #Red vine worm
+            <id>25</id>
+        </item>
+
+        <item> #Spade
+            <id>952</id>
+        </item>
+
+        <item> #Hammer
+            <id>2347</id>
+        </item>
+
+        <item> #Chisel
+            <id>1755</id>
+        </item>
+
+
+        <item> #Needle
+            <id>1733</id>
+        </item>
+
+        <item> #Thread
+            <id>1734</id>
+        </item>
+
+        <item> #Tinderbox
+            <id>590</id>
+        </item>
+
+        <item> #Knife
+            <id>946</id>
+        </item>
+
+        <item> #Vial of water
+            <id>228</id>
+        </item>
+
+        <item> #pestle and mortar
+            <id>233</id>
+        </item>
+
+        <item> #Bronze pickaxe
+            <id>1265</id>
+        </item>
+
+        <item> #Iron hatchet
+            <id>1349</id>
+        </item>
+
+        <item> #Rake
+            <id>5341</id>
+        </item>
+
+        <item> #Seed dibber
+            <id>5343</id>
+        </item>
+
+        <item> #Secateurs
+            <id>5329</id>
+        </item>
+
+        <item> #Watering can (8)
+            <id>5340</id>
+        </item>
+
+        <item> #eye of newt
+            <id>222</id>
+        </item>
+
+        <item> #bucket
+            <id>1926</id>
+        </item>
+
+        <item> #lockp
+            <id>1523</id>
+        </item>
+
+        <item> #lockp
+            <id>12155</id>
+        </item>
+
+        <item> #lockp
+            <id>18016</id>
+            <amount>100000</amount>
+        </item>
+
+        <item> #ava's accum
+            <id>10499</id>
+        </item>
+
+        <item> #Mould
+            <id>1592</id>
+        </item>
+
+        <item> #Mould
+            <id>1597</id>
+        </item>
+
+        <item> #Mould
+            <id>11065</id>
+        </item>
+
+        <item> #Mould
+            <id>1595</id>
+        </item>
+
+        <item> #wool
+            <id>1759</id>
+        </item>
+
+        <item> #cannon piece
+            <id>6</id>
+        </item>
+
+        <item> #cannon piece
+            <id>8</id>
+        </item>
+
+        <item> #cannon piece
+            <id>10</id>
+        </item>
+
+        <item> #cannon piece
+            <id>12</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>52</id>
+        <name>Donator Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #Flask
+            <id>14152</id>
+        </item>
+
+        <item> #Flask
+            <id>14164</id>
+        </item>
+
+        <item> #Flask
+            <id>14176</id>
+        </item>
+
+        <item> #Flask
+            <id>14188</id>
+        </item>
+
+        <item> #Flask
+            <id>14403</id>
+        </item>
+
+        <item> #Flask
+            <id>14415</id>
+        </item>
+
+        <item> #Flask
+            <id>14427</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>53</id>
+        <name>Extreme Donator Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+        <item> #raw rocktail
+            <id>15270</id>
+        </item>
+
+        <item> #cannonball
+            <id>2</id>
+        </item>
+
+        <item> #rune bar
+            <id>2363</id>
+        </item>
+
+        <item> #dragon bone
+            <id>536</id>
+        </item>
+
+        <item> #ruby bolts (e)
+            <id>9242</id>
+        </item>
+
+    </shop>
+
+    <shop>
+        <id>54</id>
+        <name>Vote Shop</name>
+        <currency>com.varrock.model.container.impl.currency.VotePointCurrency</currency>
+
+        <item> #overload
+            <id>15332</id>
+        </item>
+
+        <item> #super combat
+            <id>42695</id>
+        </item>
+
+        <item> #emerald rapier
+            <id>52316</id>
+        </item>
+
+        <item> #fire cape
+            <id>6570</id>
+        </item>
+
+        <item> #tokhaar
+            <id>19111</id>
+        </item>
+
+        <item> #eye of the ranger
+            <id>19672</id>
+        </item>
+
+        <item> #eye of the ranger
+            <id>19673</id>
+        </item>
+
+        <item> #eye of the ranger
+            <id>19674</id>
+        </item>
+
+        <item> #mystery box
+            <id>6199</id>
+        </item>
+
+        <item> #charm box
+            <id>10025</id>
+        </item>
+
+        <item> #gnome scarf
+            <id>9470</id>
+        </item>
+
+        <item> #fishbowl helmet
+            <id>7534</id>
+        </item>
+
+        <item> #diving apparatus
+            <id>7535</id>
+        </item>
+
+        <item> #top hat
+            <id>13101</id>
+        </item>
+
+        <item> #flippers
+            <id>6666</id>
+        </item>
+
+        <item> #greegree
+            <id>4031</id>
+        </item>
+
+        <item> #halo
+            <id>18744</id>
+        </item>
+
+        <item> #halo
+            <id>18745</id>
+        </item>
+
+        <item> #halo
+            <id>18746</id>
+        </item>
+
+        <item> #infinity hat
+            <id>15620</id>
+        </item>
+
+        <item> #infinity top
+            <id>15618</id>
+        </item>
+
+        <item> #infinity bottoms
+            <id>15622</id>
+        </item>
+
+        <item> #voting hat
+            <id>15069</id>
+        </item>
+
+        <item> #voting hat
+            <id>15071</id>
+        </item>
+
+        <item> #amulet of fury
+            <id>6585</id>
+        </item>
+
+        <item> #dragon boots
+            <id>11732</id>
+        </item>
+
+        <item> #staff of light
+            <id>14004</id>
+        </item>
+
+        <item> #staff of light
+            <id>14005</id>
+        </item>
+
+        <item> #staff of light
+            <id>14006</id>
+        </item>
+
+        <item> #staff of light
+            <id>14007</id>
+        </item>
+
+        <item> #spectral
+            <id>13744</id>
+        </item>
+
+    </shop>
+
+
+    <shop>
+        <id>55</id>
+        <name>Zombie minigame Store</name>
+        <currency>com.varrock.model.container.impl.currency.ZombieCurrency</currency>
+
+        <item> #Pet TzTok-Jad
+            <id>11978</id>
+        </item>
+
+        <item> #Tin ore
+            <id>438</id>
+        </item>
+
+        <item> #Copper ore
+            <id>436</id>
+        </item>
+
+        <item> #Iron ore
+            <id>440</id>
+        </item>
+
+        <item> #Coal
+            <id>453</id>
+        </item>
+
+        <item> #Silver ore
+            <id>442</id>
+        </item>
+
+        <item> #Gold ore
+            <id>444</id>
+        </item>
+
+        <item> #Mithril ore
+            <id>447</id>
+        </item>
+
+        <item> #Adamantite ore
+            <id>449</id>
+        </item>
+
+        <item> #Runite ore
+            <id>451</id>
+        </item>
+
+        <item> #Uncut sapphire
+            <id>1623</id>
+        </item>
+
+        <item> #Uncut emerald
+            <id>1621</id>
+        </item>
+
+        <item> #Uncut ruby
+            <id>1619</id>
+        </item>
+
+        <item> #Uncut diamond
+            <id>1617</id>
+        </item>
+
+        <item> #Uncut dragonstone
+            <id>1631</id>
+        </item>
+
+        <item> #Uncut onyx
+            <id>6571</id>
+        </item>
+
+        <item> #Berserker necklace
+            <id>11128</id>
+        </item>
+
+        <item> #Toktz-ket-xil
+            <id>6524</id>
+        </item>
+
+        <item> #Toktz-xil-ak
+            <id>6523</id>
+        </item>
+
+        <item> #Toktz-mej-tal
+            <id>6526</id>
+        </item>
+
+        <item> #Toktz-xil-ul
+            <id>6522</id>
+        </item>
+
+        <item> #Tzhaar-ket-om
+            <id>6528</id>
+        </item>
+
+        <item> #Obsidian cape
+            <id>6568</id>
+        </item>
+        
+    </shop>
+	
+	<shop>
+        <id>56</id>
+        <name>Donator Store</name>
+        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+
+
+      <item> #firecape
+            <id>6570</id>
+        </item>
+		<item> #tokhaar
+            <id>19111</id>
+        </item>
+		
+        <item> #Bandos chestplate
+            <id>11726</id>
+        </item>
+
+        <item> #Bandos tassets
+            <id>11724</id>
+        </item>
+		
+        <item> #Armadyl helmet
+            <id>11718</id>
+        </item>
+
+        <item> #Armadyl body
+            <id>11720</id>
+        </item>
+
+        <item> #Armadyl legs
+            <id>11722</id>
+        </item>
+		
+		 <item> #dragonfire shield
+            <id>11283</id>
+        </item>
+		<item> #dragon kiteshield
+            <id>11613</id>
+        </item>
+        
+        <item> #dragon kiteshield
+            <id>13887</id>
+        </item>
+        <item> #dragon kiteshield
+            <id>13893</id>
+        </item>
+        
+        <item> #dragon kiteshield
+            <id>13896</id>
+        </item>
+        <item> #dragon kiteshield
+            <id>13884</id>
+        </item>
+        <item> #dragon kiteshield
+            <id>13890</id>
+        </item>
+		
+        <item> #Steadfast boots
+            <id>20000</id>
+        </item>
+
+        <item> #Ragefire boots
+            <id>20002</id>
+        </item>
+
+        <item> #Glaiven boots
+            <id>20001</id>
+        </item>
+        
+        <item> #Glaiven boots
+            <id>13239</id>
+        </item>
+		<item> #Glaiven boots
+            <id>12708</id>
+        </item>
+        <item> #Glaiven boots
+            <id>13235</id>
+        </item>
+        
+        <item> #Glaiven boots
+            <id>12282</id>
+        </item>
+
+        <item> #Dragon claws
+            <id>14484</id>
+        </item>
+
+        <item> #Korasi's sword
+            <id>19780</id>
+        </item>
+
+        <item> #Elder maul
+            <id>51003</id>
+        </item>
+
+        <item> #Armadyl godsword
+            <id>11694</id>
+        </item>
+        <item> #Armadyl godsword
+            <id>13899</id>
+        </item>
+		<item> #Vine Whip
+            <id>20061</id>
+        </item>
+		<item> #Volcanic whip
+            <id>42773</id>
+        </item>
+         <item> #Abyssal tentacle
+            <id>11554</id>
+        </item>
+
+        <item> #Heavy ballista
+            <id>49481</id>
+        </item>
+
+
+        <item> #Toxic staff
+            <id>12284</id>
+        </item>
+		
+		 <item> #armadyl crossbow
+            <id>13051</id>
+        </item>
+
+        <item> #Zaryte bow
+            <id>4706</id>
+        </item>
+		  <item> #Ring of the gods
+            <id>12601</id>
+        </item>
+
+        <item> #Necklace of anguish
+            <id>49547</id>
+        </item>
+  		<item> #Necklace of anguish
+            <id>49553</id>
+        </item>
+       <item> #Necklace of anguish
+            <id>17291</id>
+        </item>
+
+        
+
+    </shop>
+	
+	<shop>
+        <id>57</id>
+        <name>Donator Store</name>
+        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+
+		<item> #mbox
+            <id>6199</id>
+        </item>
+		<item> #supermbox
+            <id>4003</id>
+        </item>
+		<item> #ultimatembox
+            <id>4005</id>
+        </item>
+		<item> #10scroll
+            <id>10942</id>
+        </item>
+		<item> #20scroll
+            <id>10934</id>
+        </item>
+		<item> #50scroll
+            <id>10935</id>
+        </item>
+		<item> #100scroll
+            <id>10943</id>
+        </item>
+		<item> #runepouch
+            <id>42791</id>
+        </item>
+		<item> #runepouch
+            <id>2572</id>
+        </item>
+		<item> #runepouch
+            <id>6500</id>
+        </item>
+		
+		
+
+    </shop>
+	
+	<shop>
+        <id>58</id>
+        <name>Donator Store</name>
+        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+
+		<item> #torva helm
+            <id>14008</id>
+        </item>
+		<item> #torva platebody
+            <id>14009</id>
+        </item>
+		<item> #torva legs
+            <id>14010</id>
+        </item>
+		<item> #Pernix helm
+            <id>14011</id>
+        </item>
+		<item> #Pernix body
+            <id>14012</id>
+        </item>
+		<item> #Pernix legs
+            <id>14013</id>
+        </item>
+		<item> #virtus helm
+            <id>14014</id>
+        </item>
+		<item> #virtus body
+            <id>14015</id>
+        </item>
+		<item> #virtus legs
+            <id>14016</id>
+        </item>
+		
+        <item> #partyhat
+            <id>1038</id>
+        </item>
+		        <item> #partyhat
+            <id>1040</id>
+        </item>
+		        <item> #partyhat
+            <id>1042</id>
+        </item>
+		   <item> #partyhat
+            <id>1044</id>
+        </item>
+		        <item> #partyhat
+            <id>1046</id>
+        </item>
+		        <item> #partyhat
+            <id>1048</id>
+        </item>
+		        <item> #partyhat
+            <id>1038</id>
+        </item>
+		        <item> #partyhat
+            <id>1038</id>
+        </item>
+		        <item> #partyhat
+            <id>1038</id>
+        </item>
+		
+		<item> #hween
+            <id>1053</id>
+        </item>
+		<item> #hween
+            <id>1055</id>
+        </item>
+		<item> #hween
+            <id>1057</id>
+        </item>
+		<item> #santa
+            <id>1050</id>
+        </item>
+
+        
+
+    </shop>
+	
+	<shop>
+        <id>59</id>
+        <name>Donator Store</name>
+        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+
+		<item> #custompartyhat
+            <id>14044</id>
+        </item>
+		<item> #custompartyhat
+            <id>14045</id>
+        </item>
+		<item> #custompartyhat
+            <id>14046</id>
+        </item>
+
+		<item> #customsanta
+            <id>14048</id>
+        </item>
+		
+		<item> #customhween
+            <id>11288</id>
+        </item>
+	
+		
+        <item> #customhween
+            <id>11292</id>
+        </item>
+	
+		    <item> #customhween
+            <id>11289</id>
+        </item>
+        <item> #customhween
+            <id>11291</id>
+        </item>
+		<item> #custompartyhat
+            <id>14050</id>
+        </item>
+		
+		<item> #customsanta
+            <id>14051</id>
+        </item>
+        
+		<item> #customsanta
+            <id>14049</id>
+        </item>
+	
+		<item> #customsanta
+            <id>14052</id>
+        </item>
+		<item> #flamingskull
+            <id>1588</id>
+        </item>
+		
+		<item> #sled
+            <id>4084</id>
+        </item>
+		<item> #grain
+            <id>5607</id>
+        </item>
+        <item> #grain
+            <id>1419</id>
+        </item>
+        
+        <item> #icons
+            <id>15445</id>
+        </item>
+        <item> #icons
+            <id>15450</id>
+        </item>
+        <item> #icons
+            <id>15455</id>
+        </item>
+        <item> #icons
+            <id>15460</id>
+        </item>
+		
+
+        
+
+    </shop>
+	
+	<shop>
+		<id>66</id>
+		<name>Construction Store</name>
+        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+
+		<item> #Lit candle
+			<id>34</id>
+		</item>
+
+		<item> #Plank
+			<id>960</id>
+		</item>
+
+		<item> #Oak plank
+			<id>8778</id>
+		</item>
+
+		<item> #Teak plank
+			<id>8780</id>
+		</item>
+
+		<item> #Mahogany plank
+			<id>8782</id>
+		</item>
+
+		<item> #Gold leaf
+			<id>8784</id>
+		</item>
+
+		<item> #Marble block
+			<id>8786</id>
+		</item>
+
+		<item> #Magic stone
+			<id>8788</id>
+		</item>
+
+		<item> #Bolt of cloth
+			<id>8790</id>
+		</item>
+
+		<item> #Clockwork
+			<id>8792</id>
+		</item>
+
+		<item> #Saw
+			<id>8794</id>
+		</item>
+
+		<item> #Molten glass
+			<id>1775</id>
+		</item>
+
+		<item> #Soft clay
+			<id>1761</id>
+		</item>
+
+		<item> #Limestone brick
+			<id>3420</id>
+		</item>
+
+		<item> #Steel bar
+			<id>2353</id>
+		</item>
+
+		<item> #Iron bar
+			<id>2351</id>
+		</item>
+
+		<item> #Rope
+			<id>954</id>
+		</item>
+
+		<item> #Watering can
+			<id>5331</id>
+		</item>
+
+		<item> #Bagged sunflower
+			<id>8457</id>
+		</item>
+
+		<item> #Bagged marigolds
+			<id>8459</id>
+		</item>
+
+		<item> #Bagged roses
+			<id>8461</id>
+		</item>
+
+		<item> #Bagged rosemary
+			<id>8451</id>
+		</item>
+
+		<item> #Bagged daffodils
+			<id>8453</id>
+		</item>
+
+		<item> #Bagged bluebells
+			<id>8455</id>
+		</item>
+
+		<item> #Thorny hedge
+			<id>8437</id>
+		</item>
+
+		<item> #Nice hedge
+			<id>8439</id>
+		</item>
+
+		<item> #Small box hedge
+			<id>8441</id>
+		</item>
+
+		<item> #Topiary hedge
+			<id>8443</id>
+		</item>
+
+		<item> #Fancy hedge
+			<id>8445</id>
+		</item>
+
+		<item> #Tall fancy hedge
+			<id>8447</id>
+		</item>
+
+		<item> #Tall box hedge
+			<id>8449</id>
+		</item>
+
+		<item> #Skull
+			<id>964</id>
+		</item>
+
+		<item> #Bucket of water
+			<id>1929</id>
+		</item>
+
+		<item> #Red dye
+			<id>1763</id>
+		</item>
+
+		<item> #Steel nails
+			<id>1539</id>
+		</item>
+
+	</shop>
+
+
+</list>

@@ -1,0 +1,14 @@
+,
+{
+  "npc-id": 5068,
+  "position": {
+    "x": 3056,
+    "y": 3302,
+    "z": 0
+  },
+  "walking-policy": {
+    "coordinate": false,
+    "radius": -1
+  },
+  "face": "SOUTH"
+}
