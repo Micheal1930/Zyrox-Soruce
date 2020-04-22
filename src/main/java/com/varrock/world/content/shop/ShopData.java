@@ -13,7 +13,7 @@ public enum ShopData {
     MAGIC_STAFFS("Staffs", 1),
     MAGIC_RUNES("Runes", 7),
     MAGIC_ARMOUR("Armour", 8),
-    ESTATE_PLANK("Estate shop", 66),//try it
+    ESTATE_PLANK("Estate shop", 66, true),//try it
 
     COOKING_FISH("Fish", 4),
 
