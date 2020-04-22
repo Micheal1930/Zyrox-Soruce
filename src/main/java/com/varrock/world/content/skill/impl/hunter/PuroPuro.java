@@ -264,7 +264,7 @@ public class PuroPuro {
 	 * @param itemId	The jar the player is looting
 	 */
 	public static void lootJar(final Player player, Item jar, JarData jarData) {
-		if(player == null || jar == null || jarData == null || !player.getClickDelay().elapsed(2000))
+		if(player == null || jar == null || jarData == null || !player.getClickDelay().elapsed(500))
 			return;
 		if(player.getInventory().getFreeSlots() < 2) {
 			player.getPacketSender().sendMessage("You need at least 2 free inventory space to loot this.");
