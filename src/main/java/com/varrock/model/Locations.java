@@ -1958,7 +1958,6 @@ public class Locations {
         }
 
         public static boolean inMulti(GameCharacter gc) {
-
             if (gc.getRegionID() == 9043) {
                 return true;
             }
@@ -1967,17 +1966,16 @@ public class Locations {
                 return true;
             }
 
+            boolean KBD = isInArea(gc, 2251, 4676, 2289, 4716);
+            if(KBD)
+                return true;
+
+
             if (gc.getLocation() == WILDERNESS) {
                 int x = gc.getPosition().getX(), y = gc.getPosition().getY();
 
                 if (x >= 3270 && x <= 3300 && y >= 3920 && y <= 3947) {
                     return false;
-                }
-
-                boolean kbd = x >= 2251 && x <= 2292 && y >= 4673 && y <= 4717;
-
-                if(kbd) {
-                    return true;
                 }
 
                 if (x >= 3195 && x <= 3285 && y >= 3705 && y <= 3785 || x >= 3120 && x <= 3350 && y >= 3865 && y <= 3903
@@ -2015,6 +2013,10 @@ public class Locations {
             }
 
             return gc.getLocation().resource;
+        }
+
+        public static boolean isInArea(Entity player, int bottomLeftX, int bottomLeftY, int topRightX, int topRightY) {
+            return (player.getPosition().getX() >= bottomLeftX && player.getPosition().getX() <= topRightX && player.getPosition().getY() >= bottomLeftY && player.getPosition().getY() <= topRightY);
         }
 
         public boolean isSummoningAllowed() {
