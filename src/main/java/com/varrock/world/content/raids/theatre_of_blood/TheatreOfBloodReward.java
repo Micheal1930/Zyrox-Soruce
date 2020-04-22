@@ -37,7 +37,8 @@ public class TheatreOfBloodReward {
 				rareLootPlayer.setRaidsLoot(new Item(ExtremelyRares[Misc.getRandom(ExtremelyRares.length - 1)]));
 			}
 			rareLootPlayer.rareRaidLoot = true;
-			rareLootPlayer.setRaidsLootSecond(new Item(1965, 1));
+			int loot = Misc.getRandom(UNCOMMON_REWARDS.length - 1);
+			rareLootPlayer.setRaidsLootSecond(new Item(UNCOMMON_REWARDS[loot], Misc.inclusiveRandom(35, 60)));
 		}
 
 		for (Player member : party.getPartyMembers()) {
@@ -49,7 +50,7 @@ public class TheatreOfBloodReward {
 					int loot = Misc.getRandom(UNCOMMON_REWARDS.length - 1);
 
 					member.setRaidsLoot(new Item(UNCOMMON_REWARDS[loot], Misc.inclusiveRandom(35, 60)));
-					member.setRaidsLootSecond(new Item(1965, 1));
+					member.setRaidsLootSecond(new Item(UNCOMMON_REWARDS[loot], Misc.inclusiveRandom(35, 60)));
 				}
 			} else {
 				if (member != null) {
@@ -57,7 +58,7 @@ public class TheatreOfBloodReward {
 					int loot = Misc.getRandom(UNCOMMON_REWARDS.length - 1);
 
 					member.setRaidsLoot(new Item(UNCOMMON_REWARDS[loot], Misc.inclusiveRandom(35, 60)));
-					member.setRaidsLootSecond(new Item(1965, 1));
+					member.setRaidsLootSecond(new Item(UNCOMMON_REWARDS[loot], Misc.inclusiveRandom(35, 60)));
 				}
 			}
 		}
