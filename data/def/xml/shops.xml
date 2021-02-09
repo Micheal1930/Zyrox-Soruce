@@ -4,7 +4,7 @@
     <shop>
         <id>1</id>
         <name>Magic Store - Staffs</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # First row
 
@@ -38,7 +38,7 @@
     <shop>
         <id>2</id>
         <name>Ranged Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # First row
 
@@ -216,7 +216,7 @@
     <shop>
         <id>3</id>
         <name>Melee Store - Weapons</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # First row
 
@@ -385,7 +385,7 @@
     <shop>
         <id>4</id>
         <name>Cooking Store - Fish</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # Raw fish
 
@@ -438,7 +438,7 @@
     <shop>
         <id>5</id>
         <name>Fishing Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Small fishing net
             <id>303</id>
@@ -484,7 +484,7 @@
     <shop>
         <id>7</id>
         <name>Magic Store - Runes</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item>
             <id>556</id>
@@ -563,7 +563,7 @@
     <shop>
         <id>8</id>
         <name>Magic Store - Armour</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item>
             <id>6109</id>
@@ -750,7 +750,7 @@
     <shop>
         <id>9</id>
         <name>Blood Money - Misc</name>
-        <currency>com.varrock.model.container.impl.currency.BloodMoneyCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.BloodMoneyCurrency</currency>
 
         <item> #Abyssal whip
             <id>4151</id>
@@ -921,7 +921,7 @@
     <shop>
         <id>10</id>
         <name>Blood Money - Barrows</name>
-        <currency>com.varrock.model.container.impl.currency.BloodMoneyCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.BloodMoneyCurrency</currency>
 
         <item> #Dharok's great axe
             <id>4718</id>
@@ -1083,7 +1083,7 @@
     <shop>
         <id>11</id>
         <name>Blood Money - Untradeables</name>
-        <currency>com.varrock.model.container.impl.currency.BloodMoneyCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.BloodMoneyCurrency</currency>
 
         <item> #void top
             <id>8839</id>
@@ -1164,7 +1164,7 @@
     <shop>
         <id>12</id>
         <name>Ranged Store - Weapons</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # First row
 
@@ -1317,7 +1317,7 @@
     <shop>
         <id>13</id>
         <name>Ranged Store - Armour</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # First row
 
@@ -1467,7 +1467,7 @@
     <shop>
         <id>14</id>
         <name>Ranged Store - Ammunition</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # First row
 
@@ -1541,7 +1541,7 @@
     <shop>
         <id>15</id>
         <name>Melee Store - Armour</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         # First row
 
@@ -1736,7 +1736,7 @@
     <shop>
         <id>16</id>
         <name>Boss Point Store</name>
-        <currency>com.varrock.model.container.impl.currency.BossPointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.BossPointCurrency</currency>
 
         <item> #Barrows - ahrim's set
             <id>11846</id>
@@ -1851,7 +1851,7 @@
     <shop>
         <id>17</id>
         <name>Skillcape Hood Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Attack hood
             <id>9749</id>
@@ -1957,7 +1957,7 @@
     <shop>
         <id>18</id>
         <name>Skillcape Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Attack cape
             <id>9747</id>
@@ -2063,7 +2063,7 @@
     <shop>
         <id>19</id>
         <name>Skillcape (t) Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Attack cape (t)
             <id>9748</id>
@@ -2170,7 +2170,7 @@
     <shop>
         <id>20</id>
         <name>Merchant's Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Banana
             <id>18199</id>
@@ -2197,7 +2197,7 @@
     <shop>
         <id>21</id>
         <name>General store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Tinderbox
             <id>590</id>
@@ -2244,7 +2244,7 @@
     <shop>
         <id>22</id>
         <name>Mining Instructors Store - Tools</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Bronze pickaxe
             <id>1265</id>
@@ -2279,7 +2279,7 @@
     <shop>
         <id>23</id>
         <name>Mining Instructors Store - Bars</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Bronze bar
             <id>2349</id>
@@ -2306,7 +2306,7 @@
     <shop>
         <id>24</id>
         <name>Stardust Shop</name>
-        <currency>com.varrock.model.container.impl.currency.StardustCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.StardustCurrency</currency>
 
         <item> #3rd age pickaxe
             <id>50014</id>
@@ -2329,7 +2329,7 @@
     <shop>
         <id>25</id>
         <name>Culinomanchers Chest</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Culinaromancer's gloves 1
             <id>7453</id>
@@ -2376,7 +2376,7 @@
     <shop>
         <id>26</id>
         <name>Castle Wars Shop</name>
-        <currency>com.varrock.model.container.impl.currency.CastleWarsCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CastleWarsCurrency</currency>
 
         <item> #Basic decorative helm
             <id>4071</id>
@@ -2443,7 +2443,7 @@
     <shop>
         <id>27</id>
         <name>Trivia Rewards Store</name>
-        <currency>com.varrock.model.container.impl.currency.TriviaPointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.TriviaPointCurrency</currency>
 
         <item> #Casket
             <id>7956</id>
@@ -2562,7 +2562,7 @@
     <shop>
         <id>28</id>
         <name>Slayer Points Store</name>
-        <currency>com.varrock.model.container.impl.currency.SlayerPointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.SlayerPointCurrency</currency>
 
         <item> #Slayer helmet
             <id>13263</id>
@@ -2657,14 +2657,14 @@
     <shop>
         <id>29</id>
         <name>Prestige Points Store</name>
-        <currency>com.varrock.model.container.impl.currency.PrestigePointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.PrestigePointCurrency</currency>
 
     </shop>
 
     <shop>
         <id>30</id>
         <name>Smuggler's Items</name>
-        <currency>com.varrock.model.container.impl.currency.DungeoneeringCoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.DungeoneeringCoinCurrency</currency>
 
         <item> #Bronze hatchet
             <id>1351</id>
@@ -2769,7 +2769,7 @@
     <shop>
         <id>31</id>
         <name>Dungeoneering Store</name>
-        <currency>com.varrock.model.container.impl.currency.DungeoneeringTokenCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.DungeoneeringTokenCurrency</currency>
 
         <item> #Chaotic longsword
             <id>18351</id>
@@ -2828,7 +2828,7 @@
     <shop>
         <id>32</id>
         <name>Supply Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Lobster
             <id>379</id>
@@ -2991,7 +2991,7 @@
     <shop>
         <id>33</id>
         <name>Fancy Clothing Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Chef's hat
             <id>1949</id>
@@ -3102,7 +3102,7 @@
     <shop>
         <id>34</id>
         <name>Wilfred's Items - Tools</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Bronze hatchet
             <id>1351</id>
@@ -3141,7 +3141,7 @@
     <shop>
         <id>35</id>
         <name>Wilfred's Items - Logs</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Logs
             <id>1511</id>
@@ -3172,7 +3172,7 @@
     <shop>
         <id>36</id>
         <name>Ignatius Vulcan's Items</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Tinderbox
             <id>590</id>
@@ -3207,7 +3207,7 @@
     <shop>
         <id>37</id>
         <name>Master Fisher's Items</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Small fishing net
             <id>303</id>
@@ -3254,7 +3254,7 @@
     <shop>
         <id>38</id>
         <name>Master Farmer's Items</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Rake
             <id>5341</id>
@@ -3389,7 +3389,7 @@
     <shop>
         <id>39</id>
         <name>Pikkupstix's Materials I</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Pouch
             <id>12155</id>
@@ -3495,7 +3495,7 @@
     <shop>
         <id>40</id>
         <name>Pikkupstix's Materials II</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Banana
             <id>1963</id>
@@ -3630,7 +3630,7 @@
     <shop>
         <id>41</id>
         <name>Herblore Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Ingridient's book
             <id>292</id>
@@ -3741,7 +3741,7 @@
     <shop>
         <id>42</id>
         <name>Runecrafting Items</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Air talisman
             <id>1438</id>
@@ -3792,7 +3792,7 @@
     <shop>
         <id>43</id>
         <name>Energy Fragment's Store</name>
-        <currency>com.varrock.model.container.impl.currency.EnergyFragmentCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.EnergyFragmentCurrency</currency>
 
         <item> #Small pouch
             <id>5509</id>
@@ -3827,7 +3827,7 @@
     <shop>
         <id>44</id>
         <name>Crafting Items</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Flax
             <id>1779</id>
@@ -3910,7 +3910,7 @@
     <shop>
         <id>45</id>
         <name>Nomad's Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Blue cape
             <id>14642</id>
@@ -3929,7 +3929,7 @@
     <shop>
         <id>46</id>
         <name>Hunting Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Butterfly net
             <id>10010</id>
@@ -3964,7 +3964,7 @@
     <shop>
         <id>47</id>
         <name>Agility Ticket Exchange</name>
-        <currency>com.varrock.model.container.impl.currency.AgilityTicketCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.AgilityTicketCurrency</currency>
 
         <item> #Agile top
             <id>14936</id>
@@ -3979,7 +3979,7 @@
     <shop>
         <id>48</id>
         <name>Gambler's Items</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Mithril seeds
             <id>299</id>
@@ -3990,7 +3990,7 @@
     <shop>
         <id>50</id>
         <name>Tzhaar Hur Lek's Store</name>
-        <currency>com.varrock.model.container.impl.currency.TokkulCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.TokkulCurrency</currency>
 
         <item> #Pet TzTok-Jad
             <id>11978</id>
@@ -4089,7 +4089,7 @@
     <shop>
         <id>51</id>
         <name>Ironman Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item>
             <id>1540</id>
@@ -4258,7 +4258,7 @@
     <shop>
         <id>52</id>
         <name>Donator Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #Flask
             <id>14152</id>
@@ -4293,7 +4293,7 @@
     <shop>
         <id>53</id>
         <name>Extreme Donator Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
         <item> #raw rocktail
             <id>15270</id>
@@ -4320,7 +4320,7 @@
     <shop>
         <id>54</id>
         <name>Vote Shop</name>
-        <currency>com.varrock.model.container.impl.currency.VotePointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.VotePointCurrency</currency>
 
         <item> #overload
             <id>15332</id>
@@ -4452,7 +4452,7 @@
     <shop>
         <id>55</id>
         <name>Zombie minigame Store</name>
-        <currency>com.varrock.model.container.impl.currency.ZombieCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.ZombieCurrency</currency>
 
         <item> #Pet TzTok-Jad
             <id>11978</id>
@@ -4551,7 +4551,7 @@
 	<shop>
         <id>56</id>
         <name>Donator Store</name>
-        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.DonatorPointCurrency</currency>
 
 
       <item> #firecape
@@ -4696,7 +4696,7 @@
 	<shop>
         <id>57</id>
         <name>Donator Store</name>
-        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.DonatorPointCurrency</currency>
 
 		<item> #mbox
             <id>6199</id>
@@ -4736,7 +4736,7 @@
 	<shop>
         <id>58</id>
         <name>Donator Store</name>
-        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.DonatorPointCurrency</currency>
 
 		<item> #torva helm
             <id>14008</id>
@@ -4814,7 +4814,7 @@
 	<shop>
         <id>59</id>
         <name>Donator Store</name>
-        <currency>com.varrock.model.container.impl.currency.DonatorPointCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.DonatorPointCurrency</currency>
 
 		<item> #custompartyhat
             <id>14044</id>
@@ -4895,7 +4895,7 @@
 	<shop>
 		<id>66</id>
 		<name>Construction Store</name>
-        <currency>com.varrock.model.container.impl.currency.CoinCurrency</currency>
+        <currency>com.zyrox.model.container.impl.currency.CoinCurrency</currency>
 
 		<item> #Lit candle
 			<id>34</id>

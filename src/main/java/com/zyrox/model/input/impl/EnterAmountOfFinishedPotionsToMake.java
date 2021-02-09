@@ -1,0 +1,15 @@
+package com.zyrox.model.input.impl;
+
+import com.zyrox.model.input.EnterAmount;
+import com.zyrox.world.content.skill.impl.herblore.Herblore;
+import com.zyrox.world.entity.impl.player.Player;
+
+public class EnterAmountOfFinishedPotionsToMake extends EnterAmount {
+
+	@Override
+	public boolean handleAmount(Player player, int amount) {
+		Herblore.makeFinishedPotions(player, amount);
+		return false;
+	}
+
+}
