@@ -12,7 +12,7 @@ import com.zyrox.world.entity.impl.player.Player;
 public class ItemCommand extends NameCommand {
 
 	public ItemCommand() {
-		super("Nobles", "Adam");
+		super("Nobles","Micheal", "Adam");
 	}
 
 	@Override
