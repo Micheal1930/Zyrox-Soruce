@@ -9,5 +9,7 @@ public class EquipHandler {
         player.getPacketSender().sendInterface(66000);
         player.getPacketSender().sendString(66004,  player.getUsername());
         player.getPacketSender().sendString(66005, player.getTitle());
+        player.getPacketSender().sendString(66006,"Cb Level: " + player.getSkillManager().getCombatLevel());
+        player.getPacketSender().sendString(66007,"Total Level: " + player.getSkillManager().getTotalLevel());
     }
 }
