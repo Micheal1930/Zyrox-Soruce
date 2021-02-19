@@ -387,13 +387,13 @@ public class World {
 
     public static void load() {
 
-        GameServer.starterHandler.load();
-        GameServer.punishmentManager.load();
-        YouTubeManager.load();
-        ReferralCode.load();
-        SocialCodeManager.load();
+        //GameServer.starterHandler.load();
+        //GameServer.punishmentManager.load();
+        //YouTubeManager.load();
+        //ReferralCode.load();
+        //SocialCodeManager.load();
 
-        BetaTesters.load();
+        //BetaTesters.load();
 
         TaskManager.submit(new Task(2) { //1 second
             @Override

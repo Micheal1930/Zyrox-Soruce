@@ -1,6 +1,7 @@
 package com.zyrox.world.content.teleport;
 
 import com.zyrox.model.Locations;
+import com.zyrox.world.content.teleportation.TeleportData;
 import com.zyrox.world.content.transportation.TeleportHandler;
 import com.zyrox.world.entity.impl.player.Player;
 
@@ -16,23 +17,23 @@ public class TeleportManager {
             case 1716: //teleport icon
             case 51009: //teleport interface
             case 11008: //training in moderns
-                TeleportManager.sendInterface(player, TeleportCategory.MONSTERS);
+                player.getTeleportInterface().open(TeleportData.KING_BLACK_DRAGON);
                 return true;
             case 51013: //teleport interface
             case 11017: //minigames in moderns
-                TeleportManager.sendInterface(player, TeleportCategory.MINIGAMES);
+                player.getTeleportInterface().open(TeleportData.KING_BLACK_DRAGON);
                 return true;
             case 51017: //teleport interface
             case 11014: //bosses in moderns
-                TeleportManager.sendInterface(player, TeleportCategory.BOSSES);
+                player.getTeleportInterface().open(TeleportData.KING_BLACK_DRAGON);
                 return true;
             case 11020: //wilderness in moderns
             case 51021: //teleport interface
-                TeleportManager.sendInterface(player, TeleportCategory.WILDERNESS);
+                player.getTeleportInterface().open(TeleportData.KING_BLACK_DRAGON);
                 return true;
             case 11011: //dungeons in moderns
             case 51025: //teleport interface
-                TeleportManager.sendInterface(player, TeleportCategory.DUNGEONS);
+                player.getTeleportInterface().open(TeleportData.KING_BLACK_DRAGON);
                 return true;
         }
 

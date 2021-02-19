@@ -548,7 +548,7 @@ public class PacketSender {
     public PacketSender sendTabs() {
         sendTabInterface(GameSettings.ATTACK_TAB, 2423);
         sendTabInterface(GameSettings.SKILLS_TAB, 3917);// 31110);
-        sendTabInterface(GameSettings.QUESTS_TAB, 26600);
+        sendTabInterface(GameSettings.QUESTS_TAB, 55000); //26600
         sendTabInterface(GameSettings.ACHIEVEMENT_TAB, 45000);
         sendTabInterface(GameSettings.INVENTORY_TAB, 3213);
         sendTabInterface(GameSettings.EQUIPMENT_TAB, 27650);
@@ -987,6 +987,13 @@ public class PacketSender {
         if (option != null) {
             player.setPlayerInteractingOption(interactingOption);
         }
+        return this;
+    }
+    
+    public PacketSender sendNPCDescription(String option) {
+        PacketBuilder out = new PacketBuilder(129, PacketType.BYTE);
+        out.putString(option);
+        player.getSession().queueMessage(out);
         return this;
     }
 

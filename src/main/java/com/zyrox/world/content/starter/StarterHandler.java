@@ -21,6 +21,8 @@ public class StarterHandler {
     public HashMap<String, Integer> STARTER_ADDRESSES = new HashMap<>();
 
     public void addStarter(String ipAddress, String jserial) {
+    	if(ipAddress != null)
+    		return;
         SQLNetwork.insert("INSERT INTO " + SQLTable.getGameSchemaTable(SQLTable.SAVES_STARTERS) + " (ip_address, jserial) VALUES(?, ?)", new StringParameter(1, ipAddress), new StringParameter(2, jserial));
         STARTER_SERIALS.merge(jserial, 1, (a, b) -> a + b);
         STARTER_ADDRESSES.merge(ipAddress, 1, (a, b) -> a + b);

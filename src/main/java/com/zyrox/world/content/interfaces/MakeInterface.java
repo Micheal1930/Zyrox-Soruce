@@ -65,6 +65,9 @@ public class MakeInterface {
 	}
 
 	public static boolean checkButton(Player player, int buttonId) {
+		if(player.getInterfaceId() == 55500) {
+			return false;
+		}
 		switch (buttonId) {
 			case 55503:
 				player.getMakeInterface().amount = 1;
