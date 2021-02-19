@@ -1155,11 +1155,11 @@
   },
   {
     "npc-id": 947,
-    "face": WEST,
+    "face": NORTH,
     "position": {
-      "x": 3107,
-      "y": 3501,
-      "z": 0
+      "x": 2556,
+      "y": 2552,
+      "z": 1
     },
     "walking-policy": {
       "coordinate": false,
@@ -3107,18 +3107,18 @@
     "npc-id": 2292,
     "face": SOUTH,
     "position": {
-      "x": 3093,
-      "y": 3487,
-      "z": 0
+      "x": 2560,
+      "y": 2573,
+      "z": 1
     },
     "walking-policy": {
-      "coordinate": false,
-      "radius": -1
+      "coordinate": true,
+      "radius": 4
     }
   },
   {
     "npc-id": 520,
-    "face": SOUTH_EAST,
+    "face": SOUTH,
     "position": {
       "x": 2581,
       "y": 2556,
@@ -10254,6 +10254,71 @@
     }
   },
   {
+    "npc-id": 241,
+    "face": WEST,
+    "position": {
+      "x": 2931,
+      "y": 2676,
+      "z": 1
+    },
+    "walking-policy": {
+      "coordinate": false,
+      "radius": 6
+    }
+  },
+  {
+    "npc-id": 741,
+    "face": WEST,
+    "position": {
+      "x": 2931,
+      "y": 2677,
+      "z": 1
+    },
+    "walking-policy": {
+      "coordinate": false,
+      "radius": -1
+    }
+  },
+  {
+    "npc-id": 520,
+    "face": WEST,
+    "position": {
+      "x": 2931,
+      "y": 2675,
+      "z": 1
+    },
+    "walking-policy": {
+      "coordinate": false,
+      "radius": -1
+    }
+  },
+  {
+    "npc-id": 2676,
+    "face": WEST,
+    "position": {
+      "x": 2931,
+      "y": 2668,
+      "z": 1
+    },
+    "walking-policy": {
+      "coordinate": true,
+      "radius": 4
+    }
+  },
+  {
+    "npc-id": 5941,
+    "face": EAST,
+    "position": {
+      "x": 2912,
+      "y": 2662,
+      "z": 1
+    },
+    "walking-policy": {
+      "coordinate": false,
+      "radius": -1
+    }
+  },
+  {
     "npc-id": 5079,
     "face": EAST,
     "position": {
@@ -11596,13 +11661,13 @@
     "npc-id": 4247,
     "face": NORTH,
     "position": {
-      "x": 3095,
-      "y": 3500,
-      "z": 0
+      "x": 2556,
+      "y": 2596,
+      "z": 1
     },
     "walking-policy": {
-      "coordinate": false,
-      "radius": -1
+      "coordinate": true,
+      "radius": 4
     }
   },
   {

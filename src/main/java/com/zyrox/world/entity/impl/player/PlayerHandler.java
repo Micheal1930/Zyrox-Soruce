@@ -363,7 +363,7 @@ public class PlayerHandler {
                     if (player.getPreviousTile() != null) {
                         player.moveTo(player.getPreviousTile());
                     } else {
-                        player.moveTo(new Position(3088, 3485, 0));
+                        player.moveTo(new Position(2551, 2550,1));
                     }
                 }
                 if (player.getCannon() != null) {
