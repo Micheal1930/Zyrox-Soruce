@@ -266,8 +266,8 @@ public final class LoginDecoder extends FrameDecoder {
 			}
 		}
 		
-		int rights = ForumIntegration.getRights(player);
-		player.setRights(PlayerRights.forOrdinal(rights));
+//		int rights = ForumIntegration.getRights(player);
+//		player.setRights(PlayerRights.forOrdinal(rights));
 		
 		int response = LoginResponses.getResponse(player, msg);
 		

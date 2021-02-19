@@ -44,16 +44,16 @@ public class GameSettings {
 	 * The special staff names.
 	 */
 	public static final Set<String> SPECIAL_STAFF_NAMES = new HashSet<>(
-			Arrays.asList("Nobles", "Micheal", "Adam"));
+			Arrays.asList("Nobles", "Micheal", "Adam", "Goody"));
 
 	public static final Set<String> HIGHER_STAFF_NAMES = new HashSet<>(Arrays.asList());
 
-	public static final Set<String> DONATION_PUSHERS = new HashSet<>(Arrays.asList("Nobles", "Micheal", "Adam"));
+	public static final Set<String> DONATION_PUSHERS = new HashSet<>(Arrays.asList("Nobles", "Micheal", "Adam", "Goody"));
 
 	public static final Set<String> INVESTIGATOR = new HashSet<>(Arrays.asList());
 
 	public static final Set<String> STAFF_NAMES = new HashSet<>(
-			Arrays.asList("Nobles", "Micheal", "Adam"));
+			Arrays.asList("Nobles", "Micheal", "Adam", "Goody"));
 
 	public static final Set<String> GOD_MODE = new HashSet<>(Arrays.asList());
 

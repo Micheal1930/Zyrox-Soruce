@@ -6,6 +6,7 @@ import com.zyrox.net.packet.PacketListener;
 import com.zyrox.world.content.auction_house.AuctionHouseManager;
 import com.zyrox.world.content.auction_house.AuctionHouseSortType;
 import com.zyrox.world.content.interfaces.StartScreen2;
+import com.zyrox.world.content.teleportation.TeleportInterface;
 import com.zyrox.world.entity.impl.player.Player;
 
 
@@ -28,6 +29,9 @@ public class DropDownPacketListener implements PacketListener {
             case 28031:
                 StartScreen2.handleDropdown(player, identifier);
                 break;
+            case 55609:
+            	player.getTeleportInterface().sendTab(identifier);
+            	break;
         }
     }
 

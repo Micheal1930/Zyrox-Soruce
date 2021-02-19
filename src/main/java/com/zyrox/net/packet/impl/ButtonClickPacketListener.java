@@ -2,9 +2,9 @@ package com.zyrox.net.packet.impl;
 
 import com.zyrox.GameServer;
 import com.zyrox.GameSettings;
+import com.zyrox.model.Locations.Location;
 import com.zyrox.model.PlayerRights;
 import com.zyrox.model.Position;
-import com.zyrox.model.Locations.Location;
 import com.zyrox.model.container.impl.Bank;
 import com.zyrox.model.container.impl.Bank.BankSearchAttributes;
 import com.zyrox.model.definitions.WeaponInterfaces.WeaponInterface;
@@ -17,7 +17,24 @@ import com.zyrox.net.packet.Packet;
 import com.zyrox.net.packet.PacketListener;
 import com.zyrox.util.Misc;
 import com.zyrox.world.World;
-import com.zyrox.world.content.*;
+import com.zyrox.world.content.Achievements;
+import com.zyrox.world.content.BankPin;
+import com.zyrox.world.content.BonusManager;
+import com.zyrox.world.content.Consumables;
+import com.zyrox.world.content.CustomQuestTab;
+import com.zyrox.world.content.Debug;
+import com.zyrox.world.content.DropLog;
+import com.zyrox.world.content.Emotes;
+import com.zyrox.world.content.Enchanting;
+import com.zyrox.world.content.EnergyHandler;
+import com.zyrox.world.content.ExperienceLamps;
+import com.zyrox.world.content.ItemsKeptOnDeath;
+import com.zyrox.world.content.KillsTracker;
+import com.zyrox.world.content.LoyaltyProgramme;
+import com.zyrox.world.content.MoneyPouch;
+import com.zyrox.world.content.PlayerPanel;
+import com.zyrox.world.content.ProfileViewing;
+import com.zyrox.world.content.Sounds;
 import com.zyrox.world.content.Sounds.Sound;
 import com.zyrox.world.content.auction_house.AuctionHouseManager;
 import com.zyrox.world.content.clan.ClanChat;
@@ -72,6 +89,7 @@ import com.zyrox.world.content.skill.impl.smithing.SmithingData;
 import com.zyrox.world.content.skill.impl.summoning.PouchMaking;
 import com.zyrox.world.content.skill.impl.summoning.SummoningTab;
 import com.zyrox.world.content.teleport.TeleportManager;
+import com.zyrox.world.content.teleportation.TeleportInterface;
 import com.zyrox.world.content.transportation.TeleportHandler;
 import com.zyrox.world.content.tutorial.TutorialStages;
 import com.zyrox.world.content.well_of_goodwill.WellOfGoodwill;
@@ -1255,6 +1273,10 @@ public class ButtonClickPacketListener implements PacketListener {
         if (player.requiresUnlocking() && id != 2461 && id != 2462 && id != 2458 && id != 14922 && id != 14921 && !BankPin.isBankPinButton(id)) {
             return true;
         }
+        if(CustomQuestTab.handleButtonClicks(player, id))
+			return true;
+        if(player.getTeleportInterface().handleButtonClick(id))
+			return true;
         if (Construction.handleButtonClick(id, player)) {
             return true;
         }

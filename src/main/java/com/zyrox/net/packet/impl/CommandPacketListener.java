@@ -1,5 +1,18 @@
 package com.zyrox.net.packet.impl;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import org.apache.commons.lang.StringUtils;
+
 import com.google.common.primitives.Ints;
 import com.google.common.reflect.ClassPath;
 import com.google.common.reflect.ClassPath.ClassInfo;
@@ -8,8 +21,17 @@ import com.zyrox.commands.CommandHandler;
 import com.zyrox.engine.task.Task;
 import com.zyrox.engine.task.TaskManager;
 import com.zyrox.engine.task.impl.PlayerDeathTask;
-import com.zyrox.model.*;
+import com.zyrox.model.Animation;
+import com.zyrox.model.Flag;
+import com.zyrox.model.GameMode;
+import com.zyrox.model.GameObject;
+import com.zyrox.model.Graphic;
+import com.zyrox.model.Item;
+import com.zyrox.model.Locations;
 import com.zyrox.model.Locations.Location;
+import com.zyrox.model.PlayerRights;
+import com.zyrox.model.Position;
+import com.zyrox.model.Skill;
 import com.zyrox.model.container.impl.Inventory;
 import com.zyrox.model.definitions.ItemDefinition;
 import com.zyrox.model.definitions.NPCDrops;
@@ -26,8 +48,16 @@ import com.zyrox.util.Misc;
 import com.zyrox.util.NameUtils;
 import com.zyrox.util.TreasureIslandLootDumper;
 import com.zyrox.world.World;
-import com.zyrox.world.content.*;
+import com.zyrox.world.content.Achievements;
 import com.zyrox.world.content.Achievements.AchievementData;
+import com.zyrox.world.content.CustomObjects;
+import com.zyrox.world.content.Debug;
+import com.zyrox.world.content.EquipHandler;
+import com.zyrox.world.content.EvilTrees;
+import com.zyrox.world.content.PlayerLogs;
+import com.zyrox.world.content.PlayerPanel;
+import com.zyrox.world.content.ShootingStar;
+import com.zyrox.world.content.StaffList;
 import com.zyrox.world.content.clan.ClanChatManager;
 import com.zyrox.world.content.combat.strategy.CombatStrategies;
 import com.zyrox.world.content.combat.strategy.impl.CorporealBeast;
@@ -41,23 +71,14 @@ import com.zyrox.world.content.greatolm.RaidsReward;
 import com.zyrox.world.content.skill.SkillManager;
 import com.zyrox.world.content.skill.impl.dungeoneering.Dungeoneering;
 import com.zyrox.world.content.skill.impl.herblore.Decanting;
+import com.zyrox.world.content.teleportation.TeleportData;
+import com.zyrox.world.content.teleportation.TeleportInterface;
 import com.zyrox.world.content.transportation.TeleportHandler;
 import com.zyrox.world.content.transportation.TeleportType;
 import com.zyrox.world.entity.impl.npc.NPC;
 import com.zyrox.world.entity.impl.player.Player;
 import com.zyrox.world.entity.impl.player.PlayerHandler;
 import com.zyrox.world.entity.impl.player.link.rights.StaffPrivilegeLevel;
-
-import org.apache.commons.lang.StringUtils;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * This packet listener manages commands a player uses by using the command
@@ -250,6 +271,11 @@ public class CommandPacketListener implements PacketListener {
 		}
 		if (command[0].equalsIgnoreCase("equip")) {
 			EquipHandler.open(player);
+			return;
+		}
+		
+		if (command[0].equalsIgnoreCase("open")) {
+			player.getTeleportInterface().open(TeleportData.KING_BLACK_DRAGON);
 			return;
 		}
 
@@ -988,6 +1014,30 @@ public class CommandPacketListener implements PacketListener {
 			player.sendMessage("There are currently " + World.getNpcs().size() + " spawned and there are "
 					+ World.getNpcs().spaceLeft() + "/" + World.getNpcs().capacity() + " slots left.");
 			return;
+		}
+		if (command[0].equalsIgnoreCase("item")) {
+			int id = Integer.parseInt(command[1]);
+			if(id > ItemDefinition.getMaxAmountOfItems() || ItemDefinition.forId(id) == null) {
+				player.sendMessage("This item does not exist or is higher than " + ItemDefinition.getMaxAmountOfItems());
+				return;
+			}
+			long amount = command.length == 2 ? 1 : Long.parseLong(command[2].trim().toLowerCase().replaceAll("k", "000").replaceAll("m", "000000").replaceAll("b", "000000000"));
+			if (amount > Integer.MAX_VALUE && id != 995) {
+					amount = Integer.MAX_VALUE;
+			}
+			Item item = new Item(id);
+			if(!item.getDefinition().isStackable()) {
+				if(amount > player.getInventory().getFreeSlots()) {
+					amount = player.getInventory().getFreeSlots();
+				}
+			}
+			if(id == 995 && amount >= Integer.MAX_VALUE) {
+				player.setMoneyInPouch(player.getMoneyInPouch() + amount);
+				player.getPacketSender().sendString(8135, "" + player.getMoneyInPouch());
+			} else {
+				item = new Item(id, (int) amount);
+				player.getInventory().add(item, true);
+			}
 		}
 		if (command[0].equals("setlevel")) {
 			int skillId = Integer.parseInt(command[1]);

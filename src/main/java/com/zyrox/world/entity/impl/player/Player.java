@@ -86,6 +86,7 @@ import com.zyrox.world.content.skill.impl.summoning.Pouch;
 import com.zyrox.world.content.skill.impl.summoning.Summoning;
 import com.zyrox.world.content.teleport.Teleport;
 import com.zyrox.world.content.teleport.TeleportCategory;
+import com.zyrox.world.content.teleportation.TeleportInterface;
 import com.zyrox.world.content.tutorial.TutorialStages;
 import com.zyrox.world.content.youtube.YouTubeVideo;
 import com.zyrox.world.entity.impl.GameCharacter;
@@ -94,6 +95,12 @@ import com.zyrox.world.entity.impl.npc.NPC;
 import com.zyrox.world.entity.impl.npc.impl.Zulrah;
 
 public class Player extends GameCharacter {
+	
+	private TeleportInterface teleportInterface = new TeleportInterface(this);
+	
+	public TeleportInterface getTeleportInterface() {
+		return this.teleportInterface;
+	}
 
     private ActionManager actionManager = new ActionManager(this);
 
@@ -1326,7 +1333,7 @@ public int pkPointsTemp = -1;
     }
 
     public boolean isStaff() {
-        if (getRights() == PlayerRights.SUPPORT || getRights() == PlayerRights.MODERATOR || getRights() == PlayerRights.GLOBAL_MOD || getRights() == PlayerRights.ADMINISTRATOR ||  getRights() == PlayerRights.OWNER) {
+        if (getRights() == PlayerRights.SUPPORT || getRights() == PlayerRights.MODERATOR || getRights() == PlayerRights.GLOBAL_MOD || getRights() == PlayerRights.ADMINISTRATOR ||  getRights() == PlayerRights.OWNER || getRights() == PlayerRights.DEVELOPER) {
             return true;
         }
         return false;
@@ -1640,8 +1647,8 @@ public int pkPointsTemp = -1;
     public ArrayList<Integer> walkableInterfaceList = new ArrayList<>();
     public long lastHelpRequest;
     public long lastAuthClaimed;
-    public GameModes selectedGameMode;
-    public XPMode selectedXPMode;
+    public GameModes selectedGameMode = GameModes.NORMAL;
+    public XPMode selectedXPMode = XPMode.REGULAR;
     private boolean areCloudsSpawned;
 
     public void resetInterfaces() {

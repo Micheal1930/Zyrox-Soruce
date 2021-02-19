@@ -401,7 +401,7 @@ public class PlayerHandler {
                 World.getPlayers().remove(player);
                 session.setState(SessionState.LOGGED_OUT);
 
-                Hiscores.update(player);
+                //Hiscores.update(player);
 
                 new ConnectionLog().submit(
                         new LogField("username", LogFieldType.STRING, player.getName()),
