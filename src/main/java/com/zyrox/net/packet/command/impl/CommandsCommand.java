@@ -70,7 +70,7 @@ public class CommandsCommand extends Command {
             player.sendMessage("Showing commands for @dre@" + rights.toString() + "");
         }
 
-        DropViewer.sendItemInfoInterface(player, "@whi@Zyrox Commands ( @dre@" + commands.size() + " @whi@)", new ArrayList<>(), commands);
+        DropViewer.sendItemInfoInterface(player, "@whi@Varrock Commands ( @dre@" + commands.size() + " @whi@)", new ArrayList<>(), commands);
 
         return true;
     }

@@ -22,7 +22,7 @@ public class RegionChangePacketListener implements PacketListener {
 			player.getTolerance().reset();
 			//Hunter.handleRegionChange(player);
 			if(player.getRegionInstance() != null && player.getPosition().getX() != 1 && player.getPosition().getY() != 1) {
-				if(player.getRegionInstance().equals(RegionInstanceType.BARROWS) || player.getRegionInstance().equals(RegionInstanceType.WARRIORS_GUILD))
+				if(player.getRegionInstance().equals(RegionInstanceType.BARROWS) || player.getRegionInstance().getType().equals(RegionInstanceType.BOSS_INSTANCE) || player.getRegionInstance().equals(RegionInstanceType.WARRIORS_GUILD))
 					player.getRegionInstance().destruct();
 			}
 			

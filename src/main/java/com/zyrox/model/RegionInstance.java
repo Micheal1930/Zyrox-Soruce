@@ -29,7 +29,8 @@ public class RegionInstance {
 		VORKATH,
 		ZULRAH,
 		MUTANT_TARN,
-		RAIDS_2
+		RAIDS_2,
+		BOSS_INSTANCE
 	}
 	
 	private Player owner;
@@ -48,7 +49,7 @@ public class RegionInstance {
 
 	public void destruct() {
 		for(NPC n : npcsList) {
-			if(n != null && n.getConstitution() > 0 && World.getNpcs().get(n.getIndex()) != null && n.getSpawnedFor() != null && n.getSpawnedFor().getIndex() == owner.getIndex() && !n.isDying()) {
+			if(n != null && n.getConstitution() > 0 && World.getNpcs().get(n.getIndex()) != null && !n.isDying()) {
 				if(n.getId() >= 4278 && n.getId() <= 4284) {
 					owner.getMinigameAttributes().getWarriorsGuildAttributes().setSpawnedArmour(false);
 				}

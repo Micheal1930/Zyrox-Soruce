@@ -189,7 +189,7 @@ public class PuroPuro {
 		if(sucess) {
 			if(imp.isRegistered()) {
 				World.deregister(imp);
-				TaskManager.submit(new NPCRespawnTask(imp, imp.getDefinition().getRespawnTime()));
+				TaskManager.submit(new NPCRespawnTask(imp, imp.getDefinition().getRespawnTime(), player));
 				player.getInventory().delete(11260, 1).add(implingData.impJar, 1, "Hunter catch impling");
 				player.getPacketSender().sendMessage("You successfully catch the impling.");
 				player.getSkillManager().addExperience(Skill.HUNTER, implingData.XPReward * Skill.HUNTER.getModifier());

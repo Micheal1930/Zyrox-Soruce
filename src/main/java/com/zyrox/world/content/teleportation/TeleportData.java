@@ -5,12 +5,12 @@ import com.zyrox.model.Position;
 
 public enum TeleportData {
 	
-	DEFAULT(TeleportDescription.NONE, "N/A", new Position(1, 1), TeleportCategory.DEFAULT, 1, 200, new Item(995, 1)),
+	DEFAULT(false, TeleportDescription.NONE, "N/A", new Position(1, 1), TeleportCategory.DEFAULT, 1, 200, new Item(995, 1)),
 	
-	KING_BLACK_DRAGON(TeleportDescription.KBD, "King Black Dragon", new Position(2273, 4681, 0), TeleportCategory.BOSSES, 50, 2500, new Item(995, 100), new Item(995, 100), new Item(995, 100)),
-	SKOTIZO(TeleportDescription.NONE, "Skotizo", new Position(2771, 9185, 0), TeleportCategory.BOSSES, 7286, 2500, new Item(4151, 1), new Item(4152, 100), new Item(15501, 100));
+	KING_BLACK_DRAGON(true, TeleportDescription.KBD, "King Black Dragon", new Position(2273, 4681, 0), TeleportCategory.BOSSES, 50, 2500, new Item(995, 100), new Item(995, 100), new Item(995, 100)),
+	SKOTIZO(true, TeleportDescription.NONE, "Skotizo", new Position(2771, 9185, 0), TeleportCategory.BOSSES, 7286, 2500, new Item(4151, 1), new Item(4152, 100), new Item(15501, 100));
 	
-	TeleportData(TeleportDescription description, String name, Position position, TeleportCategory category, int npcID, int npcZoom, Item... items) {
+	TeleportData(boolean instance, TeleportDescription description, String name, Position position, TeleportCategory category, int npcID, int npcZoom, Item... items) {
 		this.description = description;
 		this.name = name;
 		this.position = position;
@@ -18,6 +18,7 @@ public enum TeleportData {
 		this.npcID = npcID;
 		this.npcZoom = npcZoom;
 		this.items = items;
+		this.instance = instance;
 	}
 	
 	private String name;
@@ -26,6 +27,7 @@ public enum TeleportData {
 	private TeleportCategory category;
 	private int npcID, npcZoom;
 	private Item[] items;
+	boolean instance;
 	
 	public static TeleportData findFirst(TeleportCategory category) {
 		for(TeleportData data : TeleportData.values()) {
@@ -107,5 +109,13 @@ public enum TeleportData {
 	
 	public void setItems(Item[] items) {
 		this.items = items;
+	}
+	
+	public boolean isInstanced() {
+		return this.instance;
+	}
+	
+	public void setInstance(boolean instance) {
+		this.instance = instance;
 	}
 }
