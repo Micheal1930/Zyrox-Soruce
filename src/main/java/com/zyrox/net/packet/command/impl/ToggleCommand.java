@@ -116,7 +116,7 @@ public class ToggleCommand extends NameCommand {
 			break;
 		case "staff":
 			GameSettings.STAFF_ONLY = !GameSettings.STAFF_ONLY;
-			World.sendMessage("<img=483><shad=dbffba> Zyrox has been turned online.");
+			World.sendMessage("<img=483><shad=dbffba> Varrock has been turned online.");
 			break;
 		case "onehit":
 			if(!GameSettings.ONEHIT.contains(player.getName())){

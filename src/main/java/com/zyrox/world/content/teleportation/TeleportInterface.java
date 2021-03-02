@@ -4,9 +4,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.zyrox.engine.task.Task;
+import com.zyrox.engine.task.TaskManager;
 import com.zyrox.model.Item;
+import com.zyrox.model.Position;
+import com.zyrox.model.RegionInstance;
+import com.zyrox.model.RegionInstance.RegionInstanceType;
+import com.zyrox.world.World;
+import com.zyrox.world.content.dialogue.Dialogue;
+import com.zyrox.world.content.dialogue.DialogueExpression;
+import com.zyrox.world.content.dialogue.DialogueType;
 import com.zyrox.world.content.transportation.TeleportHandler;
 import com.zyrox.world.content.transportation.TeleportType;
+import com.zyrox.world.entity.impl.npc.NPC;
+import com.zyrox.world.entity.impl.npc.NPCMovementCoordinator.Coordinator;
 import com.zyrox.world.entity.impl.player.Player;
 
 public class TeleportInterface {
@@ -15,6 +26,7 @@ public class TeleportInterface {
 	private TeleportCategory currentCategory = TeleportCategory.BOSSES;
 	private TeleportData currentTeleport, previousTeleport;
 	private ArrayList<TeleportData> favorites = new ArrayList<TeleportData>();
+	private boolean instance;
 	
 	public TeleportInterface(Player player) {
 		this.player = player;
@@ -82,7 +94,7 @@ public class TeleportInterface {
 		for(int i = 55577, k = 0; i <= 55604; i+=3, k++)
 			player.getPacketSender().sendString(i, (k < favorites ? getFavourites().get(k).getName() : TeleportData.DEFAULT.getName()));
 	}
-
+	
 	public void setFavourite(int button) {
 		if(getFavourites().size() >= 10) {
 			player.sendMessage("You have reached the maximum amount of favourites.");
@@ -124,6 +136,10 @@ public class TeleportInterface {
 			player.sendMessage("You don't have a teleport selected.");
 			return;
 		}
+		if(isInstance() && data.isInstanced()) {
+			handleInstanceTeleport();
+			return;
+		}
 		player.sendMessage("You attempt to teleport to " + data.getName() + ".");
 		TeleportHandler.teleportPlayer(player, data.getPosition(), TeleportType.NORMAL);
 		setPreviousTeleport(data);
@@ -144,6 +160,12 @@ public class TeleportInterface {
 			setFavourite(button);
 			return true;
 		}
+		if(button == 55614) {
+			setInstance(!isInstance());
+			player.sendMessage("You have toggled instances " + (isInstance() ? "on" : "off") + ".");
+			player.getPacketSender().sendToggle(1250, (isInstance() ? 1 : 0)); 
+			return true;
+		}
 		if(button >= 55536 && button <= 55555) {
 			TeleportData data = TeleportData.findSpot(getCategory(), button - 55536);
 			if(data == null) {
@@ -161,8 +183,38 @@ public class TeleportInterface {
 			removeFavourite(button);
 			return true;
 		}
-		
 		return false;
+	}
+	
+	public void handleInstanceTeleport() {
+		TeleportData data = getCurrentTeleport();
+		if(player.getRegionInstance() != null) {
+			player.getRegionInstance().destruct();
+		}
+		NPC npc = new NPC(data.getNPCID(), new Position(2715, 9186, player.getIndex() * 4));
+		TeleportHandler.teleportPlayer(player, new Position(2714, 9174, player.getIndex() * 4), player.getSpellbook().getTeleportType());
+		player.sendMessage("Starting instance for " + npc.getDefinition().getName() + "...");
+		TaskManager.submit(new Task(1) {
+			int tick = 0;
+			@Override
+			protected void execute() {
+				player.sendMessage("Spawning " + npc.getDefinition().getName() + " in " + (7 - tick) + "...");
+				if(tick == 7) {
+					player.setRegionInstance(new RegionInstance(player, RegionInstanceType.BOSS_INSTANCE));
+					npc.setInstancedPlayer(player);
+					npc.getMovementCoordinator().setCoordinator(new Coordinator(false, -1));
+					npc.getMovementQueue().setLockMovement(true);
+					npc.getDefinition().setAggressive(true);
+					player.getRegionInstance().getNpcsList().add(npc);
+					World.register(npc);
+					setPreviousTeleport(data);
+					stop();
+				}
+				tick++;
+			}
+		});
+		player.sendMessage("@red@Warning! @blu@Items are lost on Death!");
+		player.sendMessage("@blu@Please do not bring anything you are @red@NOT @blu@willing to lose.");
 	}
 	
 	public CopyOnWriteArrayList<Item> getItemList(TeleportData data) {
@@ -201,6 +253,14 @@ public class TeleportInterface {
 	
 	public void setPreviousTeleport(TeleportData previousTeleport) {
 		this.previousTeleport = previousTeleport;
+	}
+	
+	public boolean isInstance() {
+		return this.instance;
+	}
+	
+	public void setInstance(boolean instance) {
+		this.instance = instance;
 	}
 
 }

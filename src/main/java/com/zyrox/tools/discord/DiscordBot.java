@@ -448,7 +448,7 @@ public class DiscordBot {
 
         EmbedBuilder eb = new EmbedBuilder();
 
-        eb.withAuthorName("Zyrox is online!");
+        eb.withAuthorName("Varrock is online!");
 
         eb.withColor(new Color(255, 74, 72));
 
@@ -457,7 +457,7 @@ public class DiscordBot {
 
         eb.withThumbnail("http://solaceps.com/images/icon.png");
 
-        eb.withFooterText("Zyrox is now online and you can login.");
+        eb.withFooterText("Varrock is now online and you can login.");
 
         try {
             client.getChannelByID(

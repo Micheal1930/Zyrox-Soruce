@@ -60,6 +60,23 @@ public class Locations {
     public static int PLAYERS_IN_DUEL_ARENA;
 
     public enum Location {
+    	BOSS_INSTANCE(new int[]{2688, 2745}, new int[]{9159, 9212}, true, true, true, false, true, true) {	
+			@Override
+			public void login(Player player) {
+				player.moveTo(GameSettings.DEFAULT_POSITION.copy());
+			}
+
+			@Override
+			public void logout(Player player) {
+				player.moveTo(GameSettings.DEFAULT_POSITION.copy());
+			}
+			
+			@Override
+			public void leave(Player player) {
+				if(player.getRegionInstance() != null)
+					player.getRegionInstance().destruct();
+			}
+		},
         SLAYER_TOWER(new int[]{3400, 3460,}, new int[]{3525, 3580}, false, false, true, false, false, false) {
         },
         BANDIT_CAMP(new int[]{3153, 3191,}, new int[]{2959, 2995}, true, false, true, false, false, false) {

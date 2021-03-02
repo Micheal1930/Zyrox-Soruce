@@ -22,7 +22,7 @@ public class EventsCommand extends Command {
     @Override
     public boolean execute(Player player, String[] args) throws Exception {
 
-        String title = "@whi@Zyrox Events (" + GameEventManager.getEvents().size() + ")";
+        String title = "@whi@Varrock Events (" + GameEventManager.getEvents().size() + ")";
         List<String> events = new ArrayList<>();
 
         int index = 0;

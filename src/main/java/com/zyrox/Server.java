@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 
 public class Server {
 
-    public static final String NAME = "Zyrox";
+    public static final String NAME = "Varrock";
 
     private static ExecutorService httpThread;
 

@@ -339,6 +339,7 @@ public class NPC extends GameCharacter {
 	private final Position defaultPosition;
 	private NPCMovementCoordinator movementCoordinator = new NPCMovementCoordinator(this);
 	private Player spawnedFor;
+	private Player instancedPlayer;
 	private NpcDefinition definition;
 
 	/** INTS **/
@@ -574,6 +575,14 @@ public class NPC extends GameCharacter {
 				}
 			}
 		}
+	}
+	
+	public Player getInstancedPlayer() {
+		return this.instancedPlayer;
+	}
+	
+	public void setInstancedPlayer(Player instancedPlayer) {
+		this.instancedPlayer = instancedPlayer;
 	}
 
 	/**

@@ -55,7 +55,7 @@ public class GameServer {
     public static StarterHandler starterHandler = new StarterHandler();
 
     private static final GameLoader loader = new GameLoader(GameSettings.GAME_PORT);
-    private static final Logger logger = Logger.getLogger("Zyrox");
+    private static final Logger logger = Logger.getLogger("Varrock");
     private static boolean updating;
 
     /**
@@ -75,7 +75,7 @@ public class GameServer {
 
         GameSettings.load();
 
-        logger.info("Starting Zyrox in "+GameSettings.GAME_TYPE+" mode.");
+        logger.info("Starting Varrock in "+GameSettings.GAME_TYPE+" mode.");
 
         if(GameServer.isLive()) {
             logger.info("Starting discord bot...");//disable mysql it is
@@ -99,13 +99,13 @@ public class GameServer {
             loader.init();
             loader.finish(); //networking is here
             logger.info("The loader has finished loading utility tasks.");
-            logger.info("Zyrox is now online on port " + GameSettings.GAME_PORT + "!");
+            logger.info("Varrock is now online on port " + GameSettings.GAME_PORT + "!");
             Thread.sleep(5000);
             //BucketConverter.main(null);
 
 
         } catch (Exception ex) {
-            logger.log(Level.SEVERE, "Could not start Zyrox! Program terminated.", ex);
+            logger.log(Level.SEVERE, "Could not start Varrock! Program terminated.", ex);
             System.exit(1);
         }
 

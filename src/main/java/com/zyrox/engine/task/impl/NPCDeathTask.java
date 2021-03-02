@@ -1,5 +1,7 @@
 package com.zyrox.engine.task.impl;
 
+import java.text.SimpleDateFormat;
+
 import com.google.common.collect.ImmutableSet;
 import com.zyrox.GameSettings;
 import com.zyrox.engine.task.Task;
@@ -7,12 +9,17 @@ import com.zyrox.engine.task.TaskManager;
 import com.zyrox.model.Animation;
 import com.zyrox.model.Flag;
 import com.zyrox.model.GameObject;
-import com.zyrox.model.Position;
 import com.zyrox.model.Locations.Location;
+import com.zyrox.model.Position;
 import com.zyrox.world.World;
-import com.zyrox.world.content.*;
+import com.zyrox.world.content.Achievements;
 import com.zyrox.world.content.Achievements.AchievementData;
+import com.zyrox.world.content.CustomObjects;
+import com.zyrox.world.content.Galvek;
+import com.zyrox.world.content.KillsTracker;
 import com.zyrox.world.content.KillsTracker.KillsEntry;
+import com.zyrox.world.content.TreasureChest;
+import com.zyrox.world.content.TrioBosses;
 import com.zyrox.world.content.combat.strategy.impl.GalvekCombatStrategy;
 import com.zyrox.world.content.combat.strategy.impl.KalphiteQueen;
 import com.zyrox.world.content.combat.strategy.impl.Nex;
@@ -29,8 +36,6 @@ import com.zyrox.world.content.treasuretrails.EliteClueScroll;
 import com.zyrox.world.entity.impl.npc.NPC;
 import com.zyrox.world.entity.impl.npc.impl.Zulrah;
 import com.zyrox.world.entity.impl.player.Player;
-
-import java.text.SimpleDateFormat;
 
 /**
  * Represents an npc's death task, which handles everything an npc does before
@@ -306,19 +311,39 @@ public class NPCDeathTask extends Task {
         if (Nex.nexMob(npc.getId()) && killer != null) {
             Nex.getNex(killer).death(killer, npc.getId());
         }
+        
+        boolean special = npc.getDefinition().getRespawnTime() > 0 && npc.getLocation() != Location.GRAVEYARD && npc.getLocation() != Location.DUNGEONEERING && npc.getId() != 3334 
+				|| killer.getLocation() == Location.BOSS_INSTANCE && npc.getLocation() != Location.CASTLE_WARS_GAME && npc.getLocation() != Location.DONATOR_ZONE
+	               && npc.getRegionID() != 9043;
+        
+        if(killer != null) {
+			if(killer.getRegionInstance() != null) 
+				if(killer.getRegionInstance().getNpcsList().contains(npc))
+					killer.getRegionInstance().getNpcsList().remove(npc);
+			if(special) {
+				if(npc.getInstancedPlayer() == null)
+					TaskManager.submit(new NPCRespawnTask(npc, npc.getDefinition().getRespawnTime(), killer));
+				else if(World.getPlayerByName(npc.getInstancedPlayer().getUsername()) != null)
+					TaskManager.submit(new NPCRespawnTask(npc, 15, killer));
+			}
+			return;
+		}
+        if(special)
+			TaskManager.submit(new NPCRespawnTask(npc, npc.getDefinition().getRespawnTime(), null));
 
-        if (killer != null) {
-            if (killer.getPlayerInstance().getInstance() != null) {
-                return;
-            }
-        }
-
-        // respawn
-        if (npc.getDefinition().getRespawnTime() > 0 && npc.getLocation() != Location.GRAVEYARD
-                && npc.getLocation() != Location.DUNGEONEERING && npc.getLocation() != Location.CASTLE_WARS_GAME && npc.getLocation() != Location.DONATOR_ZONE
-                && npc.getRegionID() != 9043) {
-            TaskManager.submit(new NPCRespawnTask(npc, npc.getDefinition().getRespawnTime()));
-        }
+//        if (killer != null) {
+//        	
+//            if (killer.getPlayerInstance().getInstance() != null) {
+//                return;
+//            }
+//        }
+//
+//        // respawn
+//        if (npc.getDefinition().getRespawnTime() > 0 && npc.getLocation() != Location.GRAVEYARD
+//                && npc.getLocation() != Location.DUNGEONEERING && npc.getLocation() != Location.CASTLE_WARS_GAME && npc.getLocation() != Location.DONATOR_ZONE
+//                && npc.getRegionID() != 9043) {
+//            TaskManager.submit(new NPCRespawnTask(npc, npc.getDefinition().getRespawnTime()));
+//        }
 
         if (npc.getId() == 1158 || npc.getId() == 1160) {
             KalphiteQueen.death(npc.getId(), npc.getPosition());

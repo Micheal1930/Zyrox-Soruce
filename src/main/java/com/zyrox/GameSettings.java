@@ -283,12 +283,12 @@ public class GameSettings {
 
 	public static boolean DOUBLE_POINTS = false;
 
-	public static final Position EDGEVILLE = new Position(2551, 2550,1);
+	public static final Position EDGEVILLE = new Position(3088, 3485, 0);
 
 	/**
 	 * The default position
 	 */
-	public static final Position DEFAULT_POSITION = new Position((3090 + Misc.getRandom(2)), 3497 + Misc.getRandom(2),
+	public static final Position DEFAULT_POSITION = new Position((3088 + Misc.getRandom(2)), 3485 + Misc.getRandom(2),
 			0);
 
 	public static final int MAX_STARTERS_PER_IP = 2;
