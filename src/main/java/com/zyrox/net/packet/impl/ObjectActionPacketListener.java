@@ -611,7 +611,7 @@ public class ObjectActionPacketListener implements PacketListener {
                                 if (!player.getClickDelay().elapsed(4500) || player.getMovementQueue().isLockMovement()) {
                                     return;
                                 }
-                                Position tele = new Position(3085, 3492);
+                                Position tele = new Position(2554, 2559,1);
                                 if (player.getLocation() == Location.CONSTRUCTION) {
                                     player.setInHome(false);
                                     player.moveTo(tele);

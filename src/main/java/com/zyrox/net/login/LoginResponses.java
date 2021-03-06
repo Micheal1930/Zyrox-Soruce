@@ -124,7 +124,7 @@ public final class LoginResponses {
 	public static final int BETA_TESTER = 40;
 
 	/**
-	 * This login opcode is used when varrock is not released
+	 * This login opcode is used when Zyrox is not released
 	 */
 	public static final int NOT_RELEASED = 41;
 

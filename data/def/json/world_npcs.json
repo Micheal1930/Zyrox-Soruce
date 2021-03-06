@@ -11505,13 +11505,13 @@
     "npc-id": 7780,
     "face": WEST,
     "position": {
-      "x": 2591,
-      "y": 2557,
-      "z": 1
+      "x": 2729,
+      "y": 2525,
+      "z": 0
     },
     "walking-policy": {
-      "coordinate": false,
-      "radius": -1
+      "coordinate": true,
+      "radius": 1
     }
   },
   {
