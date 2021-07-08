@@ -18,8 +18,11 @@ public class PlayerTextUpdate {
         int id = 23607;
 
         player.getPacketSender().sendString(57003, "Players:  @gre@" + World.getPlayersOnline());
+        player.getPacketSender().sendString(57042, ""+ player.getRights() + "");
+        player.getPacketSender().sendString(57043, ""+ player.getRights() + "");
+        player.getPacketSender().sendString(57044, ""+ player.getRights() + "");
 
-        player.getPacketSender().sendString(id += 2, "Varrock")
+        player.getPacketSender().sendString(id += 2, "Zyrox")
                 .sendString(id += 1, "@or2@Players Online: @or4@"+World.getPlayersOnline())
                 .sendString(id += 2, "@or2@Wilderness: @or4@"+ World.getWildernessCount())
                 .sendString(id += 2, "@or2@Staff Online: @or4@"+World.getStaffOnline())

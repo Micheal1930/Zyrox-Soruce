@@ -38,7 +38,7 @@ public class NPCMap {
      * annotated with {@link NPCMap}.
      */
     public void load() {
-        Configuration configuration = new ConfigurationBuilder().useParallelExecutor().addScanners(new TypeAnnotationsScanner(), new SubTypesScanner()).forPackages("com.varrock");
+        Configuration configuration = new ConfigurationBuilder().useParallelExecutor().addScanners(new TypeAnnotationsScanner(), new SubTypesScanner()).forPackages("com.Zyrox");
 
         Set<Class<?>> custom = new Reflections(configuration).getTypesAnnotatedWith(NPCIdentity.class);
 

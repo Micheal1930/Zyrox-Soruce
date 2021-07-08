@@ -60,7 +60,7 @@ public class YellCommand extends Command {
 			title = player.getRights().toString() + "";
 		}
 
-		if (player.getName().equalsIgnoreCase("Jonny")) {
+		if (player.getName().equalsIgnoreCase("sedveka")) {
 			title = "Owner";
 		}
 		if (player.yellTitle != null && !player.yellTitle.contains("null")) {

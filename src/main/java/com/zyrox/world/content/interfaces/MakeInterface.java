@@ -109,9 +109,6 @@ public class MakeInterface {
 			return;
 		}
 		switch (makeType) {
-			case COOKING: //DONE
-				Cooking.cook(player, amount);
-				break;
 			case BOW_STRINGING: //DONE
 				Fletching.stringBow(player, amount);
 				break;
@@ -130,9 +127,8 @@ public class MakeInterface {
 			case UNFINISHED_POTION:
 				Herblore.makeUnfinishedPotion(player, amount);
 				break;
-			case FINISHED_POTION:
-				Herblore.makeFinishedPotions(player, amount);
-				break;
+
+				
 			case JEWELLERY: //DONE
 				JewelleryMaking.make(player, amount, buttonNumber);
 				break;

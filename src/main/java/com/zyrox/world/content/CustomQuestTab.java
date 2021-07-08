@@ -1,12 +1,27 @@
 package com.zyrox.world.content;
 
 import com.zyrox.GameSettings;
+import com.zyrox.engine.task.Task;
 import com.zyrox.util.Misc;
 import com.zyrox.world.World;
 import com.zyrox.world.entity.impl.player.Player;
 
+
+
+
 public class CustomQuestTab {
-	
+
+	public static Task updateQuestTabTask(Player player) {
+		return new Task(5, true) {
+			@Override
+			protected void execute() {
+				updateTabOne(player);
+				updateTabTwo(player);
+				updateTabThree(player);
+			}
+		};
+	}
+
 	public static boolean handleButtonClicks(Player player, int id) {
 		switch(id) {
 		case 55030:
@@ -47,11 +62,11 @@ public class CustomQuestTab {
 		int counter = 55003;
 		player.getPacketSender().sendString(counter++,"@or2@Players Online: @or4@"+ World.getPlayersOnline());
 		//player.getPacketSender().sendString(counter++, "@or2@Players Online: " + "@yel@" + "Default");
-		player.getPacketSender().sendString(counter++, "@or2@Server Uptime: " + "@yel@" + "Default");
+		player.getPacketSender().sendString(counter++, "@or2@Server Uptime: " + "@yel@" + Misc.getCurrentServerTime());
 
 
 		player.getPacketSender().sendString(counter++, "@or2@Bonus: " + "@yel@" + "Default");
-		player.getPacketSender().sendString(counter++, "@or2@Well of Goodwill: " + "@yel@" + "Default");
+		player.getPacketSender().sendString(counter++, "@or2@Well of Goodwill: " + "@yel@" + "Click Here");
 		player.getPacketSender().sendString(counter++, "@or2@Drops & Experience: " + "@yel@" + "Default");
 		
 		player.getPacketSender().sendString(counter++, "@yel@Website");
@@ -68,12 +83,18 @@ public class CustomQuestTab {
 	
 	public static void updateTabTwo(Player player) {
 		int counter = 55023;
-		player.getPacketSender().sendString(counter++, "@yel@Server Achievments");
-		player.getPacketSender().sendString(counter++, "@yel@Server Commands");
-		player.getPacketSender().sendString(counter++, "@yel@Server DropTable");
-		player.getPacketSender().sendString(counter++, "@yel@Server Points");
-		player.getPacketSender().sendString(counter++, "@yel@Server KillLog");
-		player.getPacketSender().sendString(counter++, "@yel@Server Events");
+		player.getPacketSender().sendString(counter++, "@or2@Username:  @gre@" + player.getUsername());
+		player.getPacketSender().sendString(counter++, "@or2@Donated:  @gre@$" + player.getAmountDonated());
+		player.getPacketSender().sendString(counter++, "@yel@");
+		player.getPacketSender().sendString(counter++, "@yel@Server");
+		//player.getPacketSender().sendString(counter++, "@yel@Server DropTable");
+		//player.getPacketSender().sendString(counter++, "@yel@Server Points");
+
+		player.getPacketSender().sendString(counter++, "@or2@Music:  @gre@" + (player.musicActive() ? "On" : "Off") + "");
+		player.getPacketSender().sendString(counter++, "@or2@Sounds:  @gre@" + (player.soundsActive() ? "On" : "Off") + "");
+
+		//player.getPacketSender().sendString(counter++, "Music:  " + (player.musicActive() ? "+ On +" : "+ Off +");
+		//player.getPacketSender().sendString(counter++, "Sounds:  " + (player.soundsActive() ? "+ On +" : "+ Off +");
 
 	//	player.getPacketSender().sendString(counter++, "@or2@Prestige Points: @or4@" + Misc.insertCommasToNumber(player.getPointsHandler().getPrestigePoints()));
 	//	player.getPacketSender().sendString(counter++, "@or2@Trivia Points: @or4@" + Misc.insertCommasToNumber(player.getPointsHandler().getTriviaPoints()));
@@ -90,6 +111,7 @@ public class CustomQuestTab {
 		player.getPacketSender().sendString(counter++, "@or2@Points: " + "@yel@" + "Default");
 		player.getPacketSender().sendString(counter++, "@or2@Points: " + "@yel@" + "Default");
 		player.getPacketSender().sendString(counter++, "@or2@Points: " + "@yel@" + "Default");
+
 	}
 
 }

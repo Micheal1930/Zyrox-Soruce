@@ -132,12 +132,12 @@ public class YouTubeManager {
                     player.sendErrorMessage("This video is too old to be added.");
                     return;
                 }
-                if (!videoTitle.toLowerCase().contains("Varrock")) {
-                    player.sendErrorMessage("The video must have Varrock in the title.");
+                if (!videoTitle.toLowerCase().contains("Zyrox")) {
+                    player.sendErrorMessage("The video must have Zyrox in the title.");
                     return;
                 }
-                if (!description.toLowerCase().contains("Varrock.io")) {
-                    player.sendErrorMessage("The video must have Varrock.io in the description.");
+                if (!description.toLowerCase().contains("Zyrox.org")) {
+                    player.sendErrorMessage("The video must have Zyrox.org in the description.");
                     return;
                 }
 

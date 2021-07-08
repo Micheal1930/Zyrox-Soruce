@@ -1983,6 +1983,7 @@ public class Locations {
                 return true;
             }
 
+
             boolean KBD = isInArea(gc, 2251, 4676, 2289, 4716);
             if(KBD)
                 return true;

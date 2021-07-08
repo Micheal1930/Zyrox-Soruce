@@ -15,7 +15,7 @@ public class PlayersCommand extends Command {
 			throw new IllegalArgumentException();
 		}
 		
-		DialogueManager.sendStatement(player, "There are currently " + World.getPlayersOnline() + " players online playing Varrock.");
+		DialogueManager.sendStatement(player, "There are currently " + World.getPlayersOnline() + " players online playing Zyrox.");
 		return true;
 	}
 

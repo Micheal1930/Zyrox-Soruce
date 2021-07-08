@@ -1,7 +1,7 @@
 package com.zyrox.world.content.skill.impl.herblore;
 
 public enum UnfinishedPotions {
-	
+
 	GUAM_POTION(91, 249, 1),
 	MARRENTILL_POTION(93, 251, 5),
 	TARROMIN_POTION(95, 253, 12),
@@ -18,28 +18,28 @@ public enum UnfinishedPotions {
 	LANTADYME(2483, 2481, 69),
 	DWARF_WEED_POTION(109, 267, 72),
 	TORSTOL_POTION(111, 269, 78);
-	
-	
+
+
 	private int unfinishedPotion, herbNeeded, levelReq;
-	
+
 	private UnfinishedPotions(int unfinishedPotion, int herbNeeded, int levelReq) {
 		this.unfinishedPotion = unfinishedPotion;
 		this.herbNeeded = herbNeeded;
 		this.levelReq = levelReq;
 	}
-	
+
 	public int getUnfPotion() {
 		return unfinishedPotion;
 	}
-	
+
 	public int getHerbNeeded() {
 		return herbNeeded;
 	}
-	
+
 	public int getLevelReq() {
 		return levelReq;
 	}
-	
+
 	public static UnfinishedPotions getPotionForHerb(int herbId) {
 		for(UnfinishedPotions unf : UnfinishedPotions.values()) {
 			if (unf.getHerbNeeded() == herbId) {

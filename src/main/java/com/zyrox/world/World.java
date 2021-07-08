@@ -451,10 +451,10 @@ public class World {
             time = 10;
 
             GameServer.discordBot.sendUpdateEventMessage(
-                    "Varrock has been turned off.",
-                    "Varrock",
+                    "Zyrox has been turned off.",
+                    "Zyrox",
                     "This command was initiated during defcon 4.",
-                    "Varrock will be back online shortly.");
+                    "Zyrox will be back online shortly.");
 
             GameServer.setUpdating(true);
 
@@ -486,22 +486,22 @@ public class World {
             if(player == null) {
 
                 GameServer.discordBot.sendUpdateEventMessage(
-                        "Varrock is being restarted!",
-                        "Varrock",
+                        "Zyrox is being restarted!",
+                        "Zyrox",
                         "This is a scheduled restart that happens every 24 hours.",
                         "Restart will be completed in 5 minutes.");
 
             } else {
                 if(update) {
                     GameServer.discordBot.sendUpdateEventMessage(
-                            "\uD83D\uDCDC Varrock is being updated!",
+                            "\uD83D\uDCDC Zyrox is being updated!",
                             player.getName(),
                             "Check #game-updates  to view the latest updates.",
                             "The update will be completed in "+Misc.getTimeLeft(time)+"");
                 } else {
 
                     GameServer.discordBot.sendUpdateEventMessage(
-                            "Varrock is being restarted!",
+                            "Zyrox is being restarted!",
                             player.getName(),
                             null,
                             "The restart will be completed in "+Misc.getTimeLeft(time)+"");

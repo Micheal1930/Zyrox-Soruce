@@ -12,10 +12,10 @@ import com.zyrox.world.entity.impl.player.Player;
 
 public class FoxVote implements Runnable {
 
-	public static final String HOST = "localhost";
-	public static final String USER = "varrnzgh_swag";
-	public static final String PASS = "BPH7UnjGuC19";
-	public static final String DATABASE = "varrnzgh_vote";
+	public static final String HOST = "199.33.112.227"; // Website Ip
+	public static final String USER = "zyro8340_vote"; // Username
+	public static final String PASS = "corymccain12"; // Password
+	public static final String DATABASE = "zyro8340_vote"; // Database
 
 	private Player player;
 	private Connection conn;
@@ -33,32 +33,34 @@ public class FoxVote implements Runnable {
 			}
 
 			String name = player.getUsername().replace(" ", "_");
-			ResultSet rs = executeQuery("SELECT * FROM fx_votes WHERE username='"+name+"' AND claimed=0 AND callback_date IS NOT NULL");
-			boolean claimedAnything = false;
+			ResultSet rs = executeQuery("SELECT * FROM votes WHERE username='" + name + "' AND claimed=0 AND voted_on != -1");
+
 			while (rs.next()) {
-				String timestamp = rs.getTimestamp("callback_date").toString();
 				String ipAddress = rs.getString("ip_address");
 				int siteId = rs.getInt("site_id");
 
-
+				player.getInventory().add(995, 1000000);
+				player.getInventory().add(989, 1);
 				player.getInventory().add(13077, 1);
-				claimedAnything = true;
+				player.sendMessage("<img=678> <shad=786518>A voting casket has been added to your inventory.");
+				//claimedAnything = true;
 
-				System.out.println("[FoxVote] Vote claimed by "+name+". (sid: "+siteId+", ip: "+ipAddress+", time: "+timestamp+")");
+				// -- ADD CODE HERE TO GIVE TOKENS OR WHATEVER
+
+				System.out.println("[Vote] Vote claimed by " + name + ". (sid: " + siteId + ", ip: " + ipAddress + ")");
 
 				rs.updateInt("claimed", 1); // do not delete otherwise they can reclaim!
 				rs.updateRow();
 			}
-			if(claimedAnything) {
-				DialogueManager.sendStatement(player, "<img=678> <shad=786518>Thank you for voting!");
-				player.sendMessage("<img=678> <shad=786518>A voting casket has been added to your inventory.");
-			} else {
-				DialogueManager.sendStatement(player, "No votes have been found.");
-			}
+
 			destroy();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	private String getUsername() {
+		return null;
 	}
 
 
@@ -73,38 +75,38 @@ public class FoxVote implements Runnable {
 	}
 
 	public void destroy() {
-        try {
-    		conn.close();
-        	conn = null;
-        	if (stmt != null) {
-    			stmt.close();
-        		stmt = null;
-        	}
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
+		try {
+			conn.close();
+			conn = null;
+			if (stmt != null) {
+				stmt.close();
+				stmt = null;
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public int executeUpdate(String query) {
-        try {
-        	this.stmt = this.conn.createStatement(1005, 1008);
-            int results = stmt.executeUpdate(query);
-            return results;
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return -1;
-    }
+		try {
+			this.stmt = this.conn.createStatement(1005, 1008);
+			int results = stmt.executeUpdate(query);
+			return results;
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		return -1;
+	}
 
 	public ResultSet executeQuery(String query) {
-        try {
-        	this.stmt = this.conn.createStatement(1005, 1008);
-            ResultSet results = stmt.executeQuery(query);
-            return results;
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return null;
-    }
+		try {
+			this.stmt = this.conn.createStatement(1005, 1008);
+			ResultSet results = stmt.executeQuery(query);
+			return results;
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		return null;
+	}
 
 }

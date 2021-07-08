@@ -820,6 +820,12 @@ public class DialogueOptions {
                 case 134:
                     FreeForAll.startDDS(player);
                     break;
+
+                case 368:
+                    TeleportHandler.teleportPlayer(player, new Position(2548, 2550, 1),
+                            player.getSpellbook().getTeleportType());
+                    break;
+
                 case 5:
                     player.getPacketSender().sendInterfaceRemoval();
 //				MySQLController.getStore().claim(player);
@@ -875,6 +881,12 @@ public class DialogueOptions {
                 case 502:
                     Gambling.plantSeed(player, FlowersData.BLACK_FLOWERS);
                     break;
+
+                case 368:
+                    TeleportHandler.teleportPlayer(player, new Position(3225, 3218),
+                            player.getSpellbook().getTeleportType());
+                    break;
+
                 case 134:
                     FreeForAll.startRange(player);
                     break;
@@ -953,6 +965,11 @@ public class DialogueOptions {
                 case 502:
                     player.setDialogueActionId(501);
                     DialogueManager.start(player, 501);
+                    break;
+
+                case 368:
+                    TeleportHandler.teleportPlayer(player, new Position(3090, 3497),
+                            player.getSpellbook().getTeleportType());
                     break;
 
                 case 134:
@@ -1034,6 +1051,12 @@ public class DialogueOptions {
                 case 41:
                     player.getPacketSender().sendInterfaceRemoval();
                     break;
+
+                case 368:
+                    TeleportHandler.teleportPlayer(player, new Position(3210, 3423),
+                            player.getSpellbook().getTeleportType());
+                    break;
+
                 case 14:
                     player.setDialogueActionId(14);
                     DialogueManager.start(player, 22);
@@ -1050,7 +1073,7 @@ public class DialogueOptions {
                     }
                     break;
                 case 45:
-                    player.getPacketSender().sendString(1, "http://varrock.io/ironman");
+                    player.getPacketSender().sendString(1, "http://zyrox.org/ironman");
                     break;
             }
         } else if (id == FIRST_OPTION_OF_TWO) {

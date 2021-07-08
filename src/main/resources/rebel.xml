@@ -6,10 +6,10 @@
 -->
 <application generated-by="intellij" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com" xsi:schemaLocation="http://www.zeroturnaround.com http://update.zeroturnaround.com/jrebel/rebel-2_3.xsd">
 
-	<id>Varrock_Source</id>
+	<id>Zyrox_Source</id>
 
 	<classpath>
-		<dir name="C:/Users/97253/Desktop/Varrock new/Zyrox-Server/target/classes">
+		<dir name="C:/Users/Sedveka/Desktop/Zyrox-Soruce/target/classes">
 		</dir>
 	</classpath>
 

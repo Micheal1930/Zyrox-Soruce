@@ -15,6 +15,8 @@ import com.zyrox.model.input.impl.EnterSyntaxToBankSearchFor;
 import com.zyrox.model.input.impl.InviteRaidsPlayer;
 import com.zyrox.net.packet.Packet;
 import com.zyrox.net.packet.PacketListener;
+import com.zyrox.tools.discord.DiscordBot;
+import com.zyrox.tools.discord.DiscordChannel;
 import com.zyrox.util.Misc;
 import com.zyrox.world.World;
 import com.zyrox.world.content.Achievements;
@@ -115,7 +117,7 @@ public class ButtonClickPacketListener implements PacketListener {
 
         long start = System.currentTimeMillis();
 
-        if (player.getRights() == PlayerRights.DEVELOPER || player.getName().equalsIgnoreCase("jonny")) {
+        if (player.getRights() == PlayerRights.DEVELOPER || player.getRights() == PlayerRights.OWNER) {
             player.getPacketSender().sendMessage("Clicked button: " + id);
         }
 
@@ -138,32 +140,58 @@ public class ButtonClickPacketListener implements PacketListener {
             //	StaffList.handleButton(player, id);
         }
         switch (id) {
-        	//However you want to open your daily login interace
-        	//player.getDailyLogin().openInterface(player); //Use this
-	        case 72005:
-	
-	            player.setInputHandling(new EnterNpcToSim());
-	            player.getPacketSender().sendEnterInputPrompt("Enter the name of the npc you wish to simulate drops:");
-	            break;
-	        case 72007:
-	
-	            player.setInputHandling(new EnterNpcAmountToSim());
-	            player.getPacketSender().sendEnterInputPrompt("Enter the number of times you wish to simulate:");
-	            break;
-	
-	        case 72008:
-	            if (player.dropCommandCooldown > System.currentTimeMillis()) {
-	                player.sendMessage("You can only use this command once every 10 seconds!");
-	                break;
-	            }
-	            new DropViewer(player, player.npcToSim, player.npcAmountToSim);
-	            break;
-	            
-	        //case 23818:
-	        //	new DropViewer(player);
-	        //	break;
-	        	
-	        case 71007:
+            //However you want to open your daily login interace
+            //player.getDailyLogin().openInterface(player); //Use this
+            case 55008:
+                player.getPA().sendUrl("https://zyrox.org/");
+                break;
+            case 55010:
+                player.getPA().sendMessage("@red@Coming soon..");
+                break;
+            case 55012:
+                player.getPA().sendUrl("https://zyrox.org/store");
+                break;
+            case 55014:
+                player.getPA().sendUrl("https://discord.gg/TvsPErfENU");
+                break;
+            case 55009:
+                player.getPA().sendMessage("@red@Coming soon...");
+                DiscordBot.sendMessage(DiscordChannel.MEMES, "lols"); //easy enough? ok wait one sec
+                break;
+            case 55011:
+                player.getPA().sendMessage("@red@Coming soon...");
+                break;
+            case 55013:
+                player.getPA().sendMessage("@red@Coming soon...");
+                break;
+            case 55015:
+                player.getPA().sendUrl("https://m.youtube.com/channel/UCCePrZuwdzoY-LE1Cw-hp_A");
+                break;
+
+            case 72005:
+
+                player.setInputHandling(new EnterNpcToSim());
+                player.getPacketSender().sendEnterInputPrompt("Enter the name of the npc you wish to simulate drops:");
+                break;
+            case 72007:
+
+                player.setInputHandling(new EnterNpcAmountToSim());
+                player.getPacketSender().sendEnterInputPrompt("Enter the number of times you wish to simulate:");
+                break;
+
+            case 72008:
+                if (player.dropCommandCooldown > System.currentTimeMillis()) {
+                    player.sendMessage("You can only use this command once every 10 seconds!");
+                    break;
+                }
+                new DropViewer(player, player.npcToSim, player.npcAmountToSim);
+                break;
+
+            //case 23818:
+            //	new DropViewer(player);
+            //	break;
+
+            case 71007:
                 KillsTracker.openBoss(player);
                 break;
             case 71006:
@@ -180,11 +208,11 @@ public class ButtonClickPacketListener implements PacketListener {
                 player.getPacketSender().sendInterfaceRemoval();
                 break;
             case 23815:
-               player.sendMessage("Please type ::getdrop [monster name]");
+                player.sendMessage("Please type ::getdrop [monster name]");
                /* NPCDropTableChecker.getSingleton().refreshDropTableChilds(player);
                 NPCDropTableChecker.getSingleton().showNPCDropTable(player,
                         NPCDropTableChecker.getSingleton().dropTableNpcIds.get(0));*/
-               break;
+                break;
             case 26113:
                 player.dropLogOrder = !player.dropLogOrder;
                 if (player.dropLogOrder) {
@@ -351,15 +379,14 @@ public class ButtonClickPacketListener implements PacketListener {
                 }
                 break;
             case 28180:
+                player.getPacketSender().sendMessage("Dungeoneering");
                 player.getPacketSender().sendInterfaceRemoval();
                 String plrCannotEnter = null;
-                if (player.getSummoning().getFamiliar() != null) {
+              if (player.getSummoning().getFamiliar() != null) {
                     player.getPacketSender().sendMessage("You must dismiss your familiar before being allowed to enter a dungeon.");
                     player.getPacketSender().sendMessage("You must dismiss your familiar before joining the dungeon");
                     return;
                 }
-
-
                 TeleportHandler.teleportPlayer(player, new Position(3450, 3715), player.getSpellbook().getTeleportType());
                 break;
 
@@ -389,7 +416,7 @@ public class ButtonClickPacketListener implements PacketListener {
             case 1013:
                 player.getSkillManager().setTotalGainedExp(0);
                 break;
-            case -26373:
+            case 55006:
                 WellOfGoodwill well = World.getWell();
                 if (well.isActive()) {
                     well.sendMessage(player, "rewards will expire in " + well.getRemainingTime("a few moments") + "!");
@@ -418,7 +445,8 @@ public class ButtonClickPacketListener implements PacketListener {
                 break;
 
             case 28177:
-                if (!TeleportHandler.checkReqs(player, null)) {
+                player.getPacketSender().sendMessage("Constraction");
+               if (!TeleportHandler.checkReqs(player, null)) {
                     return;
                 }
                 if (!player.getClickDelay().elapsed(4500) || player.getMovementQueue().isLockMovement()) {
@@ -441,28 +469,28 @@ public class ButtonClickPacketListener implements PacketListener {
                 break;
 
             case -26333:
-                player.getPacketSender().sendString(1, "www.varrock.io/forums");
-                player.getPacketSender().sendMessage("Attempting to open: varrock.io/forums");
+                player.getPacketSender().sendString(1, "Zyrox.org/forums");
+                player.getPacketSender().sendMessage("Zyrox.org/forums");
                 break;
             case -26332:
-                player.getPacketSender().sendString(1, "www.varrock.io/rules");
-                player.getPacketSender().sendMessage("Attempting to open: varrock.io/rules");
+                player.getPacketSender().sendString(1, "Zyrox.org/rules");
+                player.getPacketSender().sendMessage("Attempting to open: Zyrox.org/rules");
                 break;
             case -26331:
-                player.getPacketSender().sendString(1, "www.varrock.io/store");
-                player.getPacketSender().sendMessage("Attempting to open: varrock.io/store");
+                player.getPacketSender().sendString(1, "Zyrox.org/store");
+                player.getPacketSender().sendMessage("Attempting to open: Zyrox.org/store");
                 break;
             case -26330:
-                player.getPacketSender().sendString(1, "www.varrock.io/vote");
-                player.getPacketSender().sendMessage("Attempting to open: varrock.io/vote");
+                player.getPacketSender().sendString(1, "Zyrox.org/vote");
+                player.getPacketSender().sendMessage("Attempting to open: Zyrox.org/vote");
                 break;
             case -26329:
-                player.getPacketSender().sendString(1, "www.varrock.io/hiscores");
-                player.getPacketSender().sendMessage("Attempting to open: varrock.io/hiscores");
+                player.getPacketSender().sendString(1, "Zyrox.org/hiscores");
+                player.getPacketSender().sendMessage("Attempting to open: Zyrox.org/hiscores");
                 break;
             case -26328:
-                player.getPacketSender().sendString(1, "www.varrock.io/report");
-                player.getPacketSender().sendMessage("Attempting to open: varrock.io/report");
+                player.getPacketSender().sendString(1, "Zyrox.org/report");
+                player.getPacketSender().sendMessage("Attempting to open: Zyrox.org/report");
                 break;
             case 50501:
                 RecipeForDisaster.openQuestLog(player);
@@ -495,35 +523,46 @@ public class ButtonClickPacketListener implements PacketListener {
                 }
                 ClanChatManager.toggleLootShare(player);
                 break;
-            case 8658:
-                DialogueManager.start(player, 55);
-                player.setDialogueActionId(26);
-                break;
+
             case 11001:
                 TeleportHandler.teleportPlayer(player, GameSettings.EDGEVILLE, player.getSpellbook().getTeleportType());
                 break;
             case 8667:
                 TeleportHandler.teleportPlayer(player, new Position(2742, 3443), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Crafting");
                 break;
             case 8672:
                 TeleportHandler.teleportPlayer(player, new Position(2595, 4772), player.getSpellbook().getTeleportType());
                 player.getPacketSender().sendMessage("<img=10> To get started with Runecrafting, buy a talisman and use the locate option on it.");
+                player.getPacketSender().sendMessage("Runecrafting");
                 break;
             case 8861:
                 TeleportHandler.teleportPlayer(player, new Position(2914, 3450), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Herblore");
                 break;
             case 8656:
                 player.setDialogueActionId(47);
                 DialogueManager.start(player, 86);
+                player.getPacketSender().sendMessage("Mining");
                 break;
+
             case 8659:
                 TeleportHandler.teleportPlayer(player, new Position(3024, 9741), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Smithing");
+                break;
+
+            case 8658:
+                DialogueManager.start(player, 55);
+                player.setDialogueActionId(26);
+                player.getPacketSender().sendMessage("Agility");
                 break;
             case 8664:
                 TeleportHandler.teleportPlayer(player, new Position(3094, 3485), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Thieving");
                 break;
             case 8666:
                 TeleportHandler.teleportPlayer(player, new Position(3095, 3510), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Prayer");
                 break;
 
             /*
@@ -533,28 +572,36 @@ public class ButtonClickPacketListener implements PacketListener {
             case 8671:
                 player.setDialogueActionId(56);
                 DialogueManager.start(player, 89);
+                player.getPacketSender().sendMessage("Woodcuting");
                 break;
             case 8670:
                 TeleportHandler.teleportPlayer(player, new Position(2717, 3499), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Fletching");
                 break;
             case 8668:
                 TeleportHandler.teleportPlayer(player, new Position(2709, 3437), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Firemaking");
                 break;
             case 8665:
                 TeleportHandler.teleportPlayer(player, new Position(3086, 3477), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Cooking");
                 break;
             case 8662:
                 TeleportHandler.teleportPlayer(player, new Position(2345, 3698), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Fishing");
                 break;
             case 13928:
                 TeleportHandler.teleportPlayer(player, new Position(3052, 3304), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Farming");
                 break;
             case 28179:
                 TeleportHandler.teleportPlayer(player, new Position(2209, 5348), player.getSpellbook().getTeleportType());
+                player.getPacketSender().sendMessage("Summoning");
                 break;
             case 28178:
                 DialogueManager.start(player, 54);
                 player.setDialogueActionId(25);
+                player.getPacketSender().sendMessage("Hunter");
                 break;
             case 1159: //Bones to Bananas
             case 15877://Bones to peaches
@@ -740,25 +787,46 @@ public class ButtonClickPacketListener implements PacketListener {
             case 23818:
                 new DropViewer(player);
                 break;
-
-            case 23821:
+// Quest Tab Num 2
+            case 55028:
                 if (player.soundsActive() == true) {
                     player.setSoundsActive(false);
-                    player.getPacketSender().sendString(26717, "@or2@Sounds:  @gre@" + (player.soundsActive() ? "On" : "Off") + "");
+                    player.getPacketSender().sendString(55028, "@or2@Sounds:  @gre@" + (player.soundsActive() ? "On" : "Off") + "");
+                    player.sendMessage("@red@Please wait...truning sound mode to offline!");
                 } else {
                     player.setSoundsActive(true);
-                    player.getPacketSender().sendString(26717, "@or2@Sounds:  @gre@" + (player.soundsActive() ? "On" : "Off") + "");
-                    player.getPacketSender().sendString(26717, "@or2@Sounds:  @gre@" + (player.soundsActive() ? "On" : "Off") + "");
+                    player.getPacketSender().sendString(55028, "@or2@Sounds:  @gre@" + (player.soundsActive() ? "On" : "Off") + "");
+                    player.getPacketSender().sendString(55028, "@or2@Sounds:  @gre@" + (player.soundsActive() ? "On" : "Off") + "");
+                    player.sendMessage("@gre@Please wait...truning sound mode to online!");
+                }
+                break;
+            case 55027:
+                if (player.musicActive() == true) {
+                    player.setMusicActive(false);
+                    player.getPacketSender().sendString(55027, "@or2@Music:  @gre@" + (player.musicActive() ? "On" : "Off") + "");
+                    player.sendMessage("@red@Please wait...truning Music mode to offline!");
+                } else {
+                    player.setMusicActive(true);
+                    player.getPacketSender().sendString(55027, "@or2@Music:  @gre@" + (player.musicActive() ? "On" : "Off") + "");
+                    player.getPacketSender().sendString(55027, "@or2@Music:  @gre@" + (player.musicActive() ? "On" : "Off") + "");
+                    player.sendMessage("@gre@Please wait...truning Music mode to online!");
                 }
                 break;
 
-            case 23824:
+            case 55003:
+                player.sendMessage("@or2@Players Online: @red@"+ World.getPlayersOnline());
+            break;
+
+
+            /*case 55027:
                 if (player.musicActive()) {
                     player.setMusicActive(false);
+                    player.sendMessage("@red@Please wait...truning Music mode to offline!");
                 } else {
                     player.setMusicActive(true);
+                    player.sendMessage("@gre@Please wait...truning Music mode to online!");
                 }
-                break;
+                break;*/
 
 
             case 2799:

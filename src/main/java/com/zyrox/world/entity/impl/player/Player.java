@@ -1659,6 +1659,7 @@ public int pkPointsTemp = -1;
         walkableInterfaceList.clear();
     }
 
+
     public void sendParallellInterfaceVisibility(int interfaceId, boolean visible) {
         if (this != null && this.getPacketSender() != null) {
             if (visible) {

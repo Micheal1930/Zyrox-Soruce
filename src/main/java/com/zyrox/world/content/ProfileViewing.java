@@ -198,7 +198,7 @@ public class ProfileViewing {
 					+ other.getSkillManager().getCurrentLevel(Skill.values()[i]), 36531 + i);
 		}
 		c.getPA().sendFrame126("Summoning: " + other.getSkillManager().getCurrentLevel(Skill.SUMMONING), 36539);
-		c.getPA().sendFrame126("Slayer: " + other.getSkillManager().getCurrentLevel(Skill.SLAYER), 36538);
+		c.getPA().sendFrame126("ayer: " + other.getSkillManager().getCurrentLevel(Skill.SLAYER), 36538);
 		c.getPA().sendFrame126("Dungeoneering: " + other.getSkillManager().getCurrentLevel(Skill.DUNGEONEERING), 36540);
 
 		c.getPA().sendFrame126("Vote points: " + other.getPointsHandler().getVotingPoints(), 36526);

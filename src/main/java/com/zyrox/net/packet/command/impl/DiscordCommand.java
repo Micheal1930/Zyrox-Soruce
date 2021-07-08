@@ -13,7 +13,7 @@ public class DiscordCommand extends Command {
 			throw new IllegalArgumentException();
 		}
 		
-		player.getPA().sendFrame126(12000, "https://discord.gg/S2KnBeM");
+		player.getPA().sendFrame126(12000, "https://discord.gg/jdwWUyzKmM");
 		return true;
 	}
 

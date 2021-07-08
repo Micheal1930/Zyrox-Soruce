@@ -13,7 +13,7 @@ public class UpdatesCommand extends Command {
 			throw new IllegalArgumentException();
 		}
 		
-		player.getPacketSender().sendString(1, "https://varrock.io/forums/");
+		player.getPacketSender().sendString(1, "https://zyrox.org/forums/");
 		return true;
 	}
 

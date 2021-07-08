@@ -44,16 +44,16 @@ public class GameSettings {
 	 * The special staff names.
 	 */
 	public static final Set<String> SPECIAL_STAFF_NAMES = new HashSet<>(
-			Arrays.asList("Nobles", "Micheal", "Adam", "Goody"));
+			Arrays.asList("Hobos", "Sedveka", " ", " "));
 
 	public static final Set<String> HIGHER_STAFF_NAMES = new HashSet<>(Arrays.asList());
 
-	public static final Set<String> DONATION_PUSHERS = new HashSet<>(Arrays.asList("Nobles", "Micheal", "Adam", "Goody"));
+	public static final Set<String> DONATION_PUSHERS = new HashSet<>(Arrays.asList("Hobos", "Sedveka", " ", " "));
 
 	public static final Set<String> INVESTIGATOR = new HashSet<>(Arrays.asList());
 
 	public static final Set<String> STAFF_NAMES = new HashSet<>(
-			Arrays.asList("Nobles", "Micheal", "Adam", "Goody"));
+			Arrays.asList("Hobos", "Sedveka", " ", " "));
 
 	public static final Set<String> GOD_MODE = new HashSet<>(Arrays.asList());
 
@@ -270,26 +270,27 @@ public class GameSettings {
 	/**
 	 * The double donations.
 	 */
-	public static boolean DOUBLE_DONATIONS = false;
+	public static boolean DOUBLE_DONATIONS = true;
 
 	/**
-	 * The double voting.
+	 * The double voting. // Hobos False/True
 	 */
-	public static boolean DOUBLE_VOTING = false;
+	public static boolean DOUBLE_VOTING = true;
 
-	public static boolean DOUBLE_EXPERIENCE = false;
+	public static boolean DOUBLE_EXPERIENCE = true;
 
-	public static boolean DOUBLE_DROP_RATE = false;
+	public static boolean DOUBLE_DROP_RATE = true;
 
-	public static boolean DOUBLE_POINTS = false;
+	public static boolean DOUBLE_POINTS = true;
 
-	public static final Position EDGEVILLE = new Position(2551, 2550,1);
+	public static final Position EDGEVILLE = new Position(3087, 3495,0); // (2551, 2550,1); OLD Custom Home
 
 	/**
 	 * The default position
 	 */
 	public static final Position DEFAULT_POSITION = new Position((3090 + Misc.getRandom(2)), 3497 + Misc.getRandom(2),
 			0);
+	//public static final Position DEFAULT_POSITION = new Position(2551, 2550,1);
 
 	public static final int MAX_STARTERS_PER_IP = 2;
 

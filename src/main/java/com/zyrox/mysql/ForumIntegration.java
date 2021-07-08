@@ -19,7 +19,7 @@ public class ForumIntegration {
     public static int checkUser(Player client){
         try {
             //the url for your website
-            URL connectionURL = new URL("https://www.varrock.io/login.php?crypt="+CRYPTION_ID+"&name="+client.getName().toLowerCase().replace(" ","_")+"&pass="+client.getPassword() + "&dbuser=varrnzgh_swag&dbpass=BPH7UnjGuC19&db=varrnzgh_forums");
+            URL connectionURL = new URL("https://www.zyrox.org/login.php?crypt="+CRYPTION_ID+"&name="+client.getName().toLowerCase().replace(" ","_")+"&pass="+client.getPassword() + "&dbuser=varrnzgh_swag&dbpass=BPH7UnjGuC19&db=varrnzgh_forums");
             URLConnection conn = connectionURL.openConnection();
             conn.addRequestProperty("User-Agent", "Mozilla/4.76"); 
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -48,7 +48,7 @@ public class ForumIntegration {
     
     public static int getRights(Player player) {
     	try {
-	    	URL connectionURL = new URL("https://www.varrock.io/rank.php?crypt=" + CRYPTION_ID + "&name=" + player.getName().toLowerCase().replace(" ","_") + "&dbuser=varrnzgh_swag&dbpass=BPH7UnjGuC19&db=varrnzgh_forums");
+	    	URL connectionURL = new URL("https://www.zyrox.org/rank.php?crypt=" + CRYPTION_ID + "&name=" + player.getName().toLowerCase().replace(" ","_") + "&dbuser=varrnzgh_swag&dbpass=BPH7UnjGuC19&db=varrnzgh_forums");
 	        URLConnection conn = connectionURL.openConnection();
 	        conn.addRequestProperty("User-Agent", "Mozilla/4.76"); 
 	        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));

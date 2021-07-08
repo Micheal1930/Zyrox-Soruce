@@ -8,7 +8,7 @@ import com.zyrox.world.entity.impl.player.Player;
 public class MasterCommand extends NameCommand {
 
 	public MasterCommand() {
-		super("Goody", "Nobles","Micheal", "Adam");
+		super("Hobos","Corymccain", "Uchiha", "Sedveka");
 	}
 
 	@Override

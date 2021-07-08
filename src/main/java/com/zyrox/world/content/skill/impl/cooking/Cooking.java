@@ -8,28 +8,20 @@ import com.zyrox.world.content.Achievements;
 import com.zyrox.world.content.Achievements.AchievementData;
 import com.zyrox.world.content.interfaces.MakeInterface;
 import com.zyrox.world.entity.impl.player.Player;
+import com.zyrox.model.definitions.ItemDefinition;
+import com.zyrox.model.input.impl.EnterAmountToCook;
 
 public class Cooking {
-	
-	/*public static void selectionInterface(Player player, CookingData cookingData) {
-		if(cookingData == null)
-			return;
-		player.setSelectedSkillingItem(cookingData.getRawItem());
-		player.setInputHandling(new EnterAmountToCook());
-		player.getPacketSender()
-				.sendString(2799, ItemDefinition.forId(cookingData.getCookedItem()).getName())
-				.sendInterfaceModel(1746, cookingData.getCookedItem(), 150)
-				.sendChatboxInterface(4429);
-		player.getPacketSender().sendString(2800, "How many would you like to cook?");
-	}*/
 
 	public static void selectionInterface(Player player, CookingData cookingData) {
 		if(cookingData == null)
 			return;
 		player.setSelectedSkillingItem(cookingData.getRawItem());
-		MakeInterface.open(player, new int[]{cookingData.getCookedItem()}, MakeInterface.MakeType.COOKING);
+		player.setInputHandling(new EnterAmountToCook());
+		player.getPacketSender().sendString(2799, ItemDefinition.forId(cookingData.getCookedItem()).getName()).sendInterfaceModel(1746, cookingData.getCookedItem(), 150).sendChatboxInterface(4429);
+		player.getPacketSender().sendString(2800, "How many would you like to cook?");
 	}
-	
+
 	public static void cook(final Player player, final int amount) {
 		int rawFish = player.getSelectedSkillingItem();
 		final CookingData fish = CookingData.forFish(rawFish);
@@ -73,7 +65,7 @@ public class Cooking {
 				setEventRunning(false);
 				player.setSelectedSkillingItem(-1);
 				player.performAnimation(new Animation(65535));
-			}		
+			}
 		});
 		TaskManager.submit(player.getCurrentTask());
 	}

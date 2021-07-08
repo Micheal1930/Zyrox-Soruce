@@ -187,7 +187,7 @@ public enum ShopType {
             		ShopData.DONATOR_EQUIPMENT, ShopData.DONATOR_MISC, ShopData.DONATOR_RARES, ShopData.DONATOR_SUPERRARES,
             }, NpcClickType.FIRST_CLICK, NpcClickType.SECOND_CLICK, NpcClickType.THIRD_CLICK),
 
-    VOTE_SHOP(605,
+    VOTE_SHOP(3641,
             new ShopData[] {
                     ShopData.VOTE_SHOP
             }, NpcClickType.SECOND_CLICK),

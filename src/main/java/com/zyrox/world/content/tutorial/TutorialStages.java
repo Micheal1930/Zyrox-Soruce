@@ -60,15 +60,15 @@ public enum TutorialStages {
         }
     },
 
-    SHOPS(new Position(2586, 2559, 1), "These are the shops where you can", "buy items. You can also sell items to", "the general store to get coins!"),
-    AUCTION_HOUSE(new Position(2553, 2564, 1), "This is the auction house where you", "can buy, or sell items with other players.", "It's basically player owned shops on crack!"),
-    DUEL_ARENA(new Position(3080, 3493), "When you get rich and wanna gamble", "come on over to the duel arena and stake", "your bank against other players!"),
-    SKILLING(new Position(2515, 2560,1), "This is the home skilling area.", "You can skill with players that", "are doing other types of skills!"),
-    PKING(new Position(3086, 3516), "When you feel like your ready to", "pwn some noobs, come out into the wildy", "and show em what you got."),
-    ALTAR_ROOM(new Position(2553, 2547,1), "Switch your spell/prayer books here.", "Don't be a noob, taste vengeance!"),
-    THIEVING(new Position(2559, 2572,1), "Steal items from these stalls, and sell", "the items to the merchant for quick cash.", "Be careful, don't get caught or he will call the cops."),
-    DONATOR_ZONE(new Position(2066, 3275), "When you wanna show the server", "some love, donate and you will have", "access to this zone that has tons of features."),
-    DONATOR2_ZONE(new Position(2914, 2675,1), "Oh yeah we have more features", "access to this area by donating", "You can gain Donor Points and more!"),
+    SHOPS(new Position(3080, 3509, 0), "These are the shops where you can", "buy items. You can also sell items to", "the general store to get coins!"),
+    AUCTION_HOUSE(new Position(3092, 3495, 0), "This is the auction house where you", "can buy, or sell items with other players.", "It's basically player owned shops on crack!"),
+    DUEL_ARENA(new Position(3080, 3493,0), "When you get rich and wanna gamble", "come on over to the duel arena and stake", "your bank against other players!"),
+    SKILLING(new Position(3087, 3471,0), "This is the home skilling area.", "You can skill with players that", "are doing other types of skills!"),
+    PKING(new Position(3086, 3516,0), "When you feel like your ready to", "pwn some noobs, come out into the wildy", "and show em what you got."),
+    ALTAR_ROOM(new Position(3095, 3510,0), "Switch your spell/prayer books here.", "Don't be a noob, taste vengeance!"),
+    THIEVING(new Position(3094, 3486,0), "Steal items from these stalls, and sell", "the items to the merchant for quick cash.", "Be careful, don't get caught or he will call the cops."),
+    DONATOR_ZONE(new Position(2066, 3275,0), "When you wanna show the server", "some love, donate and you will have", "access to this zone that has tons of features."),
+    DONATOR2_ZONE(new Position(2066, 3275,0), "Oh yeah we have more features", "access to this area by donating", "You can gain Donor Points and more!"),
 
     SKILL_TELEPORT(null, "Now to train skills, it is as simple as clicking", "on them and it will teleport you to one of", "the training locations.") {
         @Override

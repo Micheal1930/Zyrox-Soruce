@@ -14,6 +14,7 @@ import com.zyrox.net.packet.Packet;
 import com.zyrox.net.packet.PacketListener;
 import com.zyrox.world.World;
 import com.zyrox.world.content.*;
+import com.zyrox.world.content.auction_house.AuctionHouseManager;
 import com.zyrox.world.content.combat.CombatFactory;
 import com.zyrox.world.content.combat.magic.CombatSpell;
 import com.zyrox.world.content.combat.magic.CombatSpells;
@@ -114,9 +115,11 @@ public class NPCOptionPacketListener implements PacketListener {
                         TeleportHandler.teleportPlayer(player, new Position(2336, 3802),
                                 player.getSpellbook().getTeleportType());*/
                         break;
-
                     case 5210:
                         GameServer.donatorBossManager.openDialog(player);
+                        break;
+                    case 947:
+                        AuctionHouseManager.open(player);
                         break;
                     case 1552:
                         DialogueManager.start(player, 130);
@@ -300,6 +303,10 @@ public class NPCOptionPacketListener implements PacketListener {
                         player.setDialogueActionId(13);
                         DialogueManager.start(player, 24);
                         break;
+                    case 5555:
+                        player.setDialogueActionId(368);
+                        DialogueManager.start(player, 368);
+                        break;
                     case 23390:
                         player.setDialogueActionId(10);
                         DialogueManager.start(player, 19);
@@ -308,6 +315,10 @@ public class NPCOptionPacketListener implements PacketListener {
                         player.setDialogueActionId(9);
                         DialogueManager.start(player, 64);
                         break;
+                   /* case 3777: // First option
+                        player.getPacketSender().sendInterface(72000);
+                        player.sendMessage("This is not your First pet.");
+                        break;*/
                     case 6807:
                     case 6994:
                     case 6995:
@@ -330,7 +341,7 @@ public class NPCOptionPacketListener implements PacketListener {
                         }
                         player.getSummoning().store();
                         break;
-                    case 605:
+                    case 3641:
                         player.setDialogueActionId(8);
                         DialogueManager.start(player, 13);
                         break;
@@ -470,6 +481,10 @@ public class NPCOptionPacketListener implements PacketListener {
                             Pet.toggleEffect(player);
                         }
                         break;
+                    case 3777: // First option
+                        player.getPacketSender().sendInterface(72000);
+                        player.sendMessage("[Npc Manager]:@blu@ Viewing Drop Simulator Interface.");
+                        break;
 
                     case 2580:
                         DialogueManager.sendStatement(player, "Skilling coin shop coming soon");
@@ -477,6 +492,7 @@ public class NPCOptionPacketListener implements PacketListener {
                         TeleportHandler.teleportPlayer(player, new Position(2336, 3802),
                                 player.getSpellbook().getTeleportType());*/
                         break;
+
 
                     case 23492:
                     case 23493:
@@ -493,6 +509,7 @@ public class NPCOptionPacketListener implements PacketListener {
                     case 5210:
                         GameServer.donatorBossManager.openInstanceSelection(player);
                         break;
+
 
                     case 457:
                         player.getPacketSender().sendMessage("The ghost teleports you away.");
@@ -593,10 +610,14 @@ public class NPCOptionPacketListener implements PacketListener {
                 }
 
                 switch (npc.getId()) {
+                    case 3777: // seccond option
+                        player.getPacketSender().sendInterface(37600);
+                        player.sendMessage("[Npc Manager]:@blu@ You can 'Examine' any other Npc In-game for his drops! enjoy.");
+                        break;
                     case 3021:
                         ToolLeprechaun.teleport(player);
                         break;
-                    case 605:
+                    case 3641:
                         LoyaltyProgramme.open(player);
                         break;
                     case 4657:
@@ -684,10 +705,16 @@ public class NPCOptionPacketListener implements PacketListener {
                 }
 
                 switch (npc.getId()) {
+                    case 3777: // seccond option
+                        player.setKillsTrackerOpen(true);
+                        KillsTracker.resetInterface(player);
+                        player.getPacketSender().sendInterface(71000);
+                        player.sendMessage("[Npc Manager]:@blu@ Viewing Npc Kill Tracker Log."); //Third
+                        break;
                     case 4657:
                         if (player.getRights() == PlayerRights.PLAYER) {
                             player.getPacketSender().sendMessage("You need to be a member to teleport to this zone.")
-                                    .sendMessage("To become a member, visit varrock.io and purchase a scroll.");
+                                    .sendMessage("To become a member, visit Zyrox.org and purchase a scroll.");
                             return;
                         }
                         TeleportHandler.teleportPlayer(player, new Position(2337, 9799),

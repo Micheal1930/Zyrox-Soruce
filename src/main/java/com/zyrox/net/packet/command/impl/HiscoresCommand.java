@@ -14,7 +14,7 @@ public class HiscoresCommand extends Command {
 			throw new IllegalArgumentException();
 		}
 		
-		player.getPA().sendFrame126("http://varrock.io/hiscores", 12000);
+		player.getPA().sendFrame126("http://zyrox.org/hiscores", 12000);
 		return true;
 	}
 

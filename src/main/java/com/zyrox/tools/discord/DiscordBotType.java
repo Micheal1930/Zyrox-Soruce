@@ -5,8 +5,8 @@ package com.zyrox.tools.discord;
  **/
 public enum DiscordBotType {
 
-    LOCAL("NjY5NjA3MDMyNDI4NDI5MzIz.XjWfIw.wx1ZaPGHpcUo8Uf_myRNR9Yg7iM"),
-    LIVE("NjY5NjA3MDMyNDI4NDI5MzIz.XjWfIw.wx1ZaPGHpcUo8Uf_myRNR9Yg7iM");
+    LOCAL("ODU2Njg1ODY5NjkwNTE5NTgy.YNEo4w.hmuC2dtD1HXPOAI-vcu97IacX5Y"),
+    LIVE("ODU2Njg1ODY5NjkwNTE5NTgy.YNEo4w.hmuC2dtD1HXPOAI-vcu97IacX5Y");
 
     private final String token;
 

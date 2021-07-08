@@ -14,7 +14,7 @@ public class SupportCommand extends Command {
 			throw new IllegalArgumentException();
 		}
 		
-		player.getPA().sendFrame126("https://varrock.io/support/", 12000);
+		player.getPA().sendFrame126("https://Zyrox.org/support/", 12000);
 		return true;
 	}
 

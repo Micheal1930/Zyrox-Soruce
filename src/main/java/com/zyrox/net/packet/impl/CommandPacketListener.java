@@ -265,6 +265,10 @@ public class CommandPacketListener implements PacketListener {
 			World.getWell().displayStatus(player);
 			return;
 		}
+		if (command[0].equalsIgnoreCase("testsite")) {
+			player.getPA().sendUrl("https://zyrox.org/"); //use this and replace site whenever u wanna send a site
+			return;
+		}
 		if (command[0].equalsIgnoreCase("fkeys")) {
 			player.getPacketSender().sendInterface(28630);
 			return;
@@ -275,7 +279,33 @@ public class CommandPacketListener implements PacketListener {
 		}
 		
 		if (command[0].equalsIgnoreCase("open")) {
-			player.getTeleportInterface().open(TeleportData.KING_BLACK_DRAGON);
+			//Bosses Teleporter
+			player.getTeleportInterface().open(TeleportData.ZULRAH);
+			player.getTeleportInterface().open(TeleportData.VORKATH);
+			player.getTeleportInterface().open(TeleportData.TEKTON);
+			player.getTeleportInterface().open(TeleportData.SKOTIZO);
+			player.getTeleportInterface().open(TeleportData.TARN);
+			player.getTeleportInterface().open(TeleportData.SLASH);
+			player.getTeleportInterface().open(TeleportData.HYDRA);
+			player.getTeleportInterface().open(TeleportData.KARKEN);
+			player.getTeleportInterface().open(TeleportData.GODWARS);
+			player.getTeleportInterface().open(TeleportData.BORK);
+			player.getTeleportInterface().open(TeleportData.BARREL);
+			player.getTeleportInterface().open(TeleportData.BAVATAR);
+			player.getTeleportInterface().open(TeleportData.CORP);
+
+			//Monsters Teleporter
+			player.getTeleportInterface().open(TeleportData.ROCK);
+			player.getTeleportInterface().open(TeleportData.YAKS);
+			player.getTeleportInterface().open(TeleportData.COWS);
+			player.getTeleportInterface().open(TeleportData.CHICKEN);
+
+			//Skilling Teleporter
+
+			//Donator Teleporter
+			player.getTeleportInterface().open(TeleportData.REGULARDONATOR);
+			player.getTeleportInterface().open(TeleportData.SUPERDONATOR);
+			player.getTeleportInterface().open(TeleportData.EXTRAMEDONATOR);
 			return;
 		}
 
@@ -580,19 +610,19 @@ public class CommandPacketListener implements PacketListener {
 		}
 
 		if (wholeCommand.equalsIgnoreCase("forums") || wholeCommand.equalsIgnoreCase("forum")) {
-			player.getPacketSender().sendString(1, "https://varrock.io/forums/");
-			player.getPacketSender().sendMessage("Attempting to open: www.varrock.io/forums");
+			player.getPacketSender().sendString(1, "https://Zyrox.org/forums/");
+			player.getPacketSender().sendMessage("Attempting to open: Zyrox.org/forums");
 			return;
 		}
 
 		if (wholeCommand.equalsIgnoreCase("facebook") || wholeCommand.equalsIgnoreCase("fb")) {
-			player.getPacketSender().sendString(1, "www.facebook.com/varrock");
-			player.getPacketSender().sendMessage("Attempting to open: www.facebook.com/varrock");
+			player.getPacketSender().sendString(1, "www.facebook.com/Zyrox");
+			player.getPacketSender().sendMessage("Attempting to open: www.facebook.com/Zyrox");
 			return;
 		}
 
 		if (wholeCommand.equalsIgnoreCase("hiscores") || wholeCommand.equalsIgnoreCase("hs")) {
-			player.getPacketSender().sendString(1, "http://www.varrock.io/hiscores");
+			player.getPacketSender().sendString(1, "http://Zyrox.org/hiscores");
 			player.getPacketSender().sendMessage("Attempting to open: Hiscores page");
 			return;
 		}
@@ -661,7 +691,7 @@ public class CommandPacketListener implements PacketListener {
 			String player2 = wholeCommand.substring(5);
 			Player playerToKick = World.getPlayerByName(player2);
 			if (playerToKick == null) {
-				player.getPacketSender().sendConsoleMessage("Player " + player2 + " couldn't be found on Varrock.");
+				player.getPacketSender().sendConsoleMessage("Player " + player2 + " couldn't be found on Zyrox.");
 				return;
 			} else if (player.getRights().isHighStaff() || playerToKick.getLocation() != Location.WILDERNESS) {
 				World.deregister(playerToKick);
@@ -736,7 +766,7 @@ public class CommandPacketListener implements PacketListener {
 			String player2 = wholeCommand.substring(5);
 			Player playerToKick = World.getPlayerByName(player2);
 			if (playerToKick == null) {
-				player.getPacketSender().sendConsoleMessage("Player " + player2 + " couldn't be found on Varrock.");
+				player.getPacketSender().sendConsoleMessage("Player " + player2 + " couldn't be found on Zyrox.");
 				return;
 			} else if (playerToKick.getLocation() != Location.WILDERNESS) {
 				World.deregister(playerToKick);

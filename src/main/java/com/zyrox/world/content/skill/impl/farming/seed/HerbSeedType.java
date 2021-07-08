@@ -15,7 +15,7 @@ public enum HerbSeedType implements SeedType {
 
 	GUAM(9, 
 			new Item(5291), //seeds
-			new int[] { 4, 20 }, //growth time
+			new int[] { 1, 2 }, //growth time
 			new Item[] { new Item(199) }, //rewards
 			null, //protection fee
 			new int[] { 11, 0, 13 }, //experience (plant, check_health, harvest)
@@ -24,7 +24,7 @@ public enum HerbSeedType implements SeedType {
 			
 	MARRENTIL(14,
 			new Item(5292), //seeds
-			new int[] { 4, 20 }, //growth time
+			new int[] { 2, 3 }, //growth time
 			new Item[] { new Item(201) }, //rewards
 			null, //protection fee
 			new int[] { 14, 0, 15 }, //experience (plant, check_health, harvest)

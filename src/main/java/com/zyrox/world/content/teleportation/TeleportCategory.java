@@ -2,11 +2,12 @@ package com.zyrox.world.content.teleportation;
 
 public enum TeleportCategory {
 	
-	BEGINNER_MONSTERS("Beginner Mobs"), 
-	MID_LEVEL_MONSTERS("Mid-Level Mobs"), 
+	MONSTERS("Monsters"),
+	SKILLING("Skilling"),
 	BOSSES("Bosses"), 
-	MINIGAMES("Minigames"), 
-	MISC("Misc"), 
+	MINIGAMES("Minigames"),
+	ZONES("Zones"),
+	DONATORS("Donators"),
 	DEFAULT("N/A");
 	
 	TeleportCategory(String name) {

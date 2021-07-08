@@ -77,10 +77,8 @@ public class GameServer {
 
         logger.info("Starting Zyrox in "+GameSettings.GAME_TYPE+" mode.");
 
-        if(GameServer.isLive()) {
             logger.info("Starting discord bot...");//disable mysql it is
-            //discordBot.start();
-        }
+            discordBot.start();
 
         logger.info("Starting youtube api...");
         //youtube = YouTubeAuthentication.start();
@@ -117,7 +115,7 @@ public class GameServer {
         Dumper.dump();
 
         if(GameSettings.GAME_TYPE != GameType.LOCAL) {
-            //discordBot.sendStartupMessage();
+            discordBot.sendStartupMessage();
         }
 
     }

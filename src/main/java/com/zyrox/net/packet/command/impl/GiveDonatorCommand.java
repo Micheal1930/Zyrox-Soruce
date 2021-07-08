@@ -19,7 +19,7 @@ import com.zyrox.world.entity.impl.player.Player;
 public class GiveDonatorCommand extends NameCommand {
 
 	public GiveDonatorCommand() {
-		super("Harrison", "Adam");
+		super("Hobos", " ");
 	}
 
 	@Override

@@ -14,7 +14,7 @@ public class BenefitsCommand extends Command {
 			throw new IllegalArgumentException();
 		}
 		
-		player.getPA().sendFrame126("https://varrock.io/store", 12000);
+		player.getPA().sendFrame126("https://zyrox.org/store", 12000);
 		return true;
 	}
 

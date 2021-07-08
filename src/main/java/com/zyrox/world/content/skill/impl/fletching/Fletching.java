@@ -5,12 +5,16 @@ import com.zyrox.engine.task.TaskManager;
 import com.zyrox.model.Animation;
 import com.zyrox.model.Item;
 import com.zyrox.model.Skill;
+import com.zyrox.model.input.impl.EnterAmountOfBowsToString;
+import com.zyrox.world.content.Achievements.AchievementData;
+
 import com.zyrox.world.content.Achievements;
 import com.zyrox.world.content.Sounds;
-import com.zyrox.world.content.Achievements.AchievementData;
 import com.zyrox.world.content.Sounds.Sound;
 import com.zyrox.world.content.interfaces.MakeInterface;
 import com.zyrox.world.entity.impl.player.Player;
+import com.zyrox.model.input.impl.EnterAmountToFletch;
+import com.zyrox.model.definitions.ItemDefinition;
 
 /**
  * Handles the Fletching skill
@@ -24,7 +28,7 @@ public class Fletching {
 	 * @param player	The player Fletching
 	 * @param log	The log to fletch
 	 */
-	/*public static void openSelection(final Player player, int log) {
+	public static void openSelection(final Player player, int log) {
 		player.getSkillManager().stopSkilling();
 		player.setSelectedSkillingItem(log);
 		BowData shortBow = BowData.forLog(log, false);
@@ -47,37 +51,11 @@ public class Fletching {
 			player.getPacketSender().sendString(8878, ""+ItemDefinition.forId(longBow.getBowID()).getName()+"");
 		}
 		player.setInputHandling(new EnterAmountToFletch());
-	}*/
-	public static void openSelection(final Player player, int log) {
-		player.getSkillManager().stopSkilling();
-		player.setSelectedSkillingItem(log);
-		BowData shortBow = BowData.forLog(log, false);
-		BowData longBow = BowData.forLog(log, true);
-		if(shortBow == null || longBow == null)
-			return;
-		if(log == 1511) {
-			/*player.getPacketSender().sendChatboxInterface(8880);
-			player.getPacketSender().sendInterfaceModel(8884, longBow.getBowID(), 250);
-			player.getPacketSender().sendInterfaceModel(8883, shortBow.getBowID(), 250);
-			player.getPacketSender().sendInterfaceModel(8885, 52, 250);
-			player.getPacketSender().sendString(8889, ""+ItemDefinition.forId(shortBow.getBowID()).getName()+"");
-			player.getPacketSender().sendString(8893, ""+ItemDefinition.forId(longBow.getBowID()).getName()+"");
-			player.getPacketSender().sendString(8897, "Shafts");*/
-			MakeInterface.open(player, new int[]{longBow.getBowID(), shortBow.getBowID(), 52}, MakeInterface.MakeType.BOWS);
-		} else {
-			MakeInterface.open(player, new int[]{longBow.getBowID(), shortBow.getBowID()}, MakeInterface.MakeType.BOWS);
-			/*player.getPacketSender().sendChatboxInterface(8866);
-			player.getPacketSender().sendInterfaceModel(8870, longBow.getBowID(), 250);
-			player.getPacketSender().sendInterfaceModel(8869, shortBow.getBowID(), 250);
-			player.getPacketSender().sendString(8874, ""+ItemDefinition.forId(shortBow.getBowID()).getName()+"");
-			player.getPacketSender().sendString(8878, ""+ItemDefinition.forId(longBow.getBowID()).getName()+"");*/
-		}
 	}
 
 	/**
 	 * Checks if a button that was clicked is from the Fletching interface
-	 * @param player	The Player clicking a button
-	 * @param clickId	The button the player clicked
+	 * @param player	The Player clicking a buttonbutton the player clicked
 	 * @return
 	 */
 	public static boolean fletchingButton(final Player player, int button) {
@@ -362,9 +340,9 @@ public class Fletching {
 				player.getSkillManager().stopSkilling();
 				player.setSelectedSkillingItem(log);
 				MakeInterface.open(player, new int[]{g.Strung()}, MakeInterface.MakeType.BOW_STRINGING);
-				/*player.setInputHandling(new EnterAmountOfBowsToString());
+				player.setInputHandling(new EnterAmountOfBowsToString());
 				player.getPacketSender().sendString(2799, ItemDefinition.forId(g.Strung()).getName()).sendInterfaceModel(1746, g.Strung(), 150).sendChatboxInterface(4429);
-				player.getPacketSender().sendString(2800, "How many would you like to make?");*/
+				player.getPacketSender().sendString(2800, "How many would you like to make?");
 			}
 		}
 	}

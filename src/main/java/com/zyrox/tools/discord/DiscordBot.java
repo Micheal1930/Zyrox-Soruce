@@ -1,14 +1,10 @@
 package com.zyrox.tools.discord;
 
-import sx.blah.discord.api.ClientBuilder;
-import sx.blah.discord.api.IDiscordClient;
-import sx.blah.discord.handle.obj.IMessage;
-import sx.blah.discord.handle.obj.IRole;
-import sx.blah.discord.handle.obj.IUser;
-import sx.blah.discord.util.DiscordException;
-import sx.blah.discord.util.EmbedBuilder;
-import sx.blah.discord.util.MissingPermissionsException;
-import sx.blah.discord.util.RateLimitException;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.*;
+import net.dv8tion.jda.api.requests.GatewayIntent;
 
 import java.awt.*;
 import java.util.*;
@@ -40,25 +36,23 @@ public class DiscordBot {
 
     }
 
-    public IDiscordClient client;
+    public JDA client;
 
     public void start() {
         createClient(DiscordBotConstants.DISCORD_BOT_TYPE.getToken(), true);
-        client.getDispatcher().registerListener(new DiscordBotEvents(this));
+        //client.getDispatcher().registerListener(new DiscordBotEvents(this));
         timer.schedule(myTask, 0, 100);
     }
 
     public void createClient(String token, boolean login) {
-        ClientBuilder clientBuilder = new ClientBuilder();
-        clientBuilder.withToken(token);
-
         try {
-            if (login) {
-                this.client = clientBuilder.login();
-            } else {
-                this.client = clientBuilder.login();
-            }
-        } catch (DiscordException e) {
+            client = JDABuilder.createLight(
+                    token,
+                    GatewayIntent.GUILD_MESSAGES, GatewayIntent.DIRECT_MESSAGES)
+                    //.addEventListeners(new Bot())
+                    .setActivity(Activity.playing("Zyrox"))
+                    .build();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -66,44 +60,6 @@ public class DiscordBot {
     public void process() {
         //updatePlayersOnline();
        // updateCountdown();
-    }
-
-    public void messageSent(IMessage message) {
-        String content = message.getContent();
-        String channelId = Long.toString(message.getChannel().getLongID());
-        String messageId = Long.toString(message.getLongID());
-        String nickName = message.getAuthor().getNicknameForGuild(message.getGuild());
-        String senderName = message.getAuthor().getName();
-
-        DiscordChannel channel = DiscordChannel.getChannelForId(channelId);
-
-        if(channel != null) {
-
-        }
-
-    }
-
-    public boolean hasRank(String rankName, IUser user, String currentChannelId) {
-        try {
-            //List<IRole> list = user.getRolesForGuild(user.getClient().getChannelByID(currentChannelId).getGuild());
-            List<IRole> list = user.getRolesForGuild(user.getClient().getChannelByID(Long.parseLong(currentChannelId)).getGuild());
-            for (int index = 0; index < list.size(); index++) {
-                String roleId = list.get(index).toString().replace("<@&", "");
-                roleId = roleId.replace(">", "");
-                if (roleId.contains("@everyone")) {
-                    continue;
-                }
-                if (user.getClient().getRoleByID(Long.parseLong(roleId)) != null) {
-                    if (user.getClient().getRoleByID(Long.parseLong(roleId)).getName().contains(rankName)) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
     }
 
     public static void sendMessage(DiscordChannel discordChannel, String message) {
@@ -124,10 +80,19 @@ public class DiscordBot {
 
     private void sendMessageCore(String channelId, String message) {
         try {
-            client.getChannelByID(Long.parseLong(channelId)).sendMessage(message);
+            for(TextChannel channel : client.getTextChannels()) {
+                System.out.println(
+                        channel.getName()
+                                .replaceAll("[^A-Za-z0-9]","")
+                                .toUpperCase()
+                                .replaceAll(" ", "_")
+                        + "('" + channel.getIdLong() + "'),"
+                );
+            }
+            client.getTextChannelById(channelId).sendMessage(message).queue();
             timeMessageSent = System.currentTimeMillis();
             messageQueue.remove(0);
-        } catch (MissingPermissionsException | RateLimitException | DiscordException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -141,7 +106,7 @@ public class DiscordBot {
 
             for (int index = 0; index < messageQueue.size(); index++) {
                 String[] parse = messageQueue.get(index).split(GameSettings.TEXT_SEPERATOR);
-                if (client.getChannelByID(Long.parseLong(parse[0])) == null) {
+                if (client.getTextChannelById(Long.parseLong(parse[0])) == null) {
                     continue;
                 }
                 if (parse.length >= 2) {
@@ -154,10 +119,10 @@ public class DiscordBot {
         }
     };
 
-    public void discordCommand(IMessage message) {
-        String currentChannelId = message.getChannel().getLongID() + "";
-        IUser user = message.getAuthor();
-        String command = message.getContent().substring(2, message.getContent().length());
+    public void discordCommand(Message message) {
+        String currentChannelId = message.getChannel().getIdLong() + "";
+        User user = message.getAuthor();
+        String command = message.getContentRaw().substring(2, message.getContentRaw().length());
         if (!command.contains("announce")) {
             command = command.toLowerCase();
         }
@@ -169,208 +134,36 @@ public class DiscordBot {
         if(client == null)
             return;
 
-        if(!client.isLoggedIn())
-            return;
-
         if(!GameServer.isLive()) {
             return;
         }
-
-       /* if(lastPlayersOnline != World.getPlayersOnline()) {
-            client.getVoiceChannelByID(Long.parseLong(DiscordChannel.PLAYERS_ONLINE.getChannelId())).changeName("Players Online: " + World.getPlayersOnline());
-            WebsiteStatisticUpdater.updatePlayersOnline();
-            lastPlayersOnline = World.getPlayersOnline();
-        }*/
-    }
-/*
-    public void updateCountdown() {
-
-        if(client == null)
-            return;
-
-        if(!client.isLoggedIn())
-            return;
-
-        long secondsLeft = (1570381200000L - System.currentTimeMillis()) / 1000;
-
-        if(secondsLeft <= 0)
-            return;
-
-        String timeLeft = Misc.getShortTimeLeft((int) secondsLeft);
-
-        if(!lastCountdown.equals(timeLeft)) {
-            client.getVoiceChannelByID(Long.parseLong(DiscordChannel.COUNTDOWN.getChannelId())).changeName(timeLeft);
-            lastCountdown = timeLeft;
-        }
-    }*/
-
-    public static ArrayList<String> ALREADY_SENT_TO = new ArrayList<String>();
-
- /*   public static void loadOutputList() {
-        ALREADY_SENT_TO.clear();
-
-        System.out.println("Loading output list...");
-        File file = new File("./output.txt");
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(file));
-        } catch(FileNotFoundException e) {
-            System.out.println("Output list not found.");
-            return;
-        }
-        String line;
-        try {
-            while ((line = reader.readLine()) != null) {
-
-                if(line.isEmpty())
-                    continue;
-
-                try {
-
-                    if(line == null)
-                        continue;
-
-                    if(line.isEmpty())
-                        continue;
-
-                    ALREADY_SENT_TO.add(line);
-                } catch(Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-*/
-    public void localCommands(String command, String currentChannelId, IUser user, IMessage message) {
-        System.out.println(command);
-       // loadOutputList();
-        if(DiscordBotConstants.DISCORD_BOT_TYPE == DiscordBotType.LIVE) {
-            return;
-        }
-       /* if (!hasRank("Owner", user, currentChannelId)) {
-            return;
-        }
-        if (command.startsWith("collect")) {
-            Writer writer = null;
-
-            try {
-                writer = new BufferedWriter(new OutputStreamWriter(
-                        new FileOutputStream("output.txt", true), "utf-8"));
-
-                int alreadySent = 0;
-
-                for (int index = 0; index < client.getUsers().size(); index++) {
-                    IUser loop = client.getUsers().get(index);
-                    if (loop.isBot()) {
-                        continue;
-                    }
-
-                    try {
-                        writer.write(String.valueOf(loop.getLongID()));
-                        ((BufferedWriter) writer).newLine();
-                    } catch (MissingPermissionsException | RateLimitException | DiscordException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                System.out.println("Dumping member list.. already sent = "+alreadySent);
-
-                writer.close();
-
-            } catch (IOException ex) {
-                // Report
-            } finally {
-                try {writer.close();} catch (Exception ex) {*//*ignore*//*}
-            }
-            return;
-        }
-        if (command.startsWith("announce")) {
-            String text = command.replace("announce ", "");
-            //sendMessage(currentChannelId, text);
-
-            Writer writer = null;
-
-            try {
-                writer = new BufferedWriter(new OutputStreamWriter(
-                        new FileOutputStream("output.txt", true), "utf-8"));
-
-                int alreadySent = 0;
-
-                for (int index = 0; index < client.getUsers().size(); index++) {
-                    IUser loop = client.getUsers().get(index);
-                    if (loop.isBot()) {
-                        continue;
-                    }
-
-                    if(ALREADY_SENT_TO.contains(String.valueOf(loop.getLongID()))*//* && !hasRank("Owner", loop, currentChannelId)*//*) {
-                        alreadySent++;
-                        continue;
-                    }
-
-                   *//* if(!hasRank("Owner", loop, currentChannelId)) {
-                        continue;
-                    }*//*
-                    try {
-                        client.getOrCreatePMChannel(loop).sendMessage(text);
-                        writer.write(String.valueOf(loop.getLongID()));
-                        ((BufferedWriter) writer).newLine();
-                        System.out.println(index + "/" + client.getUsers().size() + " Sent private message to: " + loop.getName());
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    } catch (MissingPermissionsException | RateLimitException | DiscordException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                System.out.println("Finished sending mass pm... already sent = "+alreadySent);
-
-                writer.close();
-
-            } catch (IOException ex) {
-                // Report
-            } finally {
-                try {writer.close();} catch (Exception ex) {*//*ignore*//*}
-            }
-
-            return;
-        }*/
     }
 
     public void sendAuctionHouseMessage(int itemId, int amount, String timeRemaining, long price, long auction, int bids, String action) {
-        if(!GameServer.isLive()) {
-            return;
-        }
 
         EmbedBuilder eb = new EmbedBuilder();
 
         String itemName = ItemDefinition.forId(itemId).getName();
 
-        eb.withAuthorName((amount > 1 ? amount+"x " : "") + itemName + " "+ action);
+        eb.setAuthor((amount > 1 ? amount+"x " : "") + itemName + " "+ action);
 
-        eb.withColor(new Color(138, 167, 255));
+        eb.setColor(new Color(138, 167, 255));
 
-        eb.appendDesc("Auction: "+(auction > 0 ? Misc.insertCommasToNumber(auction) : "N/A")+" coins\n");
+        eb.appendDescription("Auction: "+(auction > 0 ? Misc.insertCommasToNumber(auction) : "N/A")+" coins\n");
 
-        eb.appendDesc("Buy Now: "+Misc.insertCommasToNumber(price)+" coins\n");
+        eb.appendDescription("Buy Now: "+Misc.insertCommasToNumber(price)+" coins\n");
 
         if(bids > 0) {
-            eb.appendDesc("Bids: " + Misc.insertCommasToNumber(bids) + "\n");
+            eb.appendDescription("Bids: " + Misc.insertCommasToNumber(bids) + "\n");
         }
 
-        eb.withThumbnail("https://solaceps.com/images/32x32/"+itemId+".png");
+        eb.setThumbnail("https://solaceps.com/images/32x32/"+itemId+".png");
 
-        eb.withFooterText("Time remaining: "+timeRemaining+" ~ Type ::auction in-game to buy it");
+        eb.setFooter("Time remaining: "+timeRemaining+" ~ Type ::auction in-game to buy it");
         try {
-            client.getChannelByID(
-                    Long.parseLong(
-                            DiscordChannel.GAME_MARKET.getChannelId()))
+            client.getTextChannelById(DiscordChannel.GAMEMARKET.getChannelId())
                     .sendMessage(
-                            eb.build());
+                            eb.build()).queue();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -385,57 +178,51 @@ public class DiscordBot {
 
         String itemName = ItemDefinition.forId(itemId).getName();
 
-        eb.withTitle(username+" received "+(amount > 1 ? amount+"x" : "") + itemName+" from "+Misc.anOrA(receivedFrom)+" "+receivedFrom+"!");
+        eb.setTitle(username+" received "+(amount > 1 ? amount+"x" : "") + itemName+" from "+Misc.anOrA(receivedFrom)+" "+receivedFrom+"!");
 
-        eb.appendDesc("Received at: "+Misc.getTime()+"\n");
+        eb.appendDescription("Received at: "+Misc.getTime()+"\n");
 
-        eb.withColor(new Color(170, 255, 133));
+        eb.setColor(new Color(170, 255, 133));
 
-        eb.withThumbnail("https://solaceps.com/images/32x32/"+itemId+".png");
+        eb.setThumbnail("https://solaceps.com/images/32x32/"+itemId+".png");
 
-        eb.withFooterText(footer);
+        eb.setFooter(footer);
 
-        if(authorImage != null) {
-            eb.withFooterIcon(authorImage);
-        }
 
         try {
-            client.getChannelByID(
-                    Long.parseLong(DiscordChannel.GAME_LOOTS.getChannelId()))
+            client.getTextChannelById(DiscordChannel.GAME_LOOTS.getChannelId())
                     .sendMessage(
-                            eb.build());
+                            eb.build()).queue();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void sendUpdateEventMessage(String title, String initiatedBy, String description, String footer) {
-        if(!GameServer.isLive()) {
+       if(!GameServer.isLive()) {
             return;
         }
 
         EmbedBuilder eb = new EmbedBuilder();
 
-        eb.withAuthorName(title);
+        eb.setAuthor(title);
 
-        eb.withColor(new Color(255, 74, 72));
+        eb.setColor(new Color(255, 74, 72));
 
         if(description != null) {
-            eb.appendDesc(description+"\n");
+            eb.appendDescription(description+"\n");
         }
 
-        eb.appendDesc("Initiated by: "+initiatedBy+"\n");
-        eb.appendDesc("Server Time: "+Misc.getTime()+"\n");
+        eb.appendDescription("Initiated by: "+initiatedBy+"\n");
+        eb.appendDescription("Server Time: "+Misc.getTime()+"\n");
 
-        eb.withThumbnail("http://solaceps.com/images/icon.png");
+        eb.setThumbnail("http://solaceps.com/images/icon.png");
 
-        eb.withFooterText(footer);
-
+        eb.setFooter(footer);
         try {
-            client.getChannelByID(
-                    Long.parseLong(DiscordChannel.GAME_EVENTS.getChannelId()))
+            client.getTextChannelById(DiscordChannel.GAME_EVENTS.getChannelId())
                     .sendMessage(
-                            eb.build());
+                            eb.build()).queue();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -448,30 +235,29 @@ public class DiscordBot {
 
         EmbedBuilder eb = new EmbedBuilder();
 
-        eb.withAuthorName("Zyrox is online!");
+        eb.setAuthor("Zyrox is online!");
 
-        eb.withColor(new Color(255, 74, 72));
+        eb.setColor(new Color(255, 74, 72));
 
-        eb.appendDesc("Started in "+GameSettings.GAME_TYPE+" mode.\n");
-        eb.appendDesc("Server Time: "+Misc.getTime()+"\n");
+        eb.appendDescription("Started in "+GameSettings.GAME_TYPE+" mode.\n");
+        eb.appendDescription("Server Time: "+Misc.getTime()+"\n");
 
-        eb.withThumbnail("http://solaceps.com/images/icon.png");
+        eb.setThumbnail("http://solaceps.com/images/icon.png");
 
-        eb.withFooterText("Zyrox is now online and you can login.");
+        eb.setFooter("Zyrox is now online and you can login.");
 
         try {
-            client.getChannelByID(
-                    Long.parseLong(
-                            DiscordChannel.GAME_EVENTS.getChannelId()))
+            client.getTextChannelById(DiscordChannel.GAME_TYPE.getChannelId())
                     .sendMessage(
-                            eb.build());
+                            eb.build()).queue();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public boolean isPlayer(List<IRole> roles) {
-        for(IRole iRole : roles) {
+
+    public boolean isPlayer(List<Role> roles) {
+        for(Role iRole : roles) {
             if(iRole.getName().toLowerCase().contains("owner")
                     || iRole.getName().toLowerCase().contains("developer")
                     || iRole.getName().toLowerCase().contains("administrator")

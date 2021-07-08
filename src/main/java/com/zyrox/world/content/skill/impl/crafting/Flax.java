@@ -6,51 +6,26 @@ import com.zyrox.model.Animation;
 import com.zyrox.model.Skill;
 import com.zyrox.model.Locations.Location;
 import com.zyrox.world.content.interfaces.MakeInterface;
+import com.zyrox.model.input.impl.EnterAmountToSpin;
+
 import com.zyrox.world.entity.impl.player.Player;
 
 public class Flax {
-	
+
 	private static final int FLAX_ID = 1779;
-	private static final int FLAX_ID2 = 1780;
-	private static final int BOW_STRING_ID = 1777;
-	
-	/*public static void showSpinInterface(Player player) {
-		player.getPacketSender().sendInterfaceRemoval();
-		player.getSkillManager().stopSkilling();
-		if(Location.inResource(player)) {
-			if(!player.getInventory().contains(1780)) {
-				player.getPacketSender().sendMessage("You do not have any Flax to spin.");
-				return;
-			}
-		} else {
-			if(!player.getInventory().contains(1779)) {
-				player.getPacketSender().sendMessage("You do not have any Flax to spin.");
-				return;
-			}
-		}
-	
-		player.setInputHandling(new EnterAmountToSpin());
-		player.getPacketSender().sendString(2799, "Flax").sendInterfaceModel(1746, FLAX_ID, 150).sendChatboxInterface(4429);
-		player.getPacketSender().sendString(2800, "How many would you like to make?");
-	}*/
 
 	public static void showSpinInterface(Player player) {
 		player.getPacketSender().sendInterfaceRemoval();
 		player.getSkillManager().stopSkilling();
-		if(Location.inResource(player)) {
-			if(!player.getInventory().contains(1780)) {
-				player.getPacketSender().sendMessage("You do not have any Flax to spin.");
-				return;
-			}
-		} else {
-			if(!player.getInventory().contains(1779)) {
-				player.getPacketSender().sendMessage("You do not have any Flax to spin.");
-				return;
-			}
+		if(!player.getInventory().contains(1779)) {
+			player.getPacketSender().sendMessage("You do not have any Flax to spin.");
+			return;
 		}
-		MakeInterface.open(player, new int[] {BOW_STRING_ID}, MakeInterface.MakeType.FLAX);
+		player.setInputHandling(new EnterAmountToSpin());
+		player.getPacketSender().sendString(2799, "Flax").sendInterfaceModel(1746, FLAX_ID, 150).sendChatboxInterface(4429);
+		player.getPacketSender().sendString(2800, "How many would you like to make?");
 	}
-	
+
 	public static void spinFlax(final Player player, final int amount) {
 		if(amount <= 0)
 			return;
@@ -60,30 +35,14 @@ public class Flax {
 			int amountSpan = 0;
 			@Override
 			public void execute() {
-				if(Location.inResource(player)) {
-					if(!player.getInventory().contains(FLAX_ID2)) {
-						stop();
-						return;
-					}
-				} else {
-					if(!player.getInventory().contains(FLAX_ID)) {
-						stop();
-						return;
-					}	
+				if(!player.getInventory().contains(FLAX_ID)) {
+					stop();
+					return;
 				}
-				
-				
-				player.getSkillManager().addExperience(Skill.CRAFTING, 15 * Skill.CRAFTING.getModifier());
+				player.getSkillManager().addExperience(Skill.CRAFTING, 324);
 				player.performAnimation(new Animation(896));
-				if(Location.inResource(player)) {
-				
-				player.getInventory().delete(FLAX_ID2, 1);
-				player.getInventory().add(1778, 1, "Flax");
-				} else {
-				
 				player.getInventory().delete(FLAX_ID, 1);
-				player.getInventory().add(1777, 1, "Flax");
-				}
+				player.getInventory().add(1777, 1);
 				amountSpan++;
 				if(amountSpan >= amount)
 					stop();
@@ -92,3 +51,4 @@ public class Flax {
 		TaskManager.submit(player.getCurrentTask());
 	}
 }
+

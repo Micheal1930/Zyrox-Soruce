@@ -34,62 +34,62 @@ public enum FinishedPotions {
 	HUNTER_POTION(10000, 103, 10111, 53, 110),
 	FLETCHING_POTION(14848, 103, 11525, 58, 105),
 	ANTIPOISON_PLUS(5945, 3002, 6049, 68, 154),
-	
-    PRAYER_FLASK(14200, 14198, 14196, 14194, 14192, 14190),
-    SUPER_ATTACK_FLASK(14188, 14186, 14184, 14182, 14180, 14178),
-    SUPER_STR_FLASK(14176, 14174, 14172, 14170, 14168, 14166),
-    SUPER_DEF_FLASK(14164, 14162, 14160, 14158, 14156, 14154),
-    RANGING_FLASK(14152, 14150, 14148, 14146, 14144, 14142),
-    SARA_BREW_FLASK(14128, 14126, 14124, 14122, 14420, 14418),
-    SUPER_RESTORE_FLASK(14415, 14413, 14411, 14409, 14407, 14405),
-    MAGIC_FLASK(14403, 14401, 14399, 14397, 14395, 14393),
-    RECOVER_SPEC_FLASK(14385, 14383, 14381, 14379, 14377, 14375),
-    EXTREME_ATTACK_FLASK(14373, 14371, 14369, 14367, 14365, 14363),
-    EXTREME_STR_FLASK(14361, 14359, 14357, 14355, 14353, 15351),
-    EXTREME_DEF_FLASK(14349, 14347, 14345, 14343, 14341, 14339),
-    EXTREME_MAGIC_FLASK(14337, 14335, 14333, 14331, 14329, 14327),
-    EXTREME_RANGE_FLASK(14325, 14323, 14321, 14319, 14317, 14315),
-    OVERLOAD_FLASK(14301, 14299, 14297, 14295, 14293, 14921);
+
+	PRAYER_FLASK(14200, 14198, 14196, 14194, 14192, 14190),
+	SUPER_ATTACK_FLASK(14188, 14186, 14184, 14182, 14180, 14178),
+	SUPER_STR_FLASK(14176, 14174, 14172, 14170, 14168, 14166),
+	SUPER_DEF_FLASK(14164, 14162, 14160, 14158, 14156, 14154),
+	RANGING_FLASK(14152, 14150, 14148, 14146, 14144, 14142),
+	SARA_BREW_FLASK(14128, 14126, 14124, 14122, 14420, 14418),
+	SUPER_RESTORE_FLASK(14415, 14413, 14411, 14409, 14407, 14405),
+	MAGIC_FLASK(14403, 14401, 14399, 14397, 14395, 14393),
+	RECOVER_SPEC_FLASK(14385, 14383, 14381, 14379, 14377, 14375),
+	EXTREME_ATTACK_FLASK(14373, 14371, 14369, 14367, 14365, 14363),
+	EXTREME_STR_FLASK(14361, 14359, 14357, 14355, 14353, 15351),
+	EXTREME_DEF_FLASK(14349, 14347, 14345, 14343, 14341, 14339),
+	EXTREME_MAGIC_FLASK(14337, 14335, 14333, 14331, 14329, 14327),
+	EXTREME_RANGE_FLASK(14325, 14323, 14321, 14319, 14317, 14315),
+	OVERLOAD_FLASK(14301, 14299, 14297, 14295, 14293, 14921);
 
 
-    FinishedPotions(int flaskSix, int flaskFive, int flaskFour, int flaskThree, int flaskTwo, int flaskOne) {
-        this.flaskSix = flaskSix;
-        this.flaskFive = flaskFive;
-        this.flaskFour = flaskFour;
-        this.flaskThree = flaskThree;
-        this.flaskTwo = flaskTwo;
-        this.flaskOne = flaskOne;
-    }
+	FinishedPotions(int flaskSix, int flaskFive, int flaskFour, int flaskThree, int flaskTwo, int flaskOne) {
+		this.flaskSix = flaskSix;
+		this.flaskFive = flaskFive;
+		this.flaskFour = flaskFour;
+		this.flaskThree = flaskThree;
+		this.flaskTwo = flaskTwo;
+		this.flaskOne = flaskOne;
+	}
 
-    private int flaskSix, flaskFive, flaskFour, flaskThree, flaskTwo, flaskOne;
+	private int flaskSix, flaskFive, flaskFour, flaskThree, flaskTwo, flaskOne;
 
-    public int getFlaskSix() {
-        return flaskSix;
-    }
+	public int getFlaskSix() {
+		return flaskSix;
+	}
 
-    public int getFlaskFive() {
-        return flaskFive;
-    }
+	public int getFlaskFive() {
+		return flaskFive;
+	}
 
-    public int getFlaskFour() {
-        return flaskFour;
-    }
+	public int getFlaskFour() {
+		return flaskFour;
+	}
 
-    public int getFlaskThree() {
-        return flaskThree;
-    }
+	public int getFlaskThree() {
+		return flaskThree;
+	}
 
-    public int getFlaskTwo() {
-        return flaskTwo;
-    }
+	public int getFlaskTwo() {
+		return flaskTwo;
+	}
 
-    public int getFlaskOne() {
-        return flaskOne;
-    }
-    
+	public int getFlaskOne() {
+		return flaskOne;
+	}
+
 	private int finishedPotion, unfinishedPotion, itemNeeded, levelReq;
 
-    private double expGained;
+	private double expGained;
 
 	private FinishedPotions(int finishedPotion, int unfinishedPotion, int itemNeeded, int levelReq, double expGained) {
 		this.finishedPotion = finishedPotion;

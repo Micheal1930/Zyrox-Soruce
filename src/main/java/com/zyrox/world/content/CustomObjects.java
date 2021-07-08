@@ -869,6 +869,25 @@ public class CustomObjects {
             {1661, 3124, 9664, 0, 3},
             {4483, 2918, 2885, 0, 3},
 
+            //Edge [ Moved by Hobos ]
+            {172, 3101, 3509, 1, 1}, // Crystal Key // Moved
+            {10624, 3101, 3510, 1, 1}, // Stone chest // Moved
+            {13405, 3112, 3500, 1, 2}, // My House Portal // Moved
+            {1746, 3101, 3507, 1, 1}, // Summoing Ladder // Moved
+            {29942, 3101, 3513, 1, 1}, // Small obelisk // Moved
+            {409, 3100, 3510, 1, 4}, //  regular Prayer altar // Moved
+            {884, 3073, 3503, 1, 3}, // Well // Moved
+            {10780, 3082, 3501, 1, 4}, // Karuulum Dungeon // Moved
+            {411, 3095, 3514, 1, 4}, // Altar [ Veng ] // Moved
+            {6552, 3079, 3514, 1, 0}, //ancients altar // Moved
+            {13179, 3075, 3509, 1, 4}, //regular altar at home // Moved
+            // Thieving Stalls new home // Moved
+            {4875, 3092, 3087, 1, 0},
+            {4874, 3093, 3087, 1, 0},
+            {4876, 3094, 3087, 1, 0},
+            {4877, 3095, 3087, 1, 0},
+            {4878, 3096, 3087, 1, 0},
+
             //rfd
             {12356, 1863, 5352, 0, 0},
             {2182, 1861, 5355, 0, 2},

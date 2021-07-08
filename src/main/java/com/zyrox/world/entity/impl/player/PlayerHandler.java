@@ -3,6 +3,7 @@ package com.zyrox.world.entity.impl.player;
 import com.zyrox.GameServer;
 import com.zyrox.GameSettings;
 import com.zyrox.Server;
+import com.zyrox.engine.task.Task;
 import com.zyrox.engine.task.TaskManager;
 import com.zyrox.engine.task.impl.*;
 import com.zyrox.model.*;
@@ -18,13 +19,7 @@ import com.zyrox.net.PlayerSession;
 import com.zyrox.net.SessionState;
 import com.zyrox.util.Misc;
 import com.zyrox.world.World;
-import com.zyrox.world.content.Achievements;
-import com.zyrox.world.content.BankPin;
-import com.zyrox.world.content.BonusManager;
-import com.zyrox.world.content.EffectTimer;
-import com.zyrox.world.content.PlayerLogs;
-import com.zyrox.world.content.PlayerPanel;
-import com.zyrox.world.content.StaffList;
+import com.zyrox.world.content.*;
 import com.zyrox.world.content.alchemical_hydra.KaruulmSlayerHydra;
 import com.zyrox.world.content.auction_house.AuctionHouseManager;
 import com.zyrox.world.content.clan.ClanChatManager;
@@ -84,7 +79,7 @@ public class PlayerHandler {
                 Misc.detectVPN(player.getHostAddress(), player.getName());
             }).start();
         }*/
-
+        TaskManager.submit(CustomQuestTab.updateQuestTabTask(player));
 
         player.getSession().setState(SessionState.LOGGED_IN);
 
@@ -253,7 +248,7 @@ public class PlayerHandler {
 
                 @Override
                 public String[] dialogue() {
-                    return new String[]{"It seems as if your client is outdated!", "Restart your client to apply the latest updates", "or download them from the website.", "If you don't some things may not seem right in Varrock!"};
+                    return new String[]{"It seems as if your client is outdated!", "Restart your client to apply the latest updates", "or download them from the website.", "If you don't some things may not seem right in Zyrox!"};
                 }
 
                 @Override

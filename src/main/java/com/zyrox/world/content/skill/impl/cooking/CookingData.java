@@ -112,7 +112,7 @@ public enum CookingData {
 	/**
 	 * Get's the rate for burning or successfully cooking food.
 	 * @param player	Player cooking.
-	 * @param food		Consumables's enum.
+	 * @param
 	 * @return			Successfully cook food.
 	 */
 	public static boolean success(Player player, int burnBonus, int levelReq, int stopBurn) {

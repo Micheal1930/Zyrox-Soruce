@@ -13,7 +13,7 @@ import com.zyrox.world.entity.impl.player.Player;
 public class AladdinCommand extends NameCommand {
 	
 	public AladdinCommand() {
-		super("Nobles","Jonny");
+		super("Hobos","Sedveka");
 	}
 
 	   @Override

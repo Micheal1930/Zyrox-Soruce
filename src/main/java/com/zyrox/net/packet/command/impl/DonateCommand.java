@@ -12,7 +12,7 @@ public class DonateCommand extends Command {
 		if (args.length != 0) {
 			throw new IllegalArgumentException();
 		}
-		player.getPacketSender().sendString(1, "www.varrock.io/store");
+		player.getPacketSender().sendString(1, "www.zyrox.org/store");
 		return true;
 	}
 

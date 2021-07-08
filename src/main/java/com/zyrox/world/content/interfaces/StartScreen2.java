@@ -12,10 +12,39 @@ public class StartScreen2 {
 
 	public enum GameModes {
 		NORMAL("Normal", 52761, 28003, 1, 0, new Item[]{
-				new Item(995, 500000), new Item(556, 500), new Item(555, 500), new Item(557, 500), //
-				new Item(554, 250), new Item(558, 500), new Item(562, 500), new Item(563, 500), //
-				new Item(1323, 1), new Item(841, 1), new Item(882, 500), new Item(10499, 1), //
-				new Item(380, 250), new Item(544, 1), new Item(542, 1)//
+				//new Item(995, 500000), new Item(556, 500), new Item(555, 500), new Item(557, 500), //
+				//new Item(554, 250), new Item(558, 500), new Item(562, 500), new Item(563, 500), //
+				//new Item(1323, 1), new Item(841, 1), new Item(882, 500), new Item(10499, 1), //
+				//new Item(380, 250), new Item(544, 1), new Item(542, 1)//
+// New Player Starter
+				new Item(995, 500000),
+				new Item(554, 200),
+				new Item(555, 200),
+				new Item(556, 200),
+				new Item(557, 200),
+				new Item(558, 200),
+				new Item(560, 200),
+				new Item(562, 200),
+				new Item(563, 200),
+				new Item(565, 200),
+				new Item(9075, 200),
+				new Item(4675, 1),
+				new Item(10828, 1),
+				new Item(10551, 1),
+				new Item(1079, 1),
+				new Item(4587, 1),
+				new Item(1323, 1),
+				new Item(4131, 1),
+				new Item(3025, 10),
+				new Item(386, 100),
+				new Item(877, 50),
+				new Item(9142, 100),
+				new Item(9143, 100),
+				new Item(9144, 100),
+				new Item(9174, 1),
+				new Item(9181, 1),
+				new Item(9183, 1),
+				new Item(9185, 1),
 		}, "As a normal player you will be", "able to play the game without", "any restrictions.", "", "", "", "", "",
 				"x25", "x150"),
 		IRONMAN("<img=33>Ironman", 52762, 28004, 1, 1, new Item[]{
@@ -23,7 +52,7 @@ public class StartScreen2 {
 				new Item(554, 500), new Item(558, 500), new Item(562, 500), new Item(563, 500), //
 				new Item(1323, 1), new Item(841, 1), new Item(882, 500), new Item(10499, 1), //
 				new Item(380, 50), new Item(544, 1), new Item(542, 1)//
-		}, "Play Varrock as an Iron man.", "With this gamemode you must", "be self sufficient",
+		}, "Play Zyrox as an Iron man.", "With this gamemode you must", "be self sufficient",
 				"You will be restricted from:", "-Staking and Gambling.",
 				"-Looting items from killed players", "-Receiving loot from monsters",
 				" that another player killed.", "x25",
@@ -33,7 +62,7 @@ public class StartScreen2 {
 				new Item(554, 500), new Item(558, 500), new Item(562, 500), new Item(563, 500), //
 				new Item(1323, 1), new Item(841, 1), new Item(882, 500), new Item(10499, 1), //
 				new Item(380, 50), new Item(544, 1), new Item(542, 1)//
-		}, "Play Varrock as an Iron man.", "With this gamemode you must", "be self sufficient",
+		}, "Play Zyrox as an Iron man.", "With this gamemode you must", "be self sufficient",
 				"You will be restricted from:", "-Staking and Gambling.",
 				"-Looting items from killed players", "-Receiving loot from monsters",
 				" that another player killed.", "x25",
@@ -44,7 +73,7 @@ public class StartScreen2 {
 				new Item(554, 500), new Item(558, 500), new Item(562, 500), new Item(563, 500),
 				new Item(1323, 1), new Item(841, 1), new Item(882, 500), new Item(10499, 1),
 				new Item(380, 50), new Item(50792, 1), new Item(50794, 1), new Item(50796, 1),
-		}, "Play Varrock as a Hardcore Ironman", "In addition to the iron man mode,",
+		}, "Play Zyrox as a Hardcore Ironman", "In addition to the iron man mode,",
 				"@red@If you die you will lose your status.", "", "", "", "", "", "x25",
 				"x150");
 		private int checkClick;
@@ -151,7 +180,7 @@ public class StartScreen2 {
 			player.getAppearance().setCanChangeAppearance(true);
 			player.setNewPlayer(false);
 			ClanChatManager.join(player, "Help");
-			World.sendMessage("<img=732><shad=2F60B2>[New Player] " + player.getName() + " has logged into Varrock for the first time!");
+			World.sendMessage("<img=732><shad=2657F5>[New Player] " + player.getName() + " has logged into Zyrox for the first time!");
 			if (GameServer.starterHandler.hasAnyStarter(player.getHostAddress(), player.getSuperSerialNumber())) {
 				if (!player.didReceiveStarter()) {
 					addStarterToInv(player);

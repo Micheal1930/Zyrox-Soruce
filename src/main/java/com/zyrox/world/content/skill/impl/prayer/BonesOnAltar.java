@@ -6,6 +6,7 @@ import com.zyrox.model.Animation;
 import com.zyrox.model.Graphic;
 import com.zyrox.model.Skill;
 import com.zyrox.model.definitions.ItemDefinition;
+import com.zyrox.model.input.impl.EnterAmountOfBonesToSacrifice;
 import com.zyrox.world.content.Achievements;
 import com.zyrox.world.content.Achievements.AchievementData;
 import com.zyrox.world.content.interfaces.MakeInterface;
@@ -15,21 +16,11 @@ import com.zyrox.world.entity.impl.player.Player;
 public class BonesOnAltar {
 
 	public static void openInterface(Player player, int itemId) {
-		if(itemId == -12753) {
-			itemId = 52783;
-		}
-		if(itemId == -12756) {
-			itemId = 52780;
-		}
-		/*player.getPacketSender().sendMessage("itemId: "+itemId);
 		player.getSkillManager().stopSkilling();
 		player.setSelectedSkillingItem(itemId);
 		player.setInputHandling(new EnterAmountOfBonesToSacrifice());
 		player.getPacketSender().sendString(2799, ItemDefinition.forId(itemId).getName()).sendInterfaceModel(1746, itemId, 150) .sendChatboxInterface(4429);
-		player.getPacketSender().sendString(2800, "How many would you like to offer?");*/
-		player.getSkillManager().stopSkilling();
-		player.setSelectedSkillingItem(itemId);
-		MakeInterface.open(player, new int[] {itemId}, MakeInterface.MakeType.BONES);
+		player.getPacketSender().sendString(2800, "How many would you like to offer?");
 	}
 
 	public static void offerBones(final Player player, final int amount) {
@@ -65,7 +56,7 @@ public class BonesOnAltar {
 				amountSacrificed++;
 				player.getInventory().delete(boneId, 1);
 				player.performAnimation(new Animation(713));
-				player.getSkillManager().addExperience(Skill.PRAYER, (currentBone.getBuryingXP() * 3.5) * Skill.PRAYER.getModifier());
+				player.getSkillManager().addExperience(Skill.PRAYER, (int) (currentBone.getBuryingXP() * 13));
 			}
 			@Override
 			public void stop() {

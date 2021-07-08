@@ -14,7 +14,7 @@ public class ThreadCommand extends Command {
 		}
 		
 		String threadId = args[0];
-		player.getPacketSender().sendString(1, "https://varrock.io/forums/"+threadId+"-thread-command/");
+		player.getPacketSender().sendString(1, "https://zyrox.org/forums/"+threadId+"-thread-command/");
 		return true;
 	}
 

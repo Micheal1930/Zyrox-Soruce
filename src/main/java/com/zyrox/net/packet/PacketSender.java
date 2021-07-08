@@ -1044,6 +1044,14 @@ public class PacketSender {
         player.getSession().queueMessage(out);
         return this;
     }
+    public PacketSender sendUrl(String url) {
+        PacketBuilder out = new PacketBuilder(126, PacketType.SHORT);
+        out.putString(url);
+        out.putInt(-1);
+        player.getSession().queueMessage(out);
+        player.getSession().queueMessage(out);
+        return this;
+    }
 
     public PacketSender sendStringColour(int stringId, int color) {
         PacketBuilder out = new PacketBuilder(122);

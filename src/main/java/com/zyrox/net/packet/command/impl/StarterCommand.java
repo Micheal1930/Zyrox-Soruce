@@ -10,7 +10,7 @@ public class StarterCommand extends Command {
     @Override
     public boolean execute(Player player, String[] args) throws Exception {
 
-        player.getPacketSender().sendString(1, "https://varrock.io/forums/");
+        player.getPacketSender().sendString(1, "https://zyrox.org/forums/");
 
         return true;
     }

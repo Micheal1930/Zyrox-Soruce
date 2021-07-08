@@ -18,36 +18,6 @@ import com.zyrox.world.entity.impl.player.Player;
 
 public class Herblore {
 
-	/*public static void openInterface(Player player, int itemId, Input inputHandling) {
-		if(itemId == -12753) {
-			itemId = 52783;
-		}
-		if(itemId == -12756) {
-			itemId = 52780;
-		}
-		player.getSkillManager().stopSkilling();
-		player.setSelectedSkillingItem(itemId);
-		player.setInputHandling(inputHandling);
-		player.getPacketSender().sendString(2799, "\\n\\n\\n\\n"+ItemDefinition.forId(itemId).getName()).sendInterfaceModel(1746, itemId, 150) .sendChatboxInterface(4429);
-		player.getPacketSender().sendString(2800, "How many would you like to make?");
-	}*/
-
-	public static void openInterface(Player player, int itemId, Input inputHandling) {
-		if(itemId == -12753) {
-			itemId = 52783;
-		}
-		if(itemId == -12756) {
-			itemId = 52780;
-		}
-		player.getSkillManager().stopSkilling();
-		player.setSelectedSkillingItem(itemId);
-		if (inputHandling instanceof EnterAmountOfUnfPotionsToMake) {
-			MakeInterface.open(player, new int[] {itemId}, MakeInterface.MakeType.UNFINISHED_POTION);
-		} else {
-			MakeInterface.open(player, new int[] {itemId}, MakeInterface.MakeType.FINISHED_POTION);
-		}
-	}
-
 	public static final int VIAL = 227;
 	private static final Animation ANIMATION = new Animation(363);
 
@@ -61,82 +31,77 @@ public class Herblore {
 				player.getPacketSender().sendMessage("You need a Herblore level of at least " + herb.getLevelReq() + " to clean this leaf.");
 				return false;
 			}
-			
 			player.getInventory().delete(herb.getGrimyHerb(), 1);
-			player.getInventory().add(herb.getCleanHerb(), 1, "Herblore");
-			player.getSkillManager().addExperience(Skill.HERBLORE, herb.getExp() * Skill.HERBLORE.getModifier());
+			player.getInventory().add(herb.getCleanHerb(), 1);
+			player.getSkillManager().addExperience(Skill.HERBLORE, herb.getExp());
 			player.getPacketSender().sendMessage("You clean the dirt off the leaf.");
-			
-			if (herb == Herbs.TORSTOL) {
-				Achievements.doProgress(player, AchievementData.CLEAN_1000_TORSTOL);
-			}
 			return true;
 		}
 		return false;
 	}
 
+	public static void openInterface(Player player, int itemId, Input inputHandling) {
+		if(itemId == -12753) {
+			itemId = 52783;
+		}
+		if(itemId == -12756) {
+			itemId = 52780;
+		}
+		player.getSkillManager().stopSkilling();
+		player.setSelectedSkillingItem(itemId);
+		player.setInputHandling(inputHandling);
+		player.getPacketSender().sendString(2799, "\\n\\n\\n\\n"+ItemDefinition.forId(itemId).getName()).sendInterfaceModel(1746, itemId, 150) .sendChatboxInterface(4429);
+		player.getPacketSender().sendString(2800, "How many would you like to make?");
+	}
+
+
+
 	public static boolean startMakingUnfinishedPotion(final Player player, final int herbId) {
 		final UnfinishedPotions unf = UnfinishedPotions.getPotionForHerb(herbId);
-		if (unf == null) {
-			System.out.println("null");
+		if (unf == null)
 			return false;
-		}
-
 		if (player.getSkillManager().getCurrentLevel(Skill.HERBLORE) < unf.getLevelReq()) {
 			player.getPacketSender().sendMessage("You need a Herblore level of at least " + unf.getLevelReq() + " to make this potion.");
 			return false;
 		}
-
-		openInterface(player, unf.getUnfPotion(), new EnterAmountOfUnfPotionsToMake());
-		return true;
+		if (player.getInventory().contains(VIAL) && player.getInventory().contains(unf.getHerbNeeded())) {
+			player.getSkillManager().stopSkilling();
+			player.performAnimation(ANIMATION);
+			TaskManager.submit(new Task(1, player, false) {
+				public void execute() {
+					player.getInventory().delete(VIAL, 1).delete(unf.getHerbNeeded(), 1).add(unf.getUnfPotion(), 1);
+					player.getPacketSender().sendMessage("You put the " + ItemDefinition.forId(unf.getHerbNeeded()).getName() + " into the vial of water.");
+					player.getSkillManager().addExperience(Skill.HERBLORE, 1);
+					this.stop();
+				}
+			});
+			return true;
+		}
+		return false;
 	}
 
-	public static void makeUnfinishedPotion(Player player, int amount) {
-
-		final int potionId = player.getSelectedSkillingItem();
-
-		final UnfinishedPotions unf = UnfinishedPotions.getPotionForPotion(potionId);
-
+	public static boolean makeUnfinishedPotion(final Player player, final int herbId) {
+		final UnfinishedPotions unf = UnfinishedPotions.getPotionForHerb(herbId);
 		if (unf == null)
-			return;
-
-		player.getPacketSender().sendInterfaceRemoval();
-
-		player.setCurrentTask(new Task(1, player, true) {
-			int amountCreated = 0;
-			@Override
-			public void execute() {
-				if(amountCreated >= amount) {
-					stop();
-					return;
+			return false;
+		if (player.getSkillManager().getCurrentLevel(Skill.HERBLORE) < unf.getLevelReq()) {
+			player.getPacketSender().sendMessage("You need a Herblore level of at least " + unf.getLevelReq() + " to make this potion.");
+			return false;
+		}
+		if (player.getInventory().contains(VIAL) && player.getInventory().contains(unf.getHerbNeeded())) {
+			player.getSkillManager().stopSkilling();
+			player.performAnimation(ANIMATION);
+			TaskManager.submit(new Task(1, player, false) {
+				public void execute() {
+					player.getInventory().delete(VIAL, 1).delete(unf.getHerbNeeded(), 1).add(unf.getUnfPotion(), 1);
+					player.getPacketSender().sendMessage("You put the " + ItemDefinition.forId(unf.getHerbNeeded()).getName() + " into the vial of water.");
+					player.getSkillManager().addExperience(Skill.HERBLORE, 1);
+					this.stop();
 				}
-				if(!player.getInventory().contains(unf.getHerbNeeded())) {
-					player.getPacketSender().sendMessage("You have run out of "+ItemDefinition.forId(unf.getHerbNeeded()).getName()+".");
-					stop();
-					return;
-				}
-				if(!player.getInventory().contains(VIAL)) {
-					player.getPacketSender().sendMessage("You have run out of "+ItemDefinition.forId(VIAL).getName()+".");
-					stop();
-					return;
-				}
-				player.performAnimation(ANIMATION);
-				player.getInventory().delete(VIAL, 1).delete(unf.getHerbNeeded(), 1).add(unf.getUnfPotion(), 1, "Herblore");
-				player.getPacketSender().sendMessage("You put the " + ItemDefinition.forId(unf.getHerbNeeded()).getName() + " into the vial of water.");
-				player.getSkillManager().addExperience(Skill.HERBLORE, 1 * Skill.HERBLORE.getModifier());
-				amountCreated++;
-
-			}
-
-			@Override
-			public void stop() {
-				setEventRunning(false);
-				player.getPacketSender().sendMessage("You have finished making "+amountCreated+"x "+ItemDefinition.forId(unf.getUnfPotion()).getName()+".");
-			}
-		});
-
-		TaskManager.submit(player.getCurrentTask());
-
+			});
+			return true;
+		}
+		return false;
 	}
 
 	public static boolean startMakingFinishedPotions(final Player player, final int itemUsed, final int usedWith) {
@@ -263,7 +228,7 @@ public class Herblore {
 	public static void startCreatingSpecialPotion(Player p, int item1, int item2) {
 		if(item1 == item2)
 			return;
-		if(!p.getInventory().contains(item1) || !p.getInventory().contains(item2)) 
+		if(!p.getInventory().contains(item1) || !p.getInventory().contains(item2))
 			return;
 		SpecialPotion specialPotData = SpecialPotion.forItems(item1, item2);
 		if(specialPotData == null)

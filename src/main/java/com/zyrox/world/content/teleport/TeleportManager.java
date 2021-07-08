@@ -1,6 +1,7 @@
 package com.zyrox.world.content.teleport;
 
 import com.zyrox.model.Locations;
+import com.zyrox.world.content.teleportation.TeleportData;
 import com.zyrox.world.content.transportation.TeleportHandler;
 import com.zyrox.world.entity.impl.player.Player;
 
@@ -9,7 +10,9 @@ import com.zyrox.world.entity.impl.player.Player;
  **/
 public class TeleportManager {
 
-    private static final int INTERFACE_ID = 51000;
+    private static final int INTERFACE_ID = 51000; //51000 [ old ]
+
+
 
     public static boolean isButton(Player player, int buttonId) {
         switch(buttonId) {
